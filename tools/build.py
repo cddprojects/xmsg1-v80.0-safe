@@ -55,7 +55,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
 <div class="legal"><p>WorkNest SG is an information website only. We are not an employment agency, do not hold an MOM Employment Agency licence, and do not recruit, screen, place or introduce candidates or publish vacancies. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
-<p>&copy; 2026 WorkNest SG</p></div>
+<p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; <a href="tel:+6583963756">+65 8396 3756</a> &middot; <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></p></div>
 </div></footer>
 <script src="js/main.js"></script>
 </body></html>'''
@@ -87,7 +87,7 @@ page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Gu
 <section class="hero"><div class="wrap hero-grid">
 <div>
 <span class="eyebrow">Side income, made simple</span>
-<h1>Part time job or work from home in Singapore? <span>Find the side income that fits.</span></h1>
+<h1>Part time job or work from home in Singapore? <span>Explore side income options that fit.</span></h1>
 <p class="lede">Rising costs make one income feel tight. We share clear information on part time jobs, work from home jobs, remote jobs, online jobs and freelance jobs in Singapore, so you can choose the way to make money at home that suits your hours.</p>
 <div class="btn-row"><a class="btn btn-warm" href="#fit">Find your fit</a><a class="btn btn-ghost" href="jobs.html">Browse job types</a></div>
 </div>
@@ -131,7 +131,7 @@ page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Gu
 <section class="alt"><div class="wrap">
 <div class="head reveal"><span class="eyebrow">Knowledge Hub</span><h2>Read before you decide.</h2></div>
 <div class="posts">
-<article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can ease the squeeze.</p></article>
+<article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can help.</p></article>
 <article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
 <article class="post reveal"><div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each means</a></h3><p>Understand the words in a job ad.</p></article>
 </div></div></section>
@@ -150,6 +150,15 @@ def jobsec(id_,alt,eyebrow,h2,intro,roles,suit,check):
 </div></section>'''
 
 jobs_body=head("Job types","Part-time, work from home, remote and freelance jobs in Singapore.","Explore the common kinds of flexible work in Singapore, what each involves, and what to check before you say yes.")
+jobs_body+='''<section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">At a glance</span><h2>Six job types compared.</h2><p class="lede">A quick summary. Details vary by employer, so always check the terms.</p></div>
+<div class="tablewrap"><table class="cmp"><thead><tr><th>Job type</th><th>Typical hours</th><th>Where</th><th>Usual status</th><th>CPF</th></tr></thead><tbody>
+<tr><td><a href="#part-time">Part time job Singapore</a></td><td>Under 35 hrs a week</td><td>On-site or home</td><td>Employee</td><td>Generally applies*</td></tr>
+<tr><td><a href="#work-from-home">Work from home jobs</a></td><td>Agreed hours</td><td>Home</td><td>Usually employee</td><td>Generally applies*</td></tr>
+<tr><td><a href="#remote">Remote job Singapore</a></td><td>Full or part</td><td>Anywhere</td><td>Employee or contractor</td><td>Depends on status</td></tr>
+<tr><td><a href="#online">Online jobs</a></td><td>Flexible slots</td><td>Online</td><td>Varies</td><td>Depends on status</td></tr>
+<tr><td><a href="#freelance">Freelance jobs</a></td><td>You decide</td><td>Anywhere</td><td>Self-employed</td><td>You manage your own</td></tr>
+<tr><td><a href="#contract">Contract and temp</a></td><td>Fixed term</td><td>Varies</td><td>Employee, often via agency</td><td>Generally applies*</td></tr>
+</tbody></table></div><p class="notice">*For employees, subject to age, residency and pay. Check CPF Board for current rules. Earnings vary and are not guaranteed.</p></div></section>'''
 jobs_body+=jobsec("part-time",False,"Part time job Singapore","Part time jobs in Singapore","Roles with fewer than 35 contracted hours a week, usually as an employee with a written contract.",
  ["Retail and F&amp;B service crew","Admin and office assistants","Tutors and education centre helpers","Event and promotion staff","Customer service associates"],
  ["You study, parent or care for family","You want a second income","You are returning to work gradually"],
@@ -237,11 +246,23 @@ head("Knowledge Hub","Real-life reads on part time jobs, work from home and mone
 <div class="posts">{cards}</div></div></section>''')
 
 # ---------------- ARTICLES
+TAKE={}
 def article(fname,title,desc,cat,body):
+    tk=TAKE.get(fname)
+    box=("<div class=\"takeaways\"><h2>Key takeaways</h2><ul>"+"".join(f"<li>{t}</li>" for t in tk)+"</ul></div>") if tk else ""
+    body=body.replace("</p>","</p>"+box,1) if box else body
     page(fname,title+" | WorkNest SG",desc,f'''{head(cat,title)}
 <section><div class="wrap article">{body}
 <p style="margin-top:2.5rem"><a href="knowledge-hub.html">&larr; Back to Knowledge Hub</a></p></div></section>''')
 
+
+TAKE.update({
+"article-job-scams.html":["Genuine employers do not ask you to pay to start work.","Be careful with unsolicited chat-app offers and pay that seems too good.","Verify the company and the listing on official sources.","Never share Singpass, OTP or bank logins. Call 1799 if unsure."],
+"article-work-modes.html":["Hours, place and status are three different things in a job ad.","Part-time in Singapore means fewer than 35 contracted hours a week.","Freelancers manage their own CPF and tax.","Ask about hours, pay basis, CPF, contract type and notice period."],
+"article-rising-costs.html":["Part-time, remote or freelance work are common ways to add income.","Compare take-home pay with extra costs like transport and childcare.","Ask how and when you are paid.","Check government support schemes if money is very tight."],
+"article-childcare-caregiving.html":["Start with the hours you can truly commit.","Ask about flexibility before accepting.","Subtract childcare and work costs from expected pay.","You can revisit your decision as circumstances change."],
+"article-restart.html":["Career gaps are common and easier to explain than people expect.","Keep the explanation short and honest.","Part-time or contract work can be a gentle restart.","Refresh your CV, references and skills."],
+})
 article("article-job-scams.html","Seven signs a work-from-home offer is a scam","How to recognise fake remote and part-time job offers in Singapore.","Scams",'''
 <p class="lede">Scammers favour part-time and remote jobs because the promise of easy, flexible income is hard to resist. These are the patterns to look for.</p>
 <h2>1. You did not apply</h2><p>An unsolicited WhatsApp, Telegram or SMS offering a job is a major red flag. Legitimate employers rarely cold-message strangers with pay figures.</p>
@@ -386,8 +407,9 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>In a live site we would reply within a few working days.</p></div>
 </div>
 <div><h2>Other ways</h2><ul class="contact-list">
-<li><b>Email</b>hello@worknest.example</li>
-<li><b>Hours</b>Mon to Fri, 9am to 6pm (SGT)</li>
+<li><b>Email</b><a href="mailto:support@worknestsg.com">support@worknestsg.com</a></li>
+<li><b>Phone</b><a href="tel:+6583963756">+65 8396 3756</a></li>
+<li><b>Address</b>22 Orchard Road, #03-01, Singapore 238885</li>
 <li><b>Looking for openings?</b>Try <a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a>.</li>
 <li><b>Suspected scam?</b>Call the ScamShield helpline on 1799 and report to the Police.</li></ul></div>
 </div></section>''')
@@ -411,6 +433,6 @@ head("Privacy &amp; PDPA","Privacy notice")+'''
 <p>This is a template. Have it reviewed before launch.</p>
 <h2>What we collect</h2><p>Only what you submit through the contact form: name, email and message. The scam checker runs in your browser and stores nothing.</p>
 <h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
-<h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at dpo@worknest.example.</p>
+<h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at support@worknestsg.com.</p>
 <h2>Cookies</h2><p>This site sets no tracking cookies. Fonts are loaded from Google Fonts.</p></div></section>''')
 print("built")
