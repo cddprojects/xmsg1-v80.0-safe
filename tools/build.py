@@ -2,7 +2,7 @@
 import pathlib
 OUT = pathlib.Path(__file__).resolve().parent.parent / "site"
 
-NAV = [("index.html","Home"),("services.html","Services"),("for-employers.html","Employers"),("for-talent.html","Talent"),
+NAV = [("index.html","Home"),("services.html","Services"),("for-talent.html","For Job Seekers"),
        ("knowledge-hub.html","Knowledge Hub"),("about.html","About Us")]
 
 LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="oklch(37% .075 178)"/><path d="M16 6l8 3v6c0 5-3.4 8.6-8 11-4.600-2.400-8-6-8-11V9z" fill="oklch(97.6% .009 88)"/><path d="M12.500 16l2.700 2.700 4.500-5" stroke="oklch(60% .19 32)" stroke-width="2.400" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -50,7 +50,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div class="foot-grid">
 <div><a class="brand" href="index.html">{LOGO}SG<em>Safer</em></a>
 <p style="margin-top:1rem;max-width:32ch">Talent resourcing and career consulting for part-time, remote and hybrid work in Singapore.</p></div>
-<div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="for-employers.html">For employers</a></li><li><a href="for-talent.html">For talent</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+<div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="for-employers.html">For employers</a></li><li><a href="for-talent.html">For job seekers</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
 <div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li></ul></div>
 </div>
@@ -70,10 +70,10 @@ page("index.html","SG Safer | Talent resourcing & career consulting in Singapore
 "Singapore talent resourcing for part-time, remote, hybrid and contract roles. We handle initial screening for employers and career consulting for candidates.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Career consulting &amp; talent resourcing &middot; Singapore</span>
+<span class="eyebrow">Talent resourcing &middot; Singapore</span>
 <h1>Life here is costly. <span>Your work should fit around it.</span></h1>
-<p class="lede">Rent, groceries, childcare, a parent who needs you home by four. We know the numbers rarely add up on one rigid schedule. At SG Safer we sit down with you, find flexible work that fits your life, and introduce you to employers we have already spoken to.</p>
-<div class="btn-row"><a class="btn btn-warm" href="contact.html">Talk to a consultant</a><a class="btn btn-ghost" href="for-employers.html">I am an employer</a></div>
+<p class="lede">Rent, groceries, childcare, a parent who needs you home by four. We know the numbers rarely add up on one rigid schedule. SG Safer is a talent resourcing firm. We sit down with you, screen your profile, and introduce you to employers who offer part-time, remote and hybrid work.</p>
+<div class="btn-row"><a class="btn btn-warm" href="contact.html">Talk to a consultant</a><a class="btn btn-ghost" href="for-talent.html">How it works</a></div>
 </div>
 <aside class="modes" aria-label="What we screen for">
 <h2>Roles we resource</h2>
@@ -82,28 +82,15 @@ page("index.html","SG Safer | Talent resourcing & career consulting in Singapore
 <div class="mode"><i class="dot"></i><div><b>Hybrid</b><small>Executives and specialists split across office and home</small></div><span class="tag">Flexible</span></div>
 <div class="mode"><i class="dot"></i><div><b>Contract / temp</b><small>Project cover, seasonal peaks, maternity cover</small></div><span class="tag">Fixed term</span></div>
 </aside></div></section>
-<div class="strip"><ul><li>Initial screening</li><li>Shortlisting</li><li>Career consulting</li><li>Reference checks</li><li>Flexible workforce</li><li>Returning to work</li></ul></div>
-
-<section class="alt"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">We hear these every week</span><h2>Does any of this sound like you?</h2>
-<p class="lede">You are not being fussy, and you are not the only one. Most of the people we speak to are carrying a few of these at once.</p></div>
-<div class="tiles">
-<article class="tile reveal"><h3>"The rent goes up, my pay does not."</h3><p>Housing takes a big bite of the month, and one income can feel thin. A second part-time income can be the difference between coping and constantly worrying.</p></article>
-<article class="tile reveal"><h3>"Childcare costs as much as I would earn."</h3><p>Full-time hours and childcare fees leave many parents asking whether working is worth it. Flexible hours can change that maths.</p></article>
-<article class="tile reveal"><h3>"I need to be home for my family."</h3><p>Looking after ageing parents or young children rarely fits a 9-to-6. You should not have to choose between caring and earning.</p></article>
-<article class="tile reveal"><h3>"The commute eats my day."</h3><p>Hours and money spent getting to the office add up. Remote and hybrid roles give some of that time back.</p></article>
-<article class="tile reveal"><h3>"I have been out of work too long."</h3><p>Career breaks, retrenchment or a health setback can make applying feel daunting. A friendly conversation is a gentler place to restart.</p></article>
-<article class="tile reveal"><h3>"I keep getting suspicious job offers."</h3><p>When you are stretched, "easy money" messages are tempting and dangerous. We never charge candidates and never ask for bank logins.</p></article>
-</div>
-<div class="btn-row"><a class="btn btn-primary" href="for-talent.html">See how we can help</a></div></div></section>
+<div class="strip"><ul><li>Career consulting</li><li>Initial screening</li><li>Part-time</li><li>Remote</li><li>Hybrid</li><li>Contract</li><li>Returning to work</li></ul></div>
 
 <section><div class="wrap">
 <div class="head reveal"><span class="eyebrow">How we help</span><h2>A real person on your side, and employers who are ready to listen.</h2></div>
 <div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["brief"]}</div><h3>For employers</h3><p>We do the first round of screening so your team meets people who match the role, the schedule and the culture.</p><a class="more" href="for-employers.html">How we help employers &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>For you, the candidate</h3><p>A warm, unhurried one-to-one chat. We review your CV, understand what you need, and match you to roles that fit.</p><a class="more" href="for-talent.html">How we help candidates &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Screening you can rely on</h3><p>Identity, work eligibility, experience and reference checks done consistently, with a clear summary for each person.</p><a class="more" href="services.html">See our screening &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Guides on flexible work rules, hiring practice and Singapore recruitment terms.</p><a class="more" href="knowledge-hub.html">Read the guides &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["brief"]}</div><h3>Employers we know</h3><p>We already speak with employers who offer part-time, remote, hybrid and contract roles, so your introduction is a warm one.</p><a class="more" href="services.html">Our services &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Career consulting</h3><p>A warm, unhurried one-to-one chat. We review your CV, understand what you need, and match you to roles that fit.</p><a class="more" href="for-talent.html">How we help candidates &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Initial screening</h3><p>A relaxed first interview and verification that lets employers trust your profile, so you get shortlisted faster.</p><a class="more" href="services.html">See our screening &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Honest reads on the cost of living, caregiving, career breaks and your rights at work.</p><a class="more" href="knowledge-hub.html">Read the guides &rarr;</a></article>
 </div></div></section>
 
 <section class="alt"><div class="wrap">
@@ -116,27 +103,17 @@ page("index.html","SG Safer | Talent resourcing & career consulting in Singapore
 </div></div></section>
 
 <section class="dark"><div class="wrap split">
-<div><span class="eyebrow">Employers, this is for you</span><h2>Hiring flexible talent takes a different eye.</h2>
-<p>Availability, self-management and reliability matter more when nobody sits next to the person. We screen for those first, so your team gets people who stay.</p><div class="btn-row"><a class="btn btn-warm" href="for-employers.html">Explore employer services</a></div></div>
-<div><div class="stats" style="margin-top:0"><div><b>4</b>screening stages</div><div><b>48h</b>target first shortlist*</div><div><b>1:1</b>candidate consulting</div></div><p class="notice" style="margin-top:1.5rem;color:inherit;opacity:.7">*Illustrative target for demonstration. Update with real service levels.</p></div>
+<div><span class="eyebrow">Why job seekers choose us</span><h2>Free for you, honest with you.</h2>
+<p>We are paid by employers, never by candidates. We tell you the pay range and work mode before any interview, and we only introduce you with your consent.</p><div class="btn-row"><a class="btn btn-warm" href="for-talent.html">See how it works</a></div></div>
+<div><div class="stats" style="margin-top:0"><div><b>$0</b>fees for candidates</div><div><b>1:1</b>career consulting</div><div><b>4</b>simple steps</div></div></div>
 </div></section>
-<section><div class="wrap" style="text-align:center;max-width:720px"><h2>You do not have to figure this out alone.</h2><p class="lede" style="margin-inline:auto">Tell us where you are right now. We will take it from there, with no fees for candidates and no pressure.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Contact Us</a><a class="btn btn-ghost" href="services.html">View services</a></div></div></section>
+<section><div class="wrap" style="text-align:center;max-width:720px"><h2>You do not have to figure this out alone.</h2><p class="lede" style="margin-inline:auto">Tell us where you are right now. We will take it from there, with no fees for candidates and no pressure.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Contact Us</a><a class="btn btn-ghost" href="knowledge-hub.html">Read the Knowledge Hub</a></div></div></section>
 ''')
 
 # ---------------- SERVICES
 page("services.html","Services | SG Safer","Initial screening, shortlisting, flexible workforce resourcing and career consulting in Singapore.",
-head("Services","Support for people, and for the teams who hire them.","Friendly career consulting for candidates, careful screening for employers.")+f'''
+head("Services","Career consulting and screening, built around you.","We help job seekers find flexible work that fits, and help employers meet the right people.")+f'''
 <section><div class="wrap">
-<div class="head"><span class="eyebrow">Talent resourcing</span><h2>For employers hiring flexible talent.</h2></div>
-<div class="types">
-{svc("01","Initial screening","Structured first-round interviews against your role brief: skills, availability, communication, motivation and expectations on pay and work mode.")}
-{svc("02","Candidate shortlisting","A concise, ranked shortlist with a written assessment for each person so your hiring managers spend time only on strong matches.")}
-{svc("03","Flexible workforce sourcing","Part-time, remote, hybrid, contract and temporary talent, including seasonal and project cover.")}
-{svc("04","Verification and reference checks","Identity, right-to-work eligibility, qualification and reference checks, carried out with candidate consent under PDPA.")}
-{svc("05","Role design advice","Help shaping hours, work mode, pay bands and job-ad wording so you attract the right applicants.")}
-{svc("06","Onboarding support","Structured check-ins in the first weeks to keep part-time and remote hires engaged and settled.")}
-</div><div class="btn-row"><a class="btn btn-primary" href="for-employers.html">Employer details</a></div></div></section>
-<section class="alt"><div class="wrap">
 <div class="head"><span class="eyebrow">Career consulting</span><h2>For you, seeking work that fits.</h2></div>
 <div class="tiles">
 <article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>CV and profile review</h3><p>Presenting your experience, and any career break, in its best light.</p></article>
@@ -145,6 +122,16 @@ head("Services","Support for people, and for the teams who hire them.","Friendly
 <article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Career-return support</h3><p>A kind, practical plan for caregivers and anyone rejoining the workforce.</p></article>
 </div>
 <div class="btn-row"><a class="btn btn-primary" href="for-talent.html">Candidate details</a></div></div></section>
+<section class="alt"><div class="wrap">
+<div class="head"><span class="eyebrow">For hiring teams</span><h2>Employers: we screen so you can focus.</h2></div>
+<div class="types">
+{svc("01","Initial screening","Structured first-round interviews against your role brief: skills, availability, communication, motivation and expectations on pay and work mode.")}
+{svc("02","Candidate shortlisting","A concise, ranked shortlist with a written assessment for each person so your hiring managers spend time only on strong matches.")}
+{svc("03","Flexible workforce sourcing","Part-time, remote, hybrid, contract and temporary talent, including seasonal and project cover.")}
+{svc("04","Verification and reference checks","Identity, right-to-work eligibility, qualification and reference checks, carried out with candidate consent under PDPA.")}
+{svc("05","Role design advice","Help shaping hours, work mode, pay bands and job-ad wording so you attract the right applicants.")}
+{svc("06","Onboarding support","Structured check-ins in the first weeks to keep part-time and remote hires engaged and settled.")}
+</div><div class="btn-row"><a class="btn btn-primary" href="for-employers.html">Employer details</a></div></div></section>
 <section><div class="wrap"><div class="head"><span class="eyebrow">Our promise</span><h2>Clear terms on both sides.</h2></div>
 <div class="types">
 {svc("-","Candidates pay nothing","Our consulting and placement is funded by employer clients. No fees, deposits or training charges for candidates.")}
@@ -192,7 +179,11 @@ head("For Talent","You have a lot on your plate. Let us help with one thing.","F
 
 # ---------------- KNOWLEDGE HUB
 posts=[
-("scam","Scams","article-job-scams.html","Seven signs a work-from-home offer is a scam","Fake tasks, upfront fees and messaging-app interviews. Learn the pattern and what to do if you engaged.","6 min",True),
+("life","Life & Money","article-rising-costs.html","When the rent goes up and your pay does not","Many households feel squeezed by Singapore living costs. Here is how flexible work can help, and how to choose it wisely.","5 min",True),
+("scam","Scams","article-job-scams.html","Seven signs a work-from-home offer is a scam","Fake tasks, upfront fees and messaging-app interviews. Learn the pattern and what to do if you engaged.","6 min",False),
+("life","Life & Money","article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Working around school runs and caring duties is a real trade-off. Options to explore before you decide.","5 min",False),
+("life","Life & Money","article-restart.html","Starting again after a break, retrenchment or illness","Gaps are more common than you think. How to talk about them and take the first small step.","5 min",False),
+("life","Life & Money","#","Is the commute costing you more than you think?","Time and money add up. How remote and hybrid roles change the picture.","4 min",False),
 ("basics","Basics","article-work-modes.html","Part-time, remote, hybrid, freelance: what each really means","The words in a job ad describe different things: hours, place and employment status.","5 min",False),
 ("rights","Rights","#","Asking for flexible work: how requests are handled","An overview of the national guidelines on formal flexible work arrangement requests.","5 min",False),
 ("rights","Rights","#","Part-time employees and CPF: the basics","When CPF contributions apply and how to read your payslip.","4 min",False),
@@ -206,10 +197,11 @@ for cat,label,href,t,d,m,feat in posts:
     link = f'<a href="{href}">{t}</a>' if href!="#" else f'<a href="#" aria-disabled="true">{t}</a>'
     cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}"><div><div class="meta"><span class="cat">{label}</span><span>{m} read</span>{"<span>Coming soon</span>" if href=="#" else ""}</div><h3>{link}</h3><p>{d}</p></div>{"<div style=\"align-self:end\"><a class=\"btn btn-warm\" href=\""+href+"\">Read now</a></div>" if feat else ""}</article>'
 page("knowledge-hub.html","Knowledge Hub | SG Safer","Blog-style guides on part-time, remote, hybrid and freelance work in Singapore.",
-head("Knowledge Hub","Guides on flexible work and hiring in Singapore.","Short, sourced articles. Two are published; the rest are outlined and coming soon.")+f'''
+head("Knowledge Hub","Real-life reads on work, money and family in Singapore.","Warm, plain-English guides on the pressures that push people towards flexible work, and how to handle them.")+f'''
 <section><div class="wrap">
 <div class="filters" role="group" aria-label="Filter articles">
 <button class="chip" data-filter="all" aria-pressed="true">All</button>
+<button class="chip" data-filter="life" aria-pressed="false">Life &amp; Money</button>
 <button class="chip" data-filter="scam" aria-pressed="false">Scams</button>
 <button class="chip" data-filter="basics" aria-pressed="false">Basics</button>
 <button class="chip" data-filter="rights" aria-pressed="false">Rights</button>
@@ -241,6 +233,31 @@ article("article-work-modes.html","Part-time, remote, hybrid, freelance: what ea
 <h2>Status: employee, contractor, platform worker</h2><p>Employees have a contract of service. Freelancers and contractors have a contract for services and arrange their own CPF and taxes. Platform workers, such as ride-hail and delivery workers, have their own framework under the Platform Workers Act.</p>
 <div class="callout"><p>Questions to ask any employer: Is this an employment contract? What are my weekly hours? How is pay calculated? Is CPF payable? What is the notice period?</p></div>
 <p>Unsure about a term? Search our <a href="glossary.html">glossary</a>.</p>''')
+
+
+article("article-rising-costs.html","When the rent goes up and your pay does not","How flexible work can ease cost-of-living pressure in Singapore.","Life & Money",'''
+<p class="lede">If every month feels tighter than the last, you are not imagining it, and you are not alone. Housing, groceries, transport and family costs weigh on many households here.</p>
+<h2>Why a second income can help</h2><p>You may not be able to change your rent, but you may be able to change your income. Part-time, remote or contract work can add to what you earn without demanding a rigid full-time schedule.</p>
+<h2>Choose the arrangement that suits your budget</h2><ul><li><strong>Part-time:</strong> predictable hours, usually as an employee with a contract.</li><li><strong>Remote or hybrid:</strong> fewer commuting hours and costs.</li><li><strong>Freelance or contract:</strong> can pay more per hour but less predictable, and you handle your own CPF and tax.</li></ul>
+<h2>Look at the whole picture</h2><p>Compare the take-home pay against the extra costs: transport, meals out and childcare. Ask how pay is calculated and how often you are paid.</p>
+<div class="callout"><p>If money is very tight, also explore government support. SupportGoWhere (supportgowhere.gov.sg) lists schemes you may qualify for. Beware of anyone promising fast money for an upfront fee.</p></div>
+<p>Want to talk it through? <a href="contact.html">Book a free chat</a> with a consultant.</p>''')
+
+article("article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Weighing work against childcare and caregiving in Singapore.","Life & Money",'''
+<p class="lede">For many parents and caregivers the question is not whether you want to work, but whether the numbers and the hours make sense.</p>
+<h2>Start with your real hours</h2><p>Write down the hours you can truly commit each week, including the school run, meals and appointments. A role that fits those hours is worth more than a higher rate that does not.</p>
+<h2>Ask about flexibility early</h2><ul><li>Are hours fixed or can you choose slots?</li><li>Can some work be done from home?</li><li>What happens if a child or parent falls ill?</li></ul>
+<h2>Do the sums honestly</h2><p>Subtract childcare, transport and other work-related costs from your expected pay. Sometimes fewer hours in a well-matched role beats more hours in a stressful one.</p>
+<h2>Be kind to yourself</h2><p>Choosing to work part-time, or to pause, is not a failure. It is a decision you can revisit as your family changes.</p>
+<p>A consultant can help you find roles that respect your schedule. <a href="contact.html">Say hello</a>.</p>''')
+
+article("article-restart.html","Starting again after a break, retrenchment or illness","Restarting work after a career gap in Singapore.","Life & Money",'''
+<p class="lede">Gaps in a CV are common: caring for family, retrenchment, health, study or simply needing a rest. Employers see them more often than you might fear.</p>
+<h2>Say it simply and honestly</h2><p>One or two calm sentences are enough: what happened, what you learned or did during that time, and what you want next.</p>
+<h2>Restart small</h2><p>Part-time or contract work can rebuild confidence, references and recent experience without the pressure of jumping straight back to full time.</p>
+<h2>Freshen your profile</h2><ul><li>Update your CV with recent skills, courses or volunteering.</li><li>Ask a former colleague for a short reference.</li><li>Look into SkillsFuture options to top up relevant skills.</li></ul>
+<div class="callout"><p>Take the first step at a pace that feels right. There is no deadline on starting again.</p></div>
+<p>We would be glad to help. <a href="for-talent.html">See how our consulting works</a>.</p>''')
 
 # ---------------- SCAM CHECK
 flags=["I was contacted first, on WhatsApp, Telegram, WeChat or SMS, without applying.",
