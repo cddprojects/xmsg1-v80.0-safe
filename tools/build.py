@@ -49,12 +49,12 @@ def page(fname, title, desc, body, extra_head=""):
 <footer class="site-footer"><div class="wrap">
 <div class="foot-grid">
 <div><a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
-<p style="margin-top:1rem;max-width:32ch">Singapore talent resourcing agency for part time jobs, work from home jobs, remote jobs and freelance jobs.</p></div>
-<div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="for-talent.html">For job seekers</a></li><li><a href="for-employers.html">For employers</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+<p style="margin-top:1rem;max-width:32ch">Independent information on part time jobs, work from home jobs, remote jobs and freelance jobs in Singapore.</p></div>
+<div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
 <div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li></ul></div>
 </div>
-<div class="legal"><p>WorkNest SG is a demonstration brand. EA Licence No.: [placeholder, required for a real agency]. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
+<div class="legal"><p>WorkNest SG is an information website only. We are not an employment agency, do not hold an MOM Employment Agency licence, and do not recruit, screen, place or introduce candidates or publish vacancies. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
 <p>&copy; 2026 WorkNest SG. Demo brand for illustration.</p></div>
 </div></footer>
 <script src="js/main.js"></script>
@@ -77,36 +77,49 @@ IC.update({
 def jobtile(cls,ic,t,d,href):
     return f'<a class="jt {cls} reveal" href="{href}"><span class="ic">{IC[ic]}</span><h3>{t}</h3><p>{d}</p><span class="go">Explore &rarr;</span></a>'
 
+IC.update({
+ "laptop":icon('<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 20h20"/>'),
+ "globe":icon('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
+ "wallet":icon('<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/>'),
+ "pen2":icon('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'),
+ "check":icon('<path d="M5 12l4 4 10-10"/>'),
+ "x":icon('<path d="M6 6l12 12M18 6L6 18"/>'),
+ "book":icon('<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 21V5"/>'),
+})
+
+def jobtile(cls,ic,t,d,href):
+    return f'<a class="jt {cls} reveal" href="{href}"><span class="ic">{IC[ic]}</span><h3>{t}</h3><p>{d}</p><span class="go">Read the guide &rarr;</span></a>'
+
 # ---------------- HOME
-page("index.html","Part Time Jobs & Work From Home Jobs in Singapore | WorkNest SG",
-"WorkNest SG is a Singapore talent resourcing agency. Find part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs. Free for job seekers.",f'''
+page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | WorkNest SG",
+"Independent guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs and freelance jobs, plus how to make money at home safely. Information only.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Singapore talent resourcing agency</span>
-<h1>Part-time, work from home &amp; remote jobs <span>in Singapore.</span></h1>
-<p class="lede">We screen you, match you and introduce you to employers hiring flexible talent. Whether you want a part time job, work from home in Singapore, online work or freelance jobs, WorkNest SG is free for job seekers.</p>
-<div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a><a class="btn btn-ghost" href="jobs.html">Browse job types</a></div>
-<ul class="kw" aria-label="Popular searches"><li><a href="jobs.html#part-time">part time job Singapore</a></li><li><a href="jobs.html#work-from-home">work from home jobs</a></li><li><a href="jobs.html#remote">remote job Singapore</a></li><li><a href="jobs.html#online">online jobs</a></li><li><a href="jobs.html#freelance">freelance jobs</a></li><li><a href="jobs.html#make-money-at-home">make money at home</a></li></ul>
+<span class="eyebrow">Singapore flexible work guide</span>
+<h1>Part-time, work from home &amp; remote jobs in Singapore, <span>explained.</span></h1>
+<p class="lede">WorkNest SG is an information website. We explain part time jobs, work from home in Singapore, online work and freelance jobs in plain English, and show you how to spot scams. We do not recruit or place candidates.</p>
+<div class="btn-row"><a class="btn btn-warm" href="jobs.html">Explore job types</a><a class="btn btn-ghost" href="scam-check.html">Check a job offer</a></div>
+<ul class="kw" aria-label="Popular topics"><li><a href="jobs.html#part-time">part time job Singapore</a></li><li><a href="jobs.html#work-from-home">work from home jobs</a></li><li><a href="jobs.html#remote">remote job Singapore</a></li><li><a href="jobs.html#online">online jobs</a></li><li><a href="jobs.html#freelance">freelance jobs</a></li><li><a href="jobs.html#make-money-at-home">make money at home</a></li></ul>
 </div>
 <div class="mock" aria-hidden="true">
-<div class="mc mc-a"><div class="av">A</div><div><b>Sample candidate profile</b><small>Available 20 hrs a week &middot; Singapore</small></div><span class="pill ok">Screened</span></div>
-<div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home</b><small>Customer support, part-time</small></div><span class="pill">Matched</span></div>
-<div class="mc mc-c"><span class="ic">{IC["clock"]}</span><div><b>Video interview</b><small>Thursday, 2:00 pm</small></div><span class="pill warm">Booked</span></div>
-<div class="mc mc-d"><span class="ic">{IC["wallet"]}</span><div><b>Fees for you</b><small>Always $0</small></div></div>
+<div class="mc mc-a"><span class="ic">{IC["check"]}</span><div><b>Before you accept an offer</b><small>Company can be verified</small></div><span class="pill ok">Checklist</span></div>
+<div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home jobs</b><small>What the role really involves</small></div><span class="pill">Guide</span></div>
+<div class="mc mc-c"><span class="ic">{IC["shield"]}</span><div><b>Red flag</b><small>Asked to pay a deposit</small></div><span class="pill warm">Stop</span></div>
+<div class="mc mc-d"><span class="ic">{IC["book"]}</span><div><b>Free to read</b><small>No sign-up, no fees</small></div></div>
 <p class="cap">Illustration only</p>
 </div></div></section>
 
 <div class="strip"><div class="marquee"><ul><li>Part time job</li><li>Work from home jobs</li><li>Remote job Singapore</li><li>Online jobs</li><li>Freelance jobs</li><li>Work from home in Singapore</li><li>Online work from home</li><li>Make money at home</li></ul><ul aria-hidden="true"><li>Part time job</li><li>Work from home jobs</li><li>Remote job Singapore</li><li>Online jobs</li><li>Freelance jobs</li><li>Work from home in Singapore</li><li>Online work from home</li><li>Make money at home</li></ul></div></div>
 
 <section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Jobs we place</span><h2>Flexible jobs in Singapore, from part-time to fully remote.</h2><p class="lede">Pick the kind of work you want. We will tell you honestly what it involves and match you to employers who are hiring.</p></div>
+<div class="head reveal"><span class="eyebrow">Job types explained</span><h2>Flexible jobs in Singapore, from part-time to fully remote.</h2><p class="lede">Know what each kind of work involves, what to ask, and who it suits, before you apply anywhere.</p></div>
 <div class="jgrid">
-{jobtile("c1","clock","Part time job Singapore","Retail, admin, F&amp;B, tutoring, events and more, with hours that fit around your day.","jobs.html#part-time")}
-{jobtile("c2","home","Work from home jobs Singapore","Customer support, data entry, virtual assistants and content roles you can do from home.","jobs.html#work-from-home")}
+{jobtile("c1","clock","Part time job Singapore","Retail, admin, F&amp;B, tutoring and events. How hours, pay and CPF usually work.","jobs.html#part-time")}
+{jobtile("c2","home","Work from home jobs Singapore","Support, data entry, virtual assistant and content roles you can do from home.","jobs.html#work-from-home")}
 {jobtile("c3","globe","Remote job Singapore","Marketing, design, tech and specialist roles with location freedom.","jobs.html#remote")}
-{jobtile("c4","laptop","Online jobs","Online tutoring, moderation, research and e-commerce support, worked entirely online.","jobs.html#online")}
-{jobtile("c5","pen2","Freelance jobs","Project-based design, writing, video and bookkeeping work you can pick up on your terms.","jobs.html#freelance")}
-{jobtile("c6","brief","Contract and temp","Fixed-term cover and seasonal peaks, a smart way back into work.","jobs.html#contract")}
+{jobtile("c4","laptop","Online jobs","Online tutoring, moderation, research and e-commerce support, and how to check they are real.","jobs.html#online")}
+{jobtile("c5","pen2","Freelance jobs","Project-based work, plus what being self-employed means for CPF and tax.","jobs.html#freelance")}
+{jobtile("c6","brief","Contract and temp","Fixed-term cover and seasonal work, and what to ask about contracts.","jobs.html#contract")}
 </div></div></section>
 
 <section class="alt" id="make-money-at-home"><div class="wrap">
@@ -119,19 +132,19 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore | WorkNest 
 </div></section>
 
 <section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">How it works</span><h2>From sign-up to interview in four steps.</h2></div>
+<div class="head reveal"><span class="eyebrow">How to use this site</span><h2>Look for flexible work with your eyes open.</h2></div>
 <ol class="steps">
-<li class="reveal"><b>1</b><h3>Join the talent pool</h3><p>Tell us the work you want, your hours and your experience. Two minutes.</p></li>
-<li class="reveal"><b>2</b><h3>We screen you</h3><p>A short friendly interview and quick checks, so employers can trust your profile.</p></li>
-<li class="reveal"><b>3</b><h3>We match you</h3><p>We put you forward to employers hiring the kind of flexible role you asked for.</p></li>
-<li class="reveal"><b>4</b><h3>You interview</h3><p>We prepare you, schedule the interview and stay in touch after you start.</p></li>
+<li class="reveal"><b>1</b><h3>Learn the job type</h3><p>Read what part-time, work from home, remote or freelance really means.</p></li>
+<li class="reveal"><b>2</b><h3>Check the employer</h3><p>Verify the company, and check any agency on MOM's Employment Agency directory.</p></li>
+<li class="reveal"><b>3</b><h3>Search official channels</h3><p>Use trusted portals such as MyCareersFuture or the employer's own careers page.</p></li>
+<li class="reveal"><b>4</b><h3>Know your rights</h3><p>Understand CPF, contracts and flexible work requests before you sign.</p></li>
 </ol></div></section>
 
 <section class="dark"><div class="wrap split">
-<div><span class="eyebrow">Why job seekers choose us</span><h2>Free for you. Honest with you.</h2>
-<p>We are paid by employers, never by candidates. You see the role, pay range and work mode before any interview, and we introduce you only with your consent.</p>
-<div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a></div></div>
-<div class="stats" style="margin-top:0"><div><b>$0</b>fees for job seekers</div><div><b>6</b>types of flexible work</div><div><b>4</b>simple steps</div></div>
+<div><span class="eyebrow">Why read WorkNest SG</span><h2>Independent and free to read.</h2>
+<p>We are not a recruitment agency and do not hold an MOM Employment Agency licence. That means we do not sell placements, take fees or collect applications. We simply explain things clearly and point you to official sources.</p>
+<div class="btn-row"><a class="btn btn-warm" href="about.html">About us</a></div></div>
+<div class="stats" style="margin-top:0"><div><b>6</b>job types explained</div><div><b>20+</b>glossary terms</div><div><b>1</b>scam checker</div></div>
 </div></section>
 
 <section><div class="wrap">
@@ -142,7 +155,7 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore | WorkNest 
 <article class="post reveal"><div class="meta"><span class="cat">Scams</span><span>6 min read</span></div><h3><a href="article-job-scams.html">Seven signs a work-from-home offer is a scam</a></h3><p>Protect yourself while you look for online work.</p></article>
 </div><div class="btn-row"><a class="btn btn-ghost" href="knowledge-hub.html">See all guides</a></div></div></section>
 
-<section class="cta-band"><div class="wrap"><h2>Ready for work that fits your life?</h2><p class="lede">Join the WorkNest SG talent pool. It is free, friendly and takes two minutes.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="contact.html">Join our talent pool</a><a class="btn btn-ghost-light" href="faq.html">Read the FAQ</a></div></div></section>
+<section class="cta-band"><div class="wrap"><h2>Start with the basics.</h2><p class="lede">Explore the job types, then read the guides before you apply anywhere.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="jobs.html">Explore job types</a><a class="btn btn-ghost-light" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
 ''')
 
 # ---------------- JOBS
@@ -153,9 +166,9 @@ def jobsec(id_,alt,eyebrow,h2,intro,roles,suit,check):
     return f'''<section id="{id_}"{' class="alt"' if alt else ''}><div class="wrap">
 <div class="head"><span class="eyebrow">{eyebrow}</span><h2>{h2}</h2><p class="lede">{intro}</p></div>
 <div class="cols3"><div><h3>Typical roles</h3><ul>{rl}</ul></div><div><h3>Suits you if</h3><ul>{sl}</ul></div><div><h3>Ask before you accept</h3><ul>{cl}</ul></div></div>
-<div class="btn-row"><a class="btn btn-primary" href="contact.html">Join our talent pool</a></div></div></section>'''
+</div></section>'''
 
-jobs_body=head("Job types","Part-time, work from home, remote and freelance jobs in Singapore.","An overview of the flexible work we place people into, and what to check for each. This site is not a job board, so there are no live listings here. Join our talent pool and we will match you.")
+jobs_body=head("Job types","Part-time, work from home, remote and freelance jobs in Singapore.","An overview of common flexible work and what to check for each. WorkNest SG is an information website: we do not list vacancies or recruit. To find openings, see the official channels at the bottom of this page.")
 jobs_body+=jobsec("part-time",False,"Part time job Singapore","Part time jobs in Singapore","Roles with fewer than 35 contracted hours a week, usually as an employee with a written contract.",
  ["Retail and F&amp;B service crew","Admin and office assistants","Tutors and education centre helpers","Event and promotion staff","Customer service associates"],
  ["You study, parent or care for family","You want a second income","You are returning to work gradually"],
@@ -181,66 +194,33 @@ jobs_body+=jobsec("contract",True,"Contract and temp","Contract and temporary jo
  ["You want a defined end date","You are restarting after a break","You want to try a company or industry"],
  ["Contract length and renewal","Whether it is employed via an agency","Leave and CPF","Conversion to permanent"])
 jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="head"><span class="eyebrow">Make money at home</span><h2>Ways to make money at home, honestly.</h2><p class="lede">Legitimate options are ordinary jobs done from home: part-time employment, freelance projects or contract work. If an offer promises easy money for almost no work, treat it as a scam.</p></div>
-<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Use the scam checker</a><a class="btn btn-ghost" href="article-job-scams.html">Read the guide</a></div></div></section>'''
+<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Use the scam checker</a><a class="btn btn-ghost" href="article-job-scams.html">Read the guide</a></div></div></section>
+<section class="alt" id="where-to-look"><div class="wrap"><div class="head"><span class="eyebrow">Where to look</span><h2>Find real openings through official channels.</h2><p class="lede">We do not run listings, so use trusted sources.</p></div>
+<div class="types">
+<div class="type"><span class="n">01</span><h3><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></h3><p>The government job portal, with filters and salary information.</p></div>
+<div class="type"><span class="n">02</span><h3>Employer careers pages</h3><p>Apply directly on the official website of a company you have verified.</p></div>
+<div class="type"><span class="n">03</span><h3><a href="https://www.mom.gov.sg" rel="noopener">MOM Employment Agency directory</a></h3><p>Confirm that any recruiter or agency holds a valid licence before you share details.</p></div>
+</div></div></section>'''
 page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapore | WorkNest SG",
-"Explore part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, work from home in Singapore and freelance jobs. What to expect and what to ask.",jobs_body)
+"Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, work from home in Singapore and freelance jobs: what to expect and what to ask.",jobs_body)
 
 # ---------------- SERVICES
-page("services.html","Services | Talent Resourcing for Flexible Jobs in Singapore | WorkNest SG","Talent resourcing services in Singapore: screening, matching and placement for part time jobs, work from home jobs, remote roles and freelance jobs.",
-head("Services","We screen, match and place flexible talent.","WorkNest SG is a talent resourcing agency. We connect job seekers with employers hiring part-time, work from home, remote, online and freelance talent.")+f'''
+page("services.html","Services | Free Guides on Part Time & Work From Home Jobs | WorkNest SG","Free information services: job type guides, a job scam checker, a recruitment glossary and Knowledge Hub for part time job Singapore, work from home jobs and remote work.",
+head("Services","Free tools and guides for flexible job seekers.","WorkNest SG is an information website. Everything here is free to use, with no sign-up.")+f'''
 <section><div class="wrap">
-<div class="head"><span class="eyebrow">For job seekers</span><h2>Free, from sign-up to start date.</h2></div>
-<div class="types">
-{svc("01","Talent pool registration","Tell us the work you want: part time job, work from home, remote or freelance. We record your skills, hours and pay expectations.")}
-{svc("02","Initial screening","A short, friendly interview plus identity, eligibility and reference checks, so employers can shortlist you with confidence.")}
-{svc("03","Job matching","We match you to employers we work with who are hiring the flexible roles you want, and put you forward with your consent.")}
-{svc("04","Profile and interview readiness","Practical help with your CV and interview preparation, including video interviews, so you are ready to be hired.")}
-{svc("05","Placement follow-up","We check in after you start to help settle hours, expectations and any questions.")}
-</div><div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a><a class="btn btn-ghost" href="jobs.html">See job types</a></div></div></section>
-<section class="alt"><div class="wrap">
-<div class="head"><span class="eyebrow">For employers</span><h2>Flexible talent, already screened.</h2></div>
 <div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Initial screening</h3><p>Structured first-round interviews and checks against your role brief.</p></article>
-<article class="tile reveal"><div class="ic">{IC["split"]}</div><h3>Shortlisting</h3><p>A short list with a written profile per candidate.</p></article>
-<article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>Flexible workforce</h3><p>Part-time, remote, hybrid, freelance and contract talent.</p></article>
-<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Verification</h3><p>Identity, eligibility and reference checks with candidate consent.</p></article>
-</div><div class="btn-row"><a class="btn btn-primary" href="for-employers.html">Employer details</a></div></div></section>
-<section><div class="wrap"><div class="head"><span class="eyebrow">Our promise</span><h2>Clear terms on both sides.</h2></div>
-<div class="types">
-{svc("-","Job seekers pay nothing","No fees, deposits or training charges. We are funded by employer clients.")}
-{svc("-","Consent first","We only share your profile with an employer after you agree.")}
-{svc("-","Transparent","Role, pay range and work mode are shared before any interview.")}
-</div></div></section>''')
-
-# ---------------- FOR EMPLOYERS
-page("for-employers.html","For Employers | Hire Part-Time & Remote Talent in Singapore | WorkNest SG","Hire part-time, work from home, remote and freelance talent in Singapore. We handle screening and shortlisting.",
-head("For Employers","Hire flexible talent without the screening backlog.","We turn a long applicant list into a short, verified shortlist.")+f'''
-<section><div class="wrap split">
-<div class="reveal"><h2>What you get</h2>
-<ul><li>A written role brief agreed before we start</li><li>Structured screening interview for every shortlisted candidate</li><li>Availability, eligibility and reference verification</li><li>A one-page profile and recommendation per candidate</li><li>Interview scheduling with your team</li><li>Follow-up after start date</li></ul></div>
-<div class="reveal"><h2>What we screen</h2><div class="types">
-<div class="type" style="grid-template-columns:1fr"><div><h3>Fit for the schedule</h3><p>Availability, reliability and realistic commitments.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Skills and experience</h3><p>Relevant experience tested with role-specific questions.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Remote readiness</h3><p>Communication, tools, self-management and a suitable work setup.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Eligibility</h3><p>Right to work in Singapore and, where relevant, work pass status.</p></div></div></div></div>
-</div></section>
-<section class="alt"><div class="wrap"><div class="btn-row" style="margin-top:0"><a class="btn btn-primary" href="contact.html">Send us a role brief</a></div></div></section>''')
-
-# ---------------- FOR JOB SEEKERS
-page("for-talent.html","For Job Seekers | Find Part Time & Work From Home Jobs in Singapore | WorkNest SG","How WorkNest SG helps job seekers find a part time job Singapore, work from home jobs, remote roles, online jobs and freelance jobs. Free for candidates.",
-head("For Job Seekers","Get screened once. Get introduced to employers who are hiring.","Free for job seekers. Part-time, work from home, remote, online and freelance.")+f'''
-<section><div class="wrap">
-<div class="types">
-{svc("01","Join the talent pool","Two minutes: your skills, hours and the kind of work you want.")}
-{svc("02","Friendly screening","A short conversation and checks so employers can trust your profile.")}
-{svc("03","We match and introduce","With your consent, we put you forward to employers hiring flexible roles.")}
-{svc("04","Interview and start","We prepare you, schedule the interview and check in once you start.")}
+<article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>Job type guides</h3><p>Plain-English explainers on part time job Singapore, work from home jobs, remote, online and freelance work.</p><a class="more" href="jobs.html">Read the guides &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Job scam checker</h3><p>Tick the red flags in an offer and get guidance on what to do next.</p><a class="more" href="scam-check.html">Check an offer &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Recruitment glossary</h3><p>Decode PMET, CPF, JD, WFH, EP and other Singapore job-ad terms.</p><a class="more" href="glossary.html">Search terms &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Articles on cost of living, caregiving, career breaks, rights at work and scams.</p><a class="more" href="knowledge-hub.html">Read articles &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["check"]}</div><h3>Offer question list</h3><p>The questions to ask about hours, pay, CPF and contract before accepting any job.</p><a class="more" href="jobs.html">See per-job questions &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["globe"]}</div><h3>Signposting</h3><p>Links to official sources: MOM, CPF Board, MyCareersFuture, ScamShield and more.</p><a class="more" href="jobs.html#where-to-look">Where to look &rarr;</a></article>
 </div></div></section>
 <section class="alt"><div class="wrap split">
-<div><span class="eyebrow">Who joins us</span><h2>Whatever season of life you are in.</h2>
-<ul><li>Parents balancing school runs and childcare costs</li><li>Caregivers looking after ageing parents</li><li>Students topping up allowance and fees</li><li>People restarting after a break or retrenchment</li><li>Mature workers wanting fewer hours</li><li>Anyone whose single income is stretched</li></ul></div>
-<div><h2>Looking out for you</h2><p>When money is tight, fake "easy income" offers are especially cruel. We never charge job seekers or ask for bank logins. Learn the signs with our <a href="scam-check.html">scam checker</a> and <a href="glossary.html">glossary</a>.</p>
-<div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a></div></div>
+<div><span class="eyebrow">What we do not do</span><h2>Clear boundaries.</h2>
+<ul><li>We are not an employment agency and hold no MOM Employment Agency licence.</li><li>We do not recruit, screen, place or introduce candidates.</li><li>We do not publish job vacancies or accept applications.</li><li>We do not charge fees or ask for money, ever.</li><li>We do not give legal or financial advice.</li></ul></div>
+<div><span class="eyebrow">Why it matters</span><h2>Anyone who says otherwise is not us.</h2><p>If someone uses our name to offer you a job, ask for a fee, or request your bank or Singpass details, it is a scam. Report it and contact us.</p>
+<div class="btn-row"><a class="btn btn-primary" href="contact.html">Contact Us</a></div></div>
 </div></section>''')
 
 # ---------------- KNOWLEDGE HUB
@@ -307,7 +287,7 @@ article("article-rising-costs.html","When the rent goes up and your pay does not
 <h2>Choose the arrangement that suits your budget</h2><ul><li><strong>Part-time:</strong> predictable hours, usually as an employee with a contract.</li><li><strong>Remote or hybrid:</strong> fewer commuting hours and costs.</li><li><strong>Freelance or contract:</strong> can pay more per hour but less predictable, and you handle your own CPF and tax.</li></ul>
 <h2>Look at the whole picture</h2><p>Compare the take-home pay against the extra costs: transport, meals out and childcare. Ask how pay is calculated and how often you are paid.</p>
 <div class="callout"><p>If money is very tight, also explore government support. SupportGoWhere (supportgowhere.gov.sg) lists schemes you may qualify for. Beware of anyone promising fast money for an upfront fee.</p></div>
-<p>Want to talk it through? <a href="contact.html">Book a free chat</a> with our team.</p>''')
+<p>Explore flexible options in our <a href="jobs.html">job types guide</a>.</p>''')
 
 article("article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Weighing work against childcare and caregiving in Singapore.","Life & Money",'''
 <p class="lede">For many parents and caregivers the question is not whether you want to work, but whether the numbers and the hours make sense.</p>
@@ -315,7 +295,7 @@ article("article-childcare-caregiving.html","Childcare or caregiving costs eatin
 <h2>Ask about flexibility early</h2><ul><li>Are hours fixed or can you choose slots?</li><li>Can some work be done from home?</li><li>What happens if a child or parent falls ill?</li></ul>
 <h2>Do the sums honestly</h2><p>Subtract childcare, transport and other work-related costs from your expected pay. Sometimes fewer hours in a well-matched role beats more hours in a stressful one.</p>
 <h2>Be kind to yourself</h2><p>Choosing to work part-time, or to pause, is not a failure. It is a decision you can revisit as your family changes.</p>
-<p>Our team can help you find roles that respect your schedule. <a href="contact.html">Say hello</a>.</p>''')
+<p>Explore roles with flexible hours in our <a href="jobs.html">job types guide</a>.</p>''')
 
 article("article-restart.html","Starting again after a break, retrenchment or illness","Restarting work after a career gap in Singapore.","Life & Money",'''
 <p class="lede">Gaps in a CV are common: caring for family, retrenchment, health, study or simply needing a rest. Employers see them more often than you might fear.</p>
@@ -323,7 +303,7 @@ article("article-restart.html","Starting again after a break, retrenchment or il
 <h2>Restart small</h2><p>Part-time or contract work can rebuild confidence, references and recent experience without the pressure of jumping straight back to full time.</p>
 <h2>Freshen your profile</h2><ul><li>Update your CV with recent skills, courses or volunteering.</li><li>Ask a former colleague for a short reference.</li><li>Look into SkillsFuture options to top up relevant skills.</li></ul>
 <div class="callout"><p>Take the first step at a pace that feels right. There is no deadline on starting again.</p></div>
-<p>We would be glad to help. <a href="for-talent.html">See how it works</a>.</p>''')
+<p>See our <a href="jobs.html">job types guide</a> for a gentle place to start.</p>''')
 
 # ---------------- SCAM CHECK
 flags=["I was contacted first, on WhatsApp, Telegram, WeChat or SMS, without applying.",
@@ -379,9 +359,9 @@ head("Glossary","Recruitment keywords, decoded.")+f'''
 <dl class="glossary">{tl}</dl><p id="glossary-empty" hidden>No matches. <a href="contact.html">Ask us to add it.</a></p></div></section>''')
 
 # ---------------- FAQ
-faqs=[("Are you a job board?","No. WorkNest SG is a talent resourcing agency. We screen and match job seekers with employers, rather than publish open listings."),
-("Do job seekers pay you?","No. Our services are paid by employer clients. Be cautious of anyone who asks a job seeker for fees or deposits."),
-("How do I find a part time job in Singapore?","Join our talent pool. We screen your profile, match you to employers hiring part-time roles and introduce you with your consent. You can also check MyCareersFuture."),
+faqs=[("Are you a recruitment agency or job board?","No. WorkNest SG is an information website only. We do not hold an MOM Employment Agency licence, recruit or place candidates, publish vacancies or accept applications."),
+("Do you charge fees?","No. Everything on this site is free. If anyone using our name asks you for money, it is a scam."),
+("How do I find a part time job in Singapore?","Search official channels such as MyCareersFuture and employers' own careers pages. Our part-time guide lists what to ask before you accept."),
 ("Are there genuine work from home jobs in Singapore?","Yes. Customer support, admin, content and many specialist roles can be done from home. Genuine employers pay you for defined work and never ask you to pay to start."),
 ("How can I make money at home safely?","Focus on ordinary jobs done from home: part-time employment, freelance projects or contract work. Avoid offers that promise high pay for tasks like liking or rating."),
 ("What is the difference between remote and work from home?","Work from home usually means working from home on agreed hours. Remote means location flexibility, sometimes with an overseas team. Ask which applies."),
@@ -389,46 +369,46 @@ faqs=[("Are you a job board?","No. WorkNest SG is a talent resourcing agency. We
 ("What are freelance jobs and do they include CPF?","Freelancers are self-employed. You choose your clients and manage your own CPF contributions, tax and admin. See CPF Board and IRAS for current rules."),
 ("Is a part-time job entitled to CPF?","Employees, including part-timers, generally receive CPF contributions subject to age, residency and pay. See CPF Board for current rates."),
 ("Can I request remote or hybrid work from my employer?","Employees can submit a formal flexible work arrangement request and employers are expected to consider it fairly under national guidelines. Approval is not guaranteed."),
-("What does initial screening include?","A short interview, skills and availability checks, and with your consent, eligibility and reference verification.")]
+("How do I check that a recruiter is licensed?","Search the Employment Agency directory on the MOM website before sharing personal details.")]
 fl="".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faqs)
 page("faq.html","FAQ | Part Time & Work From Home Jobs in Singapore | WorkNest SG","Answers about part time job Singapore, work from home jobs, remote jobs, online work, freelance jobs and how to make money at home safely.",
 head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px">{fl}<p style="margin-top:2rem">Still stuck? <a href="contact.html">Contact us</a>.</p></div></section>')
 
 # ---------------- ABOUT
-page("about.html","About Us | WorkNest SG","WorkNest SG is a Singapore talent resourcing agency connecting job seekers with part-time, work from home, remote and freelance roles.",
-head("About Us","We believe work should make life easier, not harder.")+f'''
+page("about.html","About Us | WorkNest SG","WorkNest SG is an independent information website about part-time, work from home, remote and freelance work in Singapore.",
+head("About Us","Clear information for people looking for flexible work.")+f'''
 <section><div class="wrap split">
-<div class="reveal"><h2>Why we exist</h2><p>Living in Singapore is expensive, and many capable people are stretched between bills, family and work that will not bend. Many employers, meanwhile, want flexible talent but have no time to screen applicants properly.</p>
-<p>WorkNest SG is a talent resourcing agency built for the middle. We screen job seekers, match them with employers hiring part-time, work from home, remote, online and freelance talent, and introduce them properly.</p></div>
-<div class="reveal"><h2>How we work</h2><div class="types">
-<div class="type" style="grid-template-columns:1fr"><div><h3>Structured, not scattershot</h3><p>Every candidate goes through the same criteria, so introductions are fair.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Job seeker first</h3><p>Free for job seekers, consent before introductions, no pressure.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Safe by default</h3><p>Verified employers, screened talent and open advice on avoiding job scams.</p></div></div></div></div>
+<div class="reveal"><h2>Why we exist</h2><p>Living in Singapore is expensive, and many people are stretched between bills, family and work that will not bend. Searching for a part time job or work from home in Singapore also means wading through confusing terms and, too often, scams.</p>
+<p>WorkNest SG explains it plainly. We cover part-time, work from home, remote, online and freelance work, what to ask, what your rights are and how to stay safe, always pointing to the official source.</p></div>
+<div class="reveal"><h2>Our principles</h2><div class="types">
+<div class="type" style="grid-template-columns:1fr"><div><h3>Information only</h3><p>We do not recruit, place or advise on individual cases.</p></div></div>
+<div class="type" style="grid-template-columns:1fr"><div><h3>Official sources first</h3><p>We link to MOM, CPF Board, MyCareersFuture and ScamShield so you can verify.</p></div></div>
+<div class="type" style="grid-template-columns:1fr"><div><h3>Free and safe</h3><p>No fees, no sign-ups, and no collection of your sensitive details.</p></div></div></div></div>
 </div></section>
-<section class="dark"><div class="wrap"><span class="eyebrow">At a glance</span><h2>What we offer</h2>
-<div class="stats"><div><b>6</b>types of flexible work</div><div><b>4</b>simple steps</div><div><b>$0</b>fees for job seekers</div><div><b>SG</b>focused</div></div></div></section>
-<section><div class="wrap"><p class="notice" style="max-width:70ch">WorkNest SG is a demonstration brand. Figures shown are placeholders. A real agency in Singapore must hold a valid Employment Agency licence from MOM and display its licence number.</p><div class="btn-row"><a class="btn btn-primary" href="contact.html">Get in touch</a></div></div></section>''')
+<section class="dark"><div class="wrap"><span class="eyebrow">At a glance</span><h2>What you will find</h2>
+<div class="stats"><div><b>6</b>job types explained</div><div><b>20+</b>glossary terms</div><div><b>5</b>articles and growing</div><div><b>SG</b>focused</div></div></div></section>
+<section><div class="wrap"><p class="notice" style="max-width:70ch">WorkNest SG is an information website. It is not an employment agency, does not hold an MOM Employment Agency licence, and does not recruit or place candidates. Content is general information, not legal, financial or employment advice.</p><div class="btn-row"><a class="btn btn-primary" href="contact.html">Get in touch</a></div></div></section>''')
 
 # ---------------- CONTACT
-page("contact.html","Contact Us | Join Our Talent Pool | WorkNest SG","Join the WorkNest SG talent pool or send an employer role brief. Part time job, work from home jobs and remote job Singapore.",
-head("Contact Us","Join our talent pool, or say hello.","Tell us the work you want, or the role you need to fill. Please do not include NRIC, bank or Singpass details.")+f'''
+page("contact.html","Contact Us | WorkNest SG","Contact WorkNest SG with a question, correction or topic suggestion about part time job Singapore, work from home jobs and remote work.",
+head("Contact Us","Questions, corrections or topic ideas?","We are an information website and cannot find or place jobs, but we read every message. Please do not include NRIC, bank or Singpass details.")+f'''
 <section><div class="wrap split">
 <div>
 <form id="contact-form" class="form" novalidate>
 <div class="field"><label for="name">Name</label><input id="name" required autocomplete="name"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
-<div class="field"><label for="topic">I am looking for</label><select id="topic"><option>Part time job</option><option>Work from home job</option><option>Remote job</option><option>Online job</option><option>Freelance work</option><option>I am an employer hiring</option></select></div>
-<div class="field"><label for="msg">Tell us a little</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
+<div class="field"><label for="topic">Topic</label><select id="topic"><option>A question about part time jobs</option><option>A question about work from home or remote jobs</option><option>Online jobs or freelance work</option><option>I think I saw a scam</option><option>Suggest an article</option><option>Correction or feedback</option></select></div>
+<div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send</button>
 <p class="notice">Demo form: no data is sent anywhere. Connect a backend or form service before launch.</p>
 </form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>In a live site we would reply within one or two working days.</p></div>
+<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>In a live site we would reply within a few working days.</p></div>
 </div>
 <div><h2>Other ways</h2><ul class="contact-list">
 <li><b>Email</b>hello@worknest.example</li>
 <li><b>Hours</b>Mon to Fri, 9am to 6pm (SGT)</li>
-<li><b>Job seekers</b>Always free. We will never ask you for money.</li>
-<li><b>Employers</b>Send a role brief with hours, work mode, pay range and start date.</li></ul></div>
+<li><b>Looking for a job?</b>We do not list vacancies. Try <a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a>.</li>
+<li><b>Suspected scam?</b>Call the ScamShield helpline on 1799 and report to the Police.</li></ul></div>
 </div></section>''')
 
 # ---------------- PRIVACY
