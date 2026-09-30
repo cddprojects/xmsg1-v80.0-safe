@@ -41,7 +41,7 @@ def page(fname, title, desc, body, extra_head=""):
 <header class="site-header"><div class="wrap nav">
 <a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
 <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
-<ul id="nav-list">{nav}<li><a class="cta" href="join.html"{cur}>Join our community</a></li></ul>
+<ul id="nav-list">{nav}</ul>
 </div></header>
 <main id="main">
 {body}
@@ -86,28 +86,20 @@ page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Gu
 "Need a side income? Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, online work from home, freelance jobs and how to make money at home.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Side income, made simple</span>
+<span class="eyebrow">Information for job seekers in Singapore</span>
 <h1>Part time job or work from home in Singapore? <span>Explore side income options that fit.</span></h1>
 <p class="lede">Rising costs make one income feel tight. We share clear information on part time jobs, work from home jobs, remote jobs, online jobs and freelance jobs in Singapore, so you can choose the way to make money at home that suits your hours.</p>
-<div class="btn-row"><a class="btn btn-warm" href="#fit">Find your fit</a><a class="btn btn-ghost" href="jobs.html">Browse job types</a></div>
+<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Read the Knowledge Hub</a></div>
 </div>
-<div class="mock" aria-hidden="true">
-<div class="mc mc-a"><span class="ic">{IC["clock"]}</span><div><b>Part time job Singapore</b><small>Under 35 hours a week</small></div><span class="pill ok">Guide</span></div>
-<div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home jobs</b><small>Support, admin, content</small></div><span class="pill">Guide</span></div>
-<div class="mc mc-c"><span class="ic">{IC["pen2"]}</span><div><b>Freelance jobs</b><small>Paid per project</small></div><span class="pill warm">Guide</span></div>
-<div class="mc mc-d"><span class="ic">{IC["book"]}</span><div><b>Free to read</b><small>No sign-up</small></div></div>
-<p class="cap">Illustration only</p>
-</div></div></section>
+<aside class="glance" aria-label="Job types at a glance"><h2>At a glance</h2>
+<a href="part-time-jobs-singapore.html"><b>Part time job</b><span>Under 35 hrs a week</span></a>
+<a href="work-from-home-jobs-singapore.html"><b>Work from home</b><span>Agreed hours, at home</span></a>
+<a href="remote-jobs-singapore.html"><b>Remote</b><span>Location flexible</span></a>
+<a href="online-jobs-singapore.html"><b>Online jobs</b><span>Flexible sessions</span></a>
+<a href="freelance-jobs-singapore.html"><b>Freelance</b><span>Paid per project</span></a>
+</aside></div></section>
 
-<div class="strip"><div class="marquee"><ul>{kwul}</ul><ul aria-hidden="true">{kwul}</ul></div></div>
 
-<section id="fit"><div class="wrap fit-wrap">
-<div class="reveal"><span class="eyebrow">Find your fit</span><h2>Which side income suits you?</h2><p class="lede">Answer two quick questions. Nothing is saved or sent.</p></div>
-<form class="fit reveal" id="fit-form" aria-label="Find your fit">
-<div class="field"><label for="fit-setup">Where do you want to work?</label><select id="fit-setup"><option value="">Choose one</option><option value="home">From home</option><option value="any">Anywhere, online</option><option value="site">Happy to go to a workplace</option></select></div>
-<div class="field"><label for="fit-skill">What are you best at?</label><select id="fit-skill"><option value="">Choose one</option><option value="people">Talking to people, admin and organising</option><option value="creative">Creative work: writing, design, video</option><option value="special">A specialist or technical skill</option><option value="none">Not sure yet</option></select></div>
-<div id="fit-out" class="fit-out" role="status" aria-live="polite" hidden></div>
-</form></div></section>
 
 <section class="alt"><div class="wrap split">
 <div class="reveal"><span class="eyebrow">Why we are here</span><h2>One income does not always stretch far enough.</h2></div>
@@ -136,7 +128,15 @@ page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Gu
 <article class="post reveal"><div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each means</a></h3><p>Understand the words in a job ad.</p></article>
 </div></div></section>
 
-<section class="cta-band"><div class="wrap"><h2>Interested? Join our community.</h2><p class="lede">Get new guides on part time jobs, work from home jobs and freelance work in Singapore. Free, and you can leave any time.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="join.html">Join our community</a><a class="btn btn-ghost-light" href="jobs.html">Browse job types</a></div></div></section>
+<section id="contact-us"><div class="wrap split">
+<div><span class="eyebrow">Contact</span><h2>Questions or topic suggestions?</h2><p class="lede">Send us a message. We read everything, and use your feedback to decide what to cover next.</p></div>
+<div><form id="contact-form" class="form" novalidate>
+<div class="field"><label for="name">Name</label><input id="name" required autocomplete="name"><div class="err" aria-live="polite"></div></div>
+<div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
+<div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
+<button class="btn btn-primary" type="submit">Send</button></form>
+<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>We will reply to your message.</p></div></div>
+</div></section>
 ''')
 
 # ---------------- JOBS
@@ -197,19 +197,16 @@ page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapor
 
 # ---------------- SERVICES
 page("services.html","Services | Guides & Tools for Part Time and Work From Home Jobs | WorkNest SG","Free guides and tools for job seekers: part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs, plus a weekly hours calculator.",
-head("Services","Everything you need to choose a second income.","Free guides and tools for job seekers in Singapore, with no sign-up.")+f'''
+head("Services","What you will find on WorkNest SG.","Free guides and tools on flexible work in Singapore, with no sign-up.")+f'''
 <section><div class="wrap">
 <div class="tiles">
 <article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>In-depth job type guides</h3><p>Roles, a sample week, how to start, and what to check on contracts, pay and CPF for six kinds of flexible work.</p><a class="more" href="jobs.html">Browse job types &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["split"]}</div><h3>Find your fit</h3><p>Two quick questions point you to the job types that match where and how you want to work.</p><a class="more" href="index.html#fit">Try it &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["wallet"]}</div><h3>Hours calculator</h3><p>Enter the extra income you want and an hourly rate to see roughly how many hours a week that needs.</p><a class="more" href="make-money-at-home-singapore.html">Work it out &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Articles on your rights, CPF, job ads, CVs and the cost of living.</p><a class="more" href="knowledge-hub.html">Read articles &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Recruitment glossary</h3><p>PMET, CPF, JD, WFH, EP and more, in plain English.</p><a class="more" href="glossary.html">Search terms &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["globe"]}</div><h3>Where to look</h3><p>Links to official sources for current openings and your rights.</p><a class="more" href="jobs.html#where-to-look">See sources &rarr;</a></article>
 </div></div></section>
 <section class="alt"><div class="wrap split">
-<div><span class="eyebrow">Stay in the loop</span><h2>Interested? Join our community.</h2><p>Get new guides in your inbox as we publish them. It is free and you can leave any time.</p>
-<div class="btn-row"><a class="btn btn-warm" href="join.html">Join our community</a></div></div>
 <div><span class="eyebrow">Get in touch</span><h2>Questions or ideas?</h2><p>Tell us what you would like covered, or point out anything we should correct.</p>
 <div class="btn-row"><a class="btn btn-primary" href="contact.html">Contact Us</a></div></div>
 </div></section>''')
@@ -218,9 +215,9 @@ head("Services","Everything you need to choose a second income.","Free guides an
 posts=[
 ("life","Life & Money","article-rising-costs.html","When the rent goes up and your pay does not","Many households feel squeezed by Singapore living costs. Here is how flexible work can help, and how to choose it wisely.","5 min",True),
 ("basics","Basics","article-work-modes.html","Part-time, remote, hybrid, freelance: what each really means","The words in a job ad describe different things: hours, place and employment status.","5 min",False),
-("basics","Basics","article-read-job-ad.html","How to read a Singapore job ad like an insider","Decode pay, hours, probation and notice period.","4 min",False),
+("basics","Basics","article-read-job-ad.html","How to read a job ad for flexible roles","The details that decide whether a role fits.","4 min",False),
 ("rights","Rights","article-flexible-work-request.html","How to ask your employer for flexible work","A step-by-step guide to a formal request.","5 min",False),
-("rights","Rights","article-part-time-cpf.html","Part-time work and CPF: what to check on your payslip","Who gets CPF contributions and how to read your payslip.","4 min",False),
+("rights","Rights","article-part-time-cpf.html","Part-time work and CPF: check your payslip","Is CPF actually being paid, and correctly?","4 min",False),
 ("career","Career","article-remote-cv.html","A CV for remote and work from home roles","Show you can deliver independently.","4 min",False),
 ("life","Life & Money","article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Options to explore before you decide.","5 min",False),
 ("life","Life & Money","article-restart.html","Starting again after a break, retrenchment or illness","How to talk about gaps and take the first step.","5 min",False),
@@ -346,30 +343,26 @@ head("Scam Check","Does this offer look off?","Tick anything that matches. Nothi
 </div></section>''')
 
 # ---------------- GLOSSARY
-terms=[("Part-time employee","Employee contracted for fewer than 35 hours per week in Singapore."),
-("WFH","Work from home. Sometimes written as remote or home-based."),
-("Hybrid","A schedule that splits time between office and remote work."),
+terms=[("Base pay","The fixed part of your pay, before commission, bonuses or allowances."),
+("Commission-only","Pay depends entirely on results, with no guaranteed base."),
+("Ad hoc","One-off or irregular work, with no commitment on either side."),
+("Retainer","A regular fee paid to a freelancer to stay available for an agreed amount of work."),
 ("Flexi-hours","Flexible start and end times, often around core hours."),
 ("FWA","Flexible work arrangement: flexi-time, flexi-place or flexi-load."),
-("Freelancer","Self-employed person paid per project or task, responsible for own CPF and tax."),
-("Platform worker","Person who gets work via an online platform, such as ride-hail or delivery, covered by the Platform Workers Act."),
+("Core hours","Hours when you must be available, even in flexible or remote roles."),
+("Hybrid","A schedule that splits time between office and remote work."),
+("Freelancer","Self-employed person paid per project or task, responsible for own tax and contributions."),
+("Platform worker","Person who gets work via an online platform, such as ride-hail or delivery."),
 ("Gig","A short-term, task-based job."),
-("CPF","Central Provident Fund. A mandatory savings scheme for employed citizens and PRs."),
-("PMET","Professionals, Managers, Executives and Technicians."),
-("EP / S Pass","Employment Pass and S Pass. Work passes for foreign professionals and mid-skilled workers."),
-("SkillsFuture","National movement offering skills training credit and courses."),
-("WSG","Workforce Singapore, an agency supporting jobseekers and career transitions."),
-("MyCareersFuture","Government job portal operated by GovTech and WSG."),
-("JD","Job description, listing duties and requirements."),
-("Notice period","Time you or your employer must give before ending employment."),
+("Contract / temp","Fixed-term employment, sometimes through an agency."),
 ("Probation","Initial trial period at the start of employment."),
-("Contract / temp","Fixed-term employment, often through an agency."),
-("AWS / 13th month","Annual wage supplement; often a bonus month paid at year end."),
-("Money mule","Person whose bank account is used to move scam proceeds, often unknowingly. It is a criminal offence."),
-("ScamShield","Government app and 1799 helpline that filters scam messages and provides advice.")]
+("Notice period","Time you or your employer must give before ending employment."),
+("Training bond","An agreement to stay for a set period after training, or repay costs."),
+("PMET","Professionals, Managers, Executives and Technicians."),
+("Money mule","Person whose bank account is used to move scam proceeds, often unknowingly. It is a criminal offence.")]
 tl="".join(f'<div class="term"><dt>{a}</dt><dd>{b}</dd></div>' for a,b in terms)
 page("glossary.html","Singapore Recruitment Glossary | WorkNest SG","Definitions of Singapore recruitment, part-time, remote and hybrid work keywords.",
-head("Glossary","Recruitment keywords, decoded.")+f'''
+head("Glossary","Job-ad terms, explained.")+f'''
 <section><div class="wrap" style="max-width:860px">
 <label for="glossary-search" class="eyebrow">Search terms</label>
 <input id="glossary-search" class="search" type="search" placeholder="Try &quot;CPF&quot; or &quot;hybrid&quot;" autocomplete="off">
@@ -384,7 +377,6 @@ faqs=[("Does WorkNest SG list jobs?","We share information about job types in Si
 ("What is the difference between remote and work from home?","Work from home usually means working from home on agreed hours. Remote means location flexibility, sometimes with an overseas team. Ask which applies."),
 ("Are online jobs real?","Many are, such as online tutoring, moderation or support. Check who pays you, get terms in writing and never pay a fee to get started."),
 ("What are freelance jobs and do they include CPF?","Freelancers are self-employed. You choose your clients and manage your own CPF contributions, tax and admin. See CPF Board and IRAS for current rules."),
-("Is a part-time job entitled to CPF?","Employees, including part-timers, generally receive CPF contributions subject to age, residency and pay. See CPF Board for current rates."),
 ("Can I request remote or hybrid work from my employer?","Employees can submit a formal flexible work arrangement request and employers are expected to consider it fairly under national guidelines. Approval is not guaranteed."),
 ("How do I check that a recruiter is licensed?","Search the Employment Agency directory on the MOM website before sharing personal details.")]
 fl="".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faqs)
@@ -393,7 +385,7 @@ head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px
 
 # ---------------- ABOUT
 page("about.html","About Us | WorkNest SG","WorkNest SG shares practical, sourced information on part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs.",
-head("About Us","Made for people who need a second income and want the facts.")+f'''
+head("About Us","Information on flexible work in Singapore.")+f'''
 <section><div class="wrap split">
 <div class="reveal"><h2>Who this is for</h2><p>If one income feels tight and you are looking at a part time job, work from home in Singapore, online work or freelance jobs, this site is for you.</p>
 <p>You have limited hours, real bills and no time to sift through jargon. So each guide tells you what the work involves, what it usually looks like week to week, and what to check before you agree to anything.</p></div>
@@ -403,7 +395,7 @@ head("About Us","Made for people who need a second income and want the facts.")+
 <div class="type" style="grid-template-columns:1fr"><div><h3>Reviewed and dated</h3><p>Guides show when they were last reviewed, so you know how current they are.</p></div></div></div></div>
 </div></section>
 <section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">What you will find</span><h2>Six job types, five guides and growing.</h2></div>
-<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a><a class="btn btn-warm" href="join.html">Join our community</a></div></div></section>
+<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
 <section><div class="wrap"><p class="notice" style="max-width:70ch">WorkNest SG shares general information about jobs in Singapore. It is not legal, financial or employment advice. Find us at 22 Orchard Road, #03-01, Singapore 238885.</p></div></section>''')
 
 # ---------------- CONTACT
@@ -431,24 +423,6 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 
 
 
-# ---------------- JOIN
-page("join.html","Join Our Community | Part Time & Work From Home Job Guides | WorkNest SG","Join the WorkNest SG community for new guides on part time job Singapore, work from home jobs, remote jobs, online jobs and freelance jobs.",
-head("Join our community","Get new guides on flexible work in Singapore.","Free. No spam. Leave any time.")+f'''
-<section><div class="wrap split">
-<div>
-<form id="contact-form" class="form" novalidate>
-<div class="field"><label for="name">First name (optional)</label><input id="name" autocomplete="given-name"></div>
-<div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
-<div class="field"><label for="topic">Most interested in</label><select id="topic"><option>Part time jobs</option><option>Work from home jobs</option><option>Remote jobs</option><option>Online jobs</option><option>Freelance jobs</option><option>All of them</option></select></div>
-<button class="btn btn-warm" type="submit">Join our community</button>
-<p class="notice">By joining you agree to our <a href="privacy.html">privacy notice</a>. Demo form: no data is sent anywhere until a real email service is connected.</p>
-</form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks for joining.</h3><p>In a live site you would receive a confirmation email.</p></div>
-</div>
-<div><h2>What you will get</h2><ul class="qlist"><li>New guides on part time job Singapore, work from home jobs and freelance work</li><li>Plain-English updates on rules that affect you, such as CPF and flexible work</li><li>Nothing sold, and no fees, ever</li></ul>
-<p class="notice">Our address: 22 Orchard Road, #03-01, Singapore 238885. Email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> to unsubscribe or ask a question.</p></div>
-</div></section>''')
-
 # ---------------- DISCLAIMER
 page("disclaimer.html","Disclaimer | WorkNest SG","Disclaimer for WorkNest SG, an information website about part time, work from home, remote and freelance work in Singapore.",
 head("Disclaimer","Disclaimer")+'''
@@ -465,8 +439,8 @@ page("privacy.html","Privacy & PDPA | WorkNest SG","How WorkNest SG handles pers
 head("Privacy &amp; PDPA","Privacy notice")+'''
 <section><div class="wrap article">
 <p>This is a template. Have it reviewed before launch.</p>
-<h2>What we collect</h2><p>Only what you submit through our contact or community forms: name, email and your message or topic. The find-your-fit tool, hours calculator and scam checker run in your browser and store nothing.</p>
-<h2>How we use it</h2><p>To reply to your enquiry and, if you join our community, to send you guides by email. You can unsubscribe at any time. We do not sell personal data.</p>
+<h2>What we collect</h2><p>Only what you submit through our contact form: name, email and your message. The hours calculator and scam checker run in your browser and store nothing.</p>
+<h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
 <h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at support@worknestsg.com.</p>
 <h2>Cookies</h2><p>This site sets no tracking cookies. Fonts are loaded from Google Fonts.</p></div></section>''')
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())

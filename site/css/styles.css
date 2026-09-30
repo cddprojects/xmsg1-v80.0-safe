@@ -297,3 +297,10 @@ section[id]{scroll-margin-top:90px}
 .rel b{display:block;font-family:var(--f-head);font-size:1.1rem}.rel span{color:var(--ink-2);font-size:.92rem}
 .cmp td a{text-decoration:none}
 .nav ul a{padding:.5rem .65rem;font-size:.95rem}
+
+.glance{background:#fff;border:1px solid var(--line);border-radius:24px;padding:1.4rem 1.6rem;box-shadow:0 24px 40px -30px oklch(30% .06 178/.5)}
+.glance h2{font:650 .85rem var(--f-body);text-transform:uppercase;letter-spacing:.12em;color:var(--coral-ink);margin-bottom:.4rem}
+.glance a{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.glance a:first-of-type{border-top:0}
+.glance b{font-family:var(--f-head);font-size:1.1rem}.glance span{color:var(--ink-2);font-size:.95rem}
+.glance a:hover b{color:var(--pine)}

@@ -45,28 +45,6 @@
     if(ok){f.hidden=true;document.getElementById('form-ok').hidden=false;document.getElementById('form-ok').focus();}
   });}
 
-  var ff=document.getElementById('fit-form');
-  if(ff){
-    var out=document.getElementById('fit-out'),setup=document.getElementById('fit-setup'),skill=document.getElementById('fit-skill');
-    var L={pt:['Part time job Singapore','part-time-jobs-singapore.html'],wfh:['Work from home jobs Singapore','work-from-home-jobs-singapore.html'],
-      rem:['Remote job Singapore','remote-jobs-singapore.html'],on:['Online jobs and online work from home','online-jobs-singapore.html'],
-      fr:['Freelance jobs','freelance-jobs-singapore.html'],mm:['Make money at home: the main routes','make-money-at-home-singapore.html']};
-    var pick=function(){
-      if(!setup.value||!skill.value){out.hidden=true;return;}
-      var r=[];
-      if(setup.value==='site')r.push('pt');
-      if(setup.value==='home')r.push('wfh');
-      if(setup.value==='any')r.push('on');
-      if(skill.value==='people')r.push(setup.value==='site'?'wfh':'pt');
-      if(skill.value==='creative')r.push('fr');
-      if(skill.value==='special')r.push('rem','fr');
-      if(skill.value==='none')r.push('mm');
-      var seen={},list=r.filter(function(k){if(seen[k])return false;seen[k]=1;return true;}).slice(0,3);
-      out.innerHTML='<b>Good places to start</b><ul>'+list.map(function(k){return '<li><a href="'+L[k][1]+'">'+L[k][0]+' &rarr;</a></li>';}).join('')+'</ul>';
-      out.hidden=false;};
-    setup.addEventListener('change',pick);skill.addEventListener('change',pick);
-  }
-
   var cf=document.getElementById('calc');
   if(cf){
     var t=document.getElementById('c-target'),r=document.getElementById('c-rate'),o=document.getElementById('c-out');
