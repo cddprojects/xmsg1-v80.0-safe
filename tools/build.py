@@ -104,7 +104,7 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | W
 <div class="mock" aria-hidden="true">
 <div class="mc mc-a"><span class="ic">{IC["check"]}</span><div><b>Before you accept an offer</b><small>Company can be verified</small></div><span class="pill ok">Checklist</span></div>
 <div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home jobs</b><small>What the role really involves</small></div><span class="pill">Guide</span></div>
-<div class="mc mc-c"><span class="ic">{IC["shield"]}</span><div><b>Red flag</b><small>Asked to pay a deposit</small></div><span class="pill warm">Stop</span></div>
+<div class="mc mc-c"><span class="ic">{IC["wallet"]}</span><div><b>Pay and hours</b><small>Clear before you start</small></div><span class="pill warm">Ask</span></div>
 <div class="mc mc-d"><span class="ic">{IC["book"]}</span><div><b>Free to read</b><small>No sign-up, no fees</small></div></div>
 <p class="cap">Illustration only</p>
 </div></div></section>
@@ -123,16 +123,15 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | W
 </div></div></section>
 
 <section class="alt" id="make-money-at-home"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Make money at home, the safe way</span><h2>Online work from home is real. So are the scams.</h2><p class="lede">Searching "make money at home" brings up genuine employers and fake offers side by side. Here is how to tell them apart.</p></div>
-<div class="vs">
-<div class="vs-col good reveal"><h3><span class="ic">{IC["check"]}</span>Genuine work from home job</h3><ul><li>You apply, or a named recruiter contacts you</li><li>Pay, hours and duties are clear before you start</li><li>A real company you can verify</li><li>Interviews by video or phone, a written offer</li><li>You are never asked to pay to get the job</li></ul></div>
-<div class="vs-col bad reveal"><h3><span class="ic">{IC["x"]}</span>Likely scam</h3><ul><li>Unsolicited WhatsApp or Telegram message</li><li>"Earn hundreds a day" for liking or rating</li><li>Deposits, training fees or account top-ups</li><li>Pressure to reply fast and keep it secret</li><li>Requests for Singpass, OTP or bank logins</li></ul></div>
-</div>
-<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Check an offer</a><a class="btn btn-ghost" href="article-job-scams.html">Read: 7 signs of a scam</a></div>
-</div></section>
+<div class="head reveal"><span class="eyebrow">Earn from home</span><h2>Ways to make money at home in Singapore.</h2><p class="lede">Most ways to make money at home are everyday jobs done remotely. Here are the three most common routes.</p></div>
+<div class="tiles">
+<article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Part-time employment</h3><p>A regular job with set hours and a contract, done from home or on-site.</p><a class="more" href="jobs.html#part-time">Part-time jobs &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["pen2"]}</div><h3>Freelance projects</h3><p>Be paid per project for skills like design, writing, editing or bookkeeping.</p><a class="more" href="jobs.html#freelance">Freelance jobs &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>Online work from home</h3><p>Support, tutoring, research and admin delivered online for a set rate.</p><a class="more" href="jobs.html#online">Online jobs &rarr;</a></article>
+</div></div></section>
 
 <section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Finding work</span><h2>Four steps to a safer job search.</h2></div>
+<div class="head reveal"><span class="eyebrow">Finding work</span><h2>Four steps to finding the right job.</h2></div>
 <ol class="steps">
 <li class="reveal"><b>1</b><h3>Learn the job type</h3><p>Read what part-time, work from home, remote or freelance really means.</p></li>
 <li class="reveal"><b>2</b><h3>Check the employer</h3><p>Verify the company, and check any agency on MOM's Employment Agency directory.</p></li>
@@ -144,7 +143,7 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | W
 <div><span class="eyebrow">About WorkNest SG</span><h2>Straight answers about flexible work.</h2>
 <p>We share clear information about each type of job in Singapore, from typical roles and hours to CPF and contracts, and link to official sources so you can check for yourself. Everything is free to read.</p>
 <div class="btn-row"><a class="btn btn-warm" href="about.html">About us</a></div></div>
-<div class="stats" style="margin-top:0"><div><b>6</b>job types covered</div><div><b>20+</b>glossary terms</div><div><b>1</b>scam checker</div></div>
+<div class="stats" style="margin-top:0"><div><b>6</b>job types covered</div><div><b>20+</b>glossary terms</div><div><b>5</b>guides to read</div></div>
 </div></section>
 
 <section><div class="wrap">
@@ -152,7 +151,7 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | W
 <div class="posts">
 <article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can ease the squeeze.</p></article>
 <article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
-<article class="post reveal"><div class="meta"><span class="cat">Scams</span><span>6 min read</span></div><h3><a href="article-job-scams.html">Seven signs a work-from-home offer is a scam</a></h3><p>Protect yourself while you look for online work.</p></article>
+<article class="post reveal"><div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each really means</a></h3><p>Understand the words in a job ad.</p></article>
 </div><div class="btn-row"><a class="btn btn-ghost" href="knowledge-hub.html">See all guides</a></div></div></section>
 
 <section class="cta-band"><div class="wrap"><h2>Find the kind of work that suits you.</h2><p class="lede">Start with the job types, then read the guides for tips.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="jobs.html">Explore job types</a><a class="btn btn-ghost-light" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
@@ -193,8 +192,8 @@ jobs_body+=jobsec("contract",True,"Contract and temp","Contract and temporary jo
  ["Admin and operations cover","Seasonal retail and logistics","Project coordinators","Customer service surge teams"],
  ["You want a defined end date","You are restarting after a break","You want to try a company or industry"],
  ["Contract length and renewal","Whether it is employed via an agency","Leave and CPF","Conversion to permanent"])
-jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="head"><span class="eyebrow">Make money at home</span><h2>Ways to make money at home, honestly.</h2><p class="lede">Legitimate options are ordinary jobs done from home: part-time employment, freelance projects or contract work. If an offer promises easy money for almost no work, treat it as a scam.</p></div>
-<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Use the scam checker</a><a class="btn btn-ghost" href="article-job-scams.html">Read the guide</a></div></div></section>
+jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="head"><span class="eyebrow">Make money at home</span><h2>Ways to make money at home.</h2><p class="lede">Earning from home usually means one of three things: a part-time job, freelance projects or contract work. Each is covered above, so pick the one that fits your hours and skills.</p></div>
+<div class="btn-row"><a class="btn btn-primary" href="#part-time">Part-time jobs</a><a class="btn btn-ghost" href="#freelance">Freelance jobs</a><a class="btn btn-ghost" href="article-work-modes.html">Read: what each term means</a></div></div></section>
 <section class="alt" id="where-to-look"><div class="wrap"><div class="head"><span class="eyebrow">Where to look</span><h2>Find real openings through official channels.</h2><p class="lede">Current openings are posted on these trusted sources.</p></div>
 <div class="types">
 <div class="type"><span class="n">01</span><h3><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></h3><p>The government job portal, with filters and salary information.</p></div>
@@ -205,22 +204,22 @@ page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapor
 "Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, work from home in Singapore and freelance jobs: what to expect and what to ask.",jobs_body)
 
 # ---------------- SERVICES
-page("services.html","Services | Free Guides on Part Time & Work From Home Jobs | WorkNest SG","Free information services: job type guides, a job scam checker, a recruitment glossary and Knowledge Hub for part time job Singapore, work from home jobs and remote work.",
+page("services.html","Services | Free Guides on Part Time & Work From Home Jobs | WorkNest SG","Free information services: job type guides, a recruitment glossary and Knowledge Hub for part time job Singapore, work from home jobs and remote work.",
 head("Services","What you will find on WorkNest SG.","Free information on flexible work in Singapore, with no sign-up.")+f'''
 <section><div class="wrap">
 <div class="tiles">
 <article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>Job type guides</h3><p>Plain-English explainers on part time job Singapore, work from home jobs, remote, online and freelance work.</p><a class="more" href="jobs.html">Read the guides &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Job scam checker</h3><p>Tick the red flags in an offer and get guidance on what to do next.</p><a class="more" href="scam-check.html">Check an offer &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["wallet"]}</div><h3>Ways to earn from home</h3><p>Part-time, freelance and online work compared, so you can choose what suits you.</p><a class="more" href="jobs.html#make-money-at-home">Explore &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Recruitment glossary</h3><p>Decode PMET, CPF, JD, WFH, EP and other Singapore job-ad terms.</p><a class="more" href="glossary.html">Search terms &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Articles on cost of living, caregiving, career breaks, rights at work and scams.</p><a class="more" href="knowledge-hub.html">Read articles &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Articles on cost of living, caregiving, career breaks, and rights at work.</p><a class="more" href="knowledge-hub.html">Read articles &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["check"]}</div><h3>Offer question list</h3><p>The questions to ask about hours, pay, CPF and contract before accepting any job.</p><a class="more" href="jobs.html">See per-job questions &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["globe"]}</div><h3>Signposting</h3><p>Links to official sources: MOM, CPF Board, MyCareersFuture, ScamShield and more.</p><a class="more" href="jobs.html#where-to-look">Where to look &rarr;</a></article>
 </div></div></section>
 <section class="alt"><div class="wrap split">
 <div><span class="eyebrow">Good to know</span><h2>Information to guide your search.</h2>
 <p>Our pages are here to help you understand flexible work in Singapore. To apply for jobs, visit official portals such as MyCareersFuture or the employer's own careers page.</p></div>
-<div><span class="eyebrow">Stay safe</span><h2>Never pay to get a job.</h2><p>If anyone uses our name to offer you work, ask for a fee, or request your bank or Singpass details, it is a scam. Please report it and let us know.</p>
-<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Scam checker</a><a class="btn btn-ghost" href="contact.html">Contact Us</a></div></div>
+<div><span class="eyebrow">Get in touch</span><h2>Questions or ideas?</h2><p>Tell us what you would like to see covered, or point out anything we should correct.</p>
+<div class="btn-row"><a class="btn btn-primary" href="contact.html">Contact Us</a></div></div></div>
 </div></section>''')
 
 # ---------------- KNOWLEDGE HUB
@@ -378,8 +377,8 @@ head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px
 page("about.html","About Us | WorkNest SG","WorkNest SG is an independent information website about part-time, work from home, remote and freelance work in Singapore.",
 head("About Us","Clear information for people looking for flexible work.")+f'''
 <section><div class="wrap split">
-<div class="reveal"><h2>Why we exist</h2><p>Living in Singapore is expensive, and many people are stretched between bills, family and work that will not bend. Searching for a part time job or work from home in Singapore also means wading through confusing terms and, too often, scams.</p>
-<p>WorkNest SG shares what we know about part-time, work from home, remote, online and freelance work in Singapore: what each involves, what to ask, what your rights are and how to stay safe, always pointing to the official source.</p></div>
+<div class="reveal"><h2>Why we exist</h2><p>Living in Singapore is expensive, and many people are stretched between bills, family and work that will not bend. Searching for a part time job or work from home in Singapore also means wading through confusing terms and mixed advice.</p>
+<p>WorkNest SG shares what we know about part-time, work from home, remote, online and freelance work in Singapore: what each involves, what to ask and what your rights are, always pointing to the official source.</p></div>
 <div class="reveal"><h2>What you can expect</h2><div class="types">
 <div class="type" style="grid-template-columns:1fr"><div><h3>Clear</h3><p>Plain-English explanations of each type of job and the terms in job ads.</p></div></div>
 <div class="type" style="grid-template-columns:1fr"><div><h3>Sourced</h3><p>Links to MOM, CPF Board, MyCareersFuture and ScamShield so you can verify.</p></div></div>
