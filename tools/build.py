@@ -70,10 +70,10 @@ page("index.html","SG Safer | Talent resourcing & career consulting in Singapore
 "Singapore talent resourcing for part-time, remote, hybrid and contract roles. We handle initial screening for employers and career consulting for candidates.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Talent resourcing &middot; Singapore</span>
-<h1>The right people, <span>screened before they reach you.</span></h1>
-<p class="lede">SG Safer is a talent resourcing and career consulting practice for flexible work: part-time, remote, hybrid and contract. We do the initial screening for employers and guide candidates to roles that fit.</p>
-<div class="btn-row"><a class="btn btn-primary" href="for-employers.html">I am hiring</a><a class="btn btn-ghost" href="for-talent.html">I am looking for work</a></div>
+<span class="eyebrow">Career consulting &amp; talent resourcing &middot; Singapore</span>
+<h1>Life here is costly. <span>Your work should fit around it.</span></h1>
+<p class="lede">Rent, groceries, childcare, a parent who needs you home by four. We know the numbers rarely add up on one rigid schedule. At SG Safer we sit down with you, find flexible work that fits your life, and introduce you to employers we have already spoken to.</p>
+<div class="btn-row"><a class="btn btn-warm" href="contact.html">Talk to a consultant</a><a class="btn btn-ghost" href="for-employers.html">I am an employer</a></div>
 </div>
 <aside class="modes" aria-label="What we screen for">
 <h2>Roles we resource</h2>
@@ -84,35 +84,48 @@ page("index.html","SG Safer | Talent resourcing & career consulting in Singapore
 </aside></div></section>
 <div class="strip"><ul><li>Initial screening</li><li>Shortlisting</li><li>Career consulting</li><li>Reference checks</li><li>Flexible workforce</li><li>Returning to work</li></ul></div>
 
-<section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">What we do</span><h2>Two sides of one hiring conversation.</h2></div>
+<section class="alt"><div class="wrap">
+<div class="head reveal"><span class="eyebrow">We hear these every week</span><h2>Does any of this sound like you?</h2>
+<p class="lede">You are not being fussy, and you are not the only one. Most of the people we speak to are carrying a few of these at once.</p></div>
 <div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["brief"]}</div><h3>For employers</h3><p>We source, screen and shortlist so your team only meets candidates who match the role, the schedule and the culture.</p><a class="more" href="for-employers.html">How we help employers &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>For candidates</h3><p>One-to-one career consulting: CV and profile review, role matching and interview preparation for flexible work.</p><a class="more" href="for-talent.html">How we help candidates &rarr;</a></article>
+<article class="tile reveal"><h3>"The rent goes up, my pay does not."</h3><p>Housing takes a big bite of the month, and one income can feel thin. A second part-time income can be the difference between coping and constantly worrying.</p></article>
+<article class="tile reveal"><h3>"Childcare costs as much as I would earn."</h3><p>Full-time hours and childcare fees leave many parents asking whether working is worth it. Flexible hours can change that maths.</p></article>
+<article class="tile reveal"><h3>"I need to be home for my family."</h3><p>Looking after ageing parents or young children rarely fits a 9-to-6. You should not have to choose between caring and earning.</p></article>
+<article class="tile reveal"><h3>"The commute eats my day."</h3><p>Hours and money spent getting to the office add up. Remote and hybrid roles give some of that time back.</p></article>
+<article class="tile reveal"><h3>"I have been out of work too long."</h3><p>Career breaks, retrenchment or a health setback can make applying feel daunting. A friendly conversation is a gentler place to restart.</p></article>
+<article class="tile reveal"><h3>"I keep getting suspicious job offers."</h3><p>When you are stretched, "easy money" messages are tempting and dangerous. We never charge candidates and never ask for bank logins.</p></article>
+</div>
+<div class="btn-row"><a class="btn btn-primary" href="for-talent.html">See how we can help</a></div></div></section>
+
+<section><div class="wrap">
+<div class="head reveal"><span class="eyebrow">How we help</span><h2>A real person on your side, and employers who are ready to listen.</h2></div>
+<div class="tiles">
+<article class="tile reveal"><div class="ic">{IC["brief"]}</div><h3>For employers</h3><p>We do the first round of screening so your team meets people who match the role, the schedule and the culture.</p><a class="more" href="for-employers.html">How we help employers &rarr;</a></article>
+<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>For you, the candidate</h3><p>A warm, unhurried one-to-one chat. We review your CV, understand what you need, and match you to roles that fit.</p><a class="more" href="for-talent.html">How we help candidates &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Screening you can rely on</h3><p>Identity, work eligibility, experience and reference checks done consistently, with a clear summary for each person.</p><a class="more" href="services.html">See our screening &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Guides on flexible work rules, hiring practice and Singapore recruitment terms.</p><a class="more" href="knowledge-hub.html">Read the guides &rarr;</a></article>
 </div></div></section>
 
 <section class="alt"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Our screening process</span><h2>From brief to shortlist in four steps.</h2></div>
+<div class="head reveal"><span class="eyebrow">What happens next</span><h2>Four gentle steps from hello to a role that fits.</h2></div>
 <div class="types">
-{svc("01","Brief","We clarify the role: hours, work mode, pay range, must-haves and team context.")}
-{svc("02","Source","We reach into our talent network and approved channels. No mass blasting.")}
-{svc("03","Screen","Structured phone or video interview, skills and availability check, eligibility and reference verification.")}
-{svc("04","Shortlist","You receive a concise profile for each candidate with our assessment and a recommendation.")}
+{svc("01","Hello","A friendly call. You tell us your situation, hours, and what you need to earn. We listen first.")}
+{svc("02","Prepare","We polish your CV and build your confidence, at your pace.")}
+{svc("03","Screen","A relaxed screening interview so employers see the real you. It also confirms eligibility and references.")}
+{svc("04","Introduce","With your say-so, we introduce you to employers who have offered the flexibility you asked for. We keep in touch after you start.")}
 </div></div></section>
 
 <section class="dark"><div class="wrap split">
-<div><span class="eyebrow">Why flexible-work specialists</span><h2>Part-time and remote hiring has different risks.</h2>
-<p>Availability, self-management, communication style and reliability matter more when nobody sits next to the person. Our screening is built around them.</p></div>
+<div><span class="eyebrow">Employers, this is for you</span><h2>Hiring flexible talent takes a different eye.</h2>
+<p>Availability, self-management and reliability matter more when nobody sits next to the person. We screen for those first, so your team gets people who stay.</p><div class="btn-row"><a class="btn btn-warm" href="for-employers.html">Explore employer services</a></div></div>
 <div><div class="stats" style="margin-top:0"><div><b>4</b>screening stages</div><div><b>48h</b>target first shortlist*</div><div><b>1:1</b>candidate consulting</div></div><p class="notice" style="margin-top:1.5rem;color:inherit;opacity:.7">*Illustrative target for demonstration. Update with real service levels.</p></div>
 </div></section>
-<section><div class="wrap" style="text-align:center;max-width:720px"><h2>Tell us who you need, or where you want to go.</h2><p class="lede" style="margin-inline:auto">A short conversation is all it takes to start.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Contact Us</a><a class="btn btn-ghost" href="services.html">View services</a></div></div></section>
+<section><div class="wrap" style="text-align:center;max-width:720px"><h2>You do not have to figure this out alone.</h2><p class="lede" style="margin-inline:auto">Tell us where you are right now. We will take it from there, with no fees for candidates and no pressure.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Contact Us</a><a class="btn btn-ghost" href="services.html">View services</a></div></div></section>
 ''')
 
 # ---------------- SERVICES
 page("services.html","Services | SG Safer","Initial screening, shortlisting, flexible workforce resourcing and career consulting in Singapore.",
-head("Services","Screening, shortlisting and career consulting.","Talent resourcing for flexible roles, plus one-to-one guidance for candidates.")+f'''
+head("Services","Support for people, and for the teams who hire them.","Friendly career consulting for candidates, careful screening for employers.")+f'''
 <section><div class="wrap">
 <div class="head"><span class="eyebrow">Talent resourcing</span><h2>For employers hiring flexible talent.</h2></div>
 <div class="types">
@@ -124,12 +137,12 @@ head("Services","Screening, shortlisting and career consulting.","Talent resourc
 {svc("06","Onboarding support","Structured check-ins in the first weeks to keep part-time and remote hires engaged and settled.")}
 </div><div class="btn-row"><a class="btn btn-primary" href="for-employers.html">Employer details</a></div></div></section>
 <section class="alt"><div class="wrap">
-<div class="head"><span class="eyebrow">Career consulting</span><h2>For candidates seeking flexible work.</h2></div>
+<div class="head"><span class="eyebrow">Career consulting</span><h2>For you, seeking work that fits.</h2></div>
 <div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>CV and profile review</h3><p>Positioning your experience for part-time, remote and hybrid roles.</p></article>
-<article class="tile reveal"><div class="ic">{IC["split"]}</div><h3>Role matching</h3><p>We discuss your availability, goals and pay expectations, then match you to suitable openings.</p></article>
-<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Interview coaching</h3><p>Practice for video interviews and questions about self-management.</p></article>
-<article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Career-return support</h3><p>A plan for caregivers, career-switchers and mature workers rejoining the workforce.</p></article>
+<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>CV and profile review</h3><p>Presenting your experience, and any career break, in its best light.</p></article>
+<article class="tile reveal"><div class="ic">{IC["split"]}</div><h3>Role matching</h3><p>We talk through your hours, budget and goals, then match you to suitable openings.</p></article>
+<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Interview coaching</h3><p>Gentle practice for interviews, so nerves do not hide your strengths.</p></article>
+<article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Career-return support</h3><p>A kind, practical plan for caregivers and anyone rejoining the workforce.</p></article>
 </div>
 <div class="btn-row"><a class="btn btn-primary" href="for-talent.html">Candidate details</a></div></div></section>
 <section><div class="wrap"><div class="head"><span class="eyebrow">Our promise</span><h2>Clear terms on both sides.</h2></div>
@@ -161,19 +174,19 @@ head("For Employers","Hire flexible talent without the screening backlog.","We t
 
 # ---------------- FOR TALENT
 page("for-talent.html","For Talent | SG Safer","Career consulting for Singapore candidates seeking part-time, remote, hybrid and contract work.",
-head("For Talent","Find flexible work that actually fits your life.","One-to-one career consulting, free for candidates.")+f'''
+head("For Talent","You have a lot on your plate. Let us help with one thing.","Free, friendly career consulting to help you find flexible work that fits your life and your budget.")+f'''
 <section><div class="wrap">
 <div class="types">
-{svc("01","Intro conversation","A 20 to 30 minute call about your experience, availability and what a good role looks like for you.")}
-{svc("02","Profile tune-up","Feedback on your CV and online profile, tailored to flexible and remote roles.")}
-{svc("03","Screening interview","The same structured screening employers rely on, so you present yourself well.")}
-{svc("04","Match and introduce","With your consent, we introduce you to suitable openings and prepare you for the interview.")}
+{svc("01","A friendly first chat","Twenty to thirty minutes about you: your experience, your commitments and what you need to earn. No judgement, no jargon.")}
+{svc("02","Tune-up together","We polish your CV and profile side by side, and help you talk about career breaks or gaps with confidence.")}
+{svc("03","A relaxed screening","The same conversation employers rely on, made comfortable. It lets your reliability and strengths show.")}
+{svc("04","Introductions and support","With your consent, we introduce you to suitable openings, prepare you for interviews, and check in after you start.")}
 </div></div></section>
 <section class="alt"><div class="wrap split">
-<div><span class="eyebrow">Who we help</span><h2>Flexible work suits many stages of life.</h2>
-<ul><li>Students seeking part-time or holiday work</li><li>Caregivers and parents returning to work</li><li>Mid-career switchers</li><li>Mature workers looking for reduced hours</li><li>Professionals building a freelance portfolio</li></ul></div>
-<div><h2>Staying safe while job hunting</h2><p>Fake job offers target people looking for flexible work. Legitimate consultants do not charge candidates or ask for bank logins. Learn the signs with our <a href="scam-check.html">scam checker</a> and <a href="glossary.html">glossary</a>.</p>
-<div class="btn-row"><a class="btn btn-primary" href="contact.html">Book a consultation</a></div></div>
+<div><span class="eyebrow">Who we help</span><h2>Whatever season of life you are in.</h2>
+<ul><li>Parents balancing school runs and childcare costs</li><li>Caregivers looking after ageing parents</li><li>Students topping up allowance and fees</li><li>People restarting after a break or retrenchment</li><li>Mature workers wanting fewer hours, not fewer options</li><li>Anyone whose single income is stretched</li></ul></div>
+<div><h2>Looking out for you</h2><p>When money is tight, fake "easy income" offers are especially cruel. A genuine consultant never charges candidates or asks for bank logins. Learn the signs with our <a href="scam-check.html">scam checker</a> and <a href="glossary.html">glossary</a>.</p>
+<div class="btn-row"><a class="btn btn-warm" href="contact.html">Book a free chat</a></div></div>
 </div></section>''')
 
 
@@ -297,10 +310,10 @@ head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px
 
 # ---------------- ABOUT
 page("about.html","About Us | SG Safer","SG Safer is a Singapore talent resourcing and career consulting practice focused on flexible work.",
-head("About Us","A talent resourcing practice for flexible work.")+f'''
+head("About Us","We started with a simple belief: work should make life easier, not harder.")+f'''
 <section><div class="wrap split">
-<div class="reveal"><h2>Why we exist</h2><p>Part-time, remote and hybrid roles attract large numbers of applicants, and screening them properly takes time many small teams do not have. At the same time, candidates want honest guidance on roles that fit their lives.</p>
-<p>SG Safer sits in the middle. We do the initial screening for employers and act as career consultants for candidates, so both sides meet with confidence.</p></div>
+<div class="reveal"><h2>Why we exist</h2><p>Living in Singapore is expensive, and many capable people are stretched between bills, family and work that will not bend. Many employers, meanwhile, want flexible talent but have no time to screen applicants properly.</p>
+<p>We are here for both. We sit with candidates as career consultants, and do the initial screening for employers, so the right people find each other.</p></div>
 <div class="reveal"><h2>How we work</h2><div class="types">
 <div class="type" style="grid-template-columns:1fr"><div><h3>Structured, not scattershot</h3><p>Every candidate goes through the same criteria, so comparisons are fair.</p></div></div>
 <div class="type" style="grid-template-columns:1fr"><div><h3>Candidate-first ethics</h3><p>Free for candidates, consent before introductions, no pressure.</p></div></div>
@@ -312,13 +325,13 @@ head("About Us","A talent resourcing practice for flexible work.")+f'''
 
 # ---------------- CONTACT
 page("contact.html","Contact Us | SG Safer","Contact SG Safer to brief a role or book a career consultation.",
-head("Contact Us","Brief a role, or book a consultation.","Tell us a little and we will reply with next steps. Please do not include NRIC, bank or Singpass details.")+f'''
+head("Contact Us","Say hello. We would love to hear your story.","Tell us a little about your situation, or the role you need to fill, and we will reply with warm, practical next steps. Please do not include NRIC, bank or Singpass details.")+f'''
 <section><div class="wrap split">
 <div>
 <form id="contact-form" class="form" novalidate>
 <div class="field"><label for="name">Name</label><input id="name" required autocomplete="name"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
-<div class="field"><label for="topic">I am</label><select id="topic"><option>An employer hiring</option><option>A candidate seeking work</option><option>Returning to work</option><option>Other</option></select></div>
+<div class="field"><label for="topic">I am</label><select id="topic"><option>A candidate seeking work</option><option>Returning to work after a break</option><option>An employer hiring</option><option>Other</option></select></div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send message</button>
 <p class="notice">Demo form: no data is sent anywhere. Connect a backend or form service before launch.</p>
@@ -329,7 +342,7 @@ head("Contact Us","Brief a role, or book a consultation.","Tell us a little and 
 <li><b>Email</b>hello@sgsafer.example</li>
 <li><b>Hours</b>Mon to Fri, 9am to 6pm (SGT)</li>
 <li><b>Employers</b>Send a role brief with hours, work mode, pay range and start date.</li>
-<li><b>Candidates</b>Consultations are free. We will never ask you for money.</li></ul></div>
+<li><b>Candidates</b>Consultations are free. We will never ask you for money, and there is no pressure to decide anything.</li></ul></div>
 </div></section>''')
 
 # ---------------- PRIVACY
