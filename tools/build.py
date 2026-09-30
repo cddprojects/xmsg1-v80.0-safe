@@ -2,10 +2,10 @@
 import pathlib
 OUT = pathlib.Path(__file__).resolve().parent.parent / "site"
 
-NAV = [("index.html","Home"),("services.html","Services"),("for-talent.html","For Job Seekers"),
+NAV = [("index.html","Home"),("services.html","Services"),("jobs.html","Job Types"),
        ("knowledge-hub.html","Knowledge Hub"),("about.html","About Us")]
 
-LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="oklch(37% .075 178)"/><path d="M16 6l8 3v6c0 5-3.4 8.6-8 11-4.600-2.400-8-6-8-11V9z" fill="oklch(97.6% .009 88)"/><path d="M12.500 16l2.700 2.700 4.500-5" stroke="oklch(60% .19 32)" stroke-width="2.400" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="oklch(37% .075 178)"/><path d="M6 16.500L16 7l10 9.500" stroke="oklch(97.6% .009 88)" stroke-width="2.400" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.500 15v9h13v-9" fill="oklch(97.6% .009 88)"/><circle cx="16" cy="19.500" r="2.400" fill="oklch(60% .19 32)"/></svg>'
 
 def icon(p):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{p}</svg>'
@@ -39,7 +39,7 @@ def page(fname, title, desc, body, extra_head=""):
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap nav">
-<a class="brand" href="index.html">{LOGO}SG<em>Safer</em></a>
+<a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
 <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
 <ul id="nav-list">{nav}<li><a class="cta" href="contact.html"{cur}>Contact Us</a></li></ul>
 </div></header>
@@ -48,14 +48,14 @@ def page(fname, title, desc, body, extra_head=""):
 </main>
 <footer class="site-footer"><div class="wrap">
 <div class="foot-grid">
-<div><a class="brand" href="index.html">{LOGO}SG<em>Safer</em></a>
-<p style="margin-top:1rem;max-width:32ch">Talent resourcing and career consulting for part-time, remote and hybrid work in Singapore.</p></div>
-<div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="for-employers.html">For employers</a></li><li><a href="for-talent.html">For job seekers</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+<div><a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
+<p style="margin-top:1rem;max-width:32ch">Singapore talent resourcing agency for part time jobs, work from home jobs, remote jobs and freelance jobs.</p></div>
+<div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="for-talent.html">For job seekers</a></li><li><a href="for-employers.html">For employers</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
 <div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li></ul></div>
 </div>
-<div class="legal"><p>SG Safer is a demonstration brand. EA Licence No.: [placeholder, required for a real agency]. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
-<p>&copy; 2026 SG Safer. Demo brand for illustration.</p></div>
+<div class="legal"><p>WorkNest SG is a demonstration brand. EA Licence No.: [placeholder, required for a real agency]. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
+<p>&copy; 2026 WorkNest SG. Demo brand for illustration.</p></div>
 </div></footer>
 <script src="js/main.js"></script>
 </body></html>'''
@@ -65,82 +65,155 @@ def head(eyebrow, h1, lede=""):
     return f'<div class="page-head"><div class="wrap"><span class="eyebrow">{eyebrow}</span><h1>{h1}</h1>{"<p class=lede>"+lede+"</p>" if lede else ""}</div></div>'
 
 def svc(n,t,d): return f'<div class="type reveal"><span class="n">{n}</span><h3>{t}</h3><p>{d}</p></div>'
+IC.update({
+ "laptop":icon('<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 20h20"/>'),
+ "globe":icon('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
+ "wallet":icon('<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/>'),
+ "pen2":icon('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'),
+ "check":icon('<path d="M5 12l4 4 10-10"/>'),
+ "x":icon('<path d="M6 6l12 12M18 6L6 18"/>'),
+})
+
+def jobtile(cls,ic,t,d,href):
+    return f'<a class="jt {cls} reveal" href="{href}"><span class="ic">{IC[ic]}</span><h3>{t}</h3><p>{d}</p><span class="go">Explore &rarr;</span></a>'
+
 # ---------------- HOME
-page("index.html","SG Safer | Talent resourcing & career consulting in Singapore",
-"Singapore talent resourcing for part-time, remote, hybrid and contract roles. We handle initial screening for employers and career consulting for candidates.",f'''
+page("index.html","Part Time Jobs & Work From Home Jobs in Singapore | WorkNest SG",
+"WorkNest SG is a Singapore talent resourcing agency. Find part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs. Free for job seekers.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Talent resourcing &middot; Singapore</span>
-<h1>Life here is costly. <span>Your work should fit around it.</span></h1>
-<p class="lede">Rent, groceries, childcare, a parent who needs you home by four. We know the numbers rarely add up on one rigid schedule. SG Safer is a talent resourcing firm. We sit down with you, screen your profile, and introduce you to employers who offer part-time, remote and hybrid work.</p>
-<div class="btn-row"><a class="btn btn-warm" href="contact.html">Talk to a consultant</a><a class="btn btn-ghost" href="for-talent.html">How it works</a></div>
+<span class="eyebrow">Singapore talent resourcing agency</span>
+<h1>Part-time, work from home &amp; remote jobs <span>in Singapore.</span></h1>
+<p class="lede">We screen you, match you and introduce you to employers hiring flexible talent. Whether you want a part time job, work from home in Singapore, online work or freelance jobs, WorkNest SG is free for job seekers.</p>
+<div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a><a class="btn btn-ghost" href="jobs.html">Browse job types</a></div>
+<ul class="kw" aria-label="Popular searches"><li><a href="jobs.html#part-time">part time job Singapore</a></li><li><a href="jobs.html#work-from-home">work from home jobs</a></li><li><a href="jobs.html#remote">remote job Singapore</a></li><li><a href="jobs.html#online">online jobs</a></li><li><a href="jobs.html#freelance">freelance jobs</a></li><li><a href="jobs.html#make-money-at-home">make money at home</a></li></ul>
 </div>
-<aside class="modes" aria-label="What we screen for">
-<h2>Roles we resource</h2>
-<div class="mode"><i class="dot"></i><div><b>Part-time</b><small>Admin, operations, education, retail, F&amp;B</small></div><span class="tag">Fewer than 35 hrs</span></div>
-<div class="mode"><i class="dot"></i><div><b>Remote</b><small>Support, content, data, marketing, virtual assistants</small></div><span class="tag">Location-free</span></div>
-<div class="mode"><i class="dot"></i><div><b>Hybrid</b><small>Executives and specialists split across office and home</small></div><span class="tag">Flexible</span></div>
-<div class="mode"><i class="dot"></i><div><b>Contract / temp</b><small>Project cover, seasonal peaks, maternity cover</small></div><span class="tag">Fixed term</span></div>
-</aside></div></section>
-<div class="strip"><ul><li>Career consulting</li><li>Initial screening</li><li>Part-time</li><li>Remote</li><li>Hybrid</li><li>Contract</li><li>Returning to work</li></ul></div>
+<div class="mock" aria-hidden="true">
+<div class="mc mc-a"><div class="av">A</div><div><b>Sample candidate profile</b><small>Available 20 hrs a week &middot; Singapore</small></div><span class="pill ok">Screened</span></div>
+<div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home</b><small>Customer support, part-time</small></div><span class="pill">Matched</span></div>
+<div class="mc mc-c"><span class="ic">{IC["clock"]}</span><div><b>Video interview</b><small>Thursday, 2:00 pm</small></div><span class="pill warm">Booked</span></div>
+<div class="mc mc-d"><span class="ic">{IC["wallet"]}</span><div><b>Fees for you</b><small>Always $0</small></div></div>
+<p class="cap">Illustration only</p>
+</div></div></section>
+
+<div class="strip"><div class="marquee"><ul><li>Part time job</li><li>Work from home jobs</li><li>Remote job Singapore</li><li>Online jobs</li><li>Freelance jobs</li><li>Work from home in Singapore</li><li>Online work from home</li><li>Make money at home</li></ul><ul aria-hidden="true"><li>Part time job</li><li>Work from home jobs</li><li>Remote job Singapore</li><li>Online jobs</li><li>Freelance jobs</li><li>Work from home in Singapore</li><li>Online work from home</li><li>Make money at home</li></ul></div></div>
 
 <section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">How we help</span><h2>A real person on your side, and employers who are ready to listen.</h2></div>
-<div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["brief"]}</div><h3>Employers we know</h3><p>We already speak with employers who offer part-time, remote, hybrid and contract roles, so your introduction is a warm one.</p><a class="more" href="services.html">Our services &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Career consulting</h3><p>A warm, unhurried one-to-one chat. We review your CV, understand what you need, and match you to roles that fit.</p><a class="more" href="for-talent.html">How we help candidates &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Initial screening</h3><p>A relaxed first interview and verification that lets employers trust your profile, so you get shortlisted faster.</p><a class="more" href="services.html">See our screening &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Knowledge Hub</h3><p>Honest reads on the cost of living, caregiving, career breaks and your rights at work.</p><a class="more" href="knowledge-hub.html">Read the guides &rarr;</a></article>
+<div class="head reveal"><span class="eyebrow">Jobs we place</span><h2>Flexible jobs in Singapore, from part-time to fully remote.</h2><p class="lede">Pick the kind of work you want. We will tell you honestly what it involves and match you to employers who are hiring.</p></div>
+<div class="jgrid">
+{jobtile("c1","clock","Part time job Singapore","Retail, admin, F&amp;B, tutoring, events and more, with hours that fit around your day.","jobs.html#part-time")}
+{jobtile("c2","home","Work from home jobs Singapore","Customer support, data entry, virtual assistants and content roles you can do from home.","jobs.html#work-from-home")}
+{jobtile("c3","globe","Remote job Singapore","Marketing, design, tech and specialist roles with location freedom.","jobs.html#remote")}
+{jobtile("c4","laptop","Online jobs","Online tutoring, moderation, research and e-commerce support, worked entirely online.","jobs.html#online")}
+{jobtile("c5","pen2","Freelance jobs","Project-based design, writing, video and bookkeeping work you can pick up on your terms.","jobs.html#freelance")}
+{jobtile("c6","brief","Contract and temp","Fixed-term cover and seasonal peaks, a smart way back into work.","jobs.html#contract")}
 </div></div></section>
 
-<section class="alt"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">What happens next</span><h2>Four gentle steps from hello to a role that fits.</h2></div>
-<div class="types">
-{svc("01","Hello","A friendly call. You tell us your situation, hours, and what you need to earn. We listen first.")}
-{svc("02","Prepare","We polish your CV and build your confidence, at your pace.")}
-{svc("03","Screen","A relaxed screening interview so employers see the real you. It also confirms eligibility and references.")}
-{svc("04","Introduce","With your say-so, we introduce you to employers who have offered the flexibility you asked for. We keep in touch after you start.")}
-</div></div></section>
+<section class="alt" id="make-money-at-home"><div class="wrap">
+<div class="head reveal"><span class="eyebrow">Make money at home, the safe way</span><h2>Online work from home is real. So are the scams.</h2><p class="lede">Searching "make money at home" brings up genuine employers and fake offers side by side. Here is how to tell them apart.</p></div>
+<div class="vs">
+<div class="vs-col good reveal"><h3><span class="ic">{IC["check"]}</span>Genuine work from home job</h3><ul><li>You apply, or a named recruiter contacts you</li><li>Pay, hours and duties are clear before you start</li><li>A real company you can verify</li><li>Interviews by video or phone, a written offer</li><li>You are never asked to pay to get the job</li></ul></div>
+<div class="vs-col bad reveal"><h3><span class="ic">{IC["x"]}</span>Likely scam</h3><ul><li>Unsolicited WhatsApp or Telegram message</li><li>"Earn hundreds a day" for liking or rating</li><li>Deposits, training fees or account top-ups</li><li>Pressure to reply fast and keep it secret</li><li>Requests for Singpass, OTP or bank logins</li></ul></div>
+</div>
+<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Check an offer</a><a class="btn btn-ghost" href="article-job-scams.html">Read: 7 signs of a scam</a></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="head reveal"><span class="eyebrow">How it works</span><h2>From sign-up to interview in four steps.</h2></div>
+<ol class="steps">
+<li class="reveal"><b>1</b><h3>Join the talent pool</h3><p>Tell us the work you want, your hours and your experience. Two minutes.</p></li>
+<li class="reveal"><b>2</b><h3>We screen you</h3><p>A short friendly interview and quick checks, so employers can trust your profile.</p></li>
+<li class="reveal"><b>3</b><h3>We match you</h3><p>We put you forward to employers hiring the kind of flexible role you asked for.</p></li>
+<li class="reveal"><b>4</b><h3>You interview</h3><p>We prepare you, schedule the interview and stay in touch after you start.</p></li>
+</ol></div></section>
 
 <section class="dark"><div class="wrap split">
-<div><span class="eyebrow">Why job seekers choose us</span><h2>Free for you, honest with you.</h2>
-<p>We are paid by employers, never by candidates. We tell you the pay range and work mode before any interview, and we only introduce you with your consent.</p><div class="btn-row"><a class="btn btn-warm" href="for-talent.html">See how it works</a></div></div>
-<div><div class="stats" style="margin-top:0"><div><b>$0</b>fees for candidates</div><div><b>1:1</b>career consulting</div><div><b>4</b>simple steps</div></div></div>
+<div><span class="eyebrow">Why job seekers choose us</span><h2>Free for you. Honest with you.</h2>
+<p>We are paid by employers, never by candidates. You see the role, pay range and work mode before any interview, and we introduce you only with your consent.</p>
+<div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a></div></div>
+<div class="stats" style="margin-top:0"><div><b>$0</b>fees for job seekers</div><div><b>6</b>types of flexible work</div><div><b>4</b>simple steps</div></div>
 </div></section>
-<section><div class="wrap" style="text-align:center;max-width:720px"><h2>You do not have to figure this out alone.</h2><p class="lede" style="margin-inline:auto">Tell us where you are right now. We will take it from there, with no fees for candidates and no pressure.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Contact Us</a><a class="btn btn-ghost" href="knowledge-hub.html">Read the Knowledge Hub</a></div></div></section>
+
+<section><div class="wrap">
+<div class="head reveal"><span class="eyebrow">Knowledge Hub</span><h2>Real-life reads for real-life pressures.</h2></div>
+<div class="posts">
+<article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can ease the squeeze.</p></article>
+<article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
+<article class="post reveal"><div class="meta"><span class="cat">Scams</span><span>6 min read</span></div><h3><a href="article-job-scams.html">Seven signs a work-from-home offer is a scam</a></h3><p>Protect yourself while you look for online work.</p></article>
+</div><div class="btn-row"><a class="btn btn-ghost" href="knowledge-hub.html">See all guides</a></div></div></section>
+
+<section class="cta-band"><div class="wrap"><h2>Ready for work that fits your life?</h2><p class="lede">Join the WorkNest SG talent pool. It is free, friendly and takes two minutes.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="contact.html">Join our talent pool</a><a class="btn btn-ghost-light" href="faq.html">Read the FAQ</a></div></div></section>
 ''')
 
+# ---------------- JOBS
+def jobsec(id_,alt,eyebrow,h2,intro,roles,suit,check):
+    rl="".join(f"<li>{r}</li>" for r in roles)
+    sl="".join(f"<li>{r}</li>" for r in suit)
+    cl="".join(f"<li>{r}</li>" for r in check)
+    return f'''<section id="{id_}"{' class="alt"' if alt else ''}><div class="wrap">
+<div class="head"><span class="eyebrow">{eyebrow}</span><h2>{h2}</h2><p class="lede">{intro}</p></div>
+<div class="cols3"><div><h3>Typical roles</h3><ul>{rl}</ul></div><div><h3>Suits you if</h3><ul>{sl}</ul></div><div><h3>Ask before you accept</h3><ul>{cl}</ul></div></div>
+<div class="btn-row"><a class="btn btn-primary" href="contact.html">Join our talent pool</a></div></div></section>'''
+
+jobs_body=head("Job types","Part-time, work from home, remote and freelance jobs in Singapore.","An overview of the flexible work we place people into, and what to check for each. This site is not a job board, so there are no live listings here. Join our talent pool and we will match you.")
+jobs_body+=jobsec("part-time",False,"Part time job Singapore","Part time jobs in Singapore","Roles with fewer than 35 contracted hours a week, usually as an employee with a written contract.",
+ ["Retail and F&amp;B service crew","Admin and office assistants","Tutors and education centre helpers","Event and promotion staff","Customer service associates"],
+ ["You study, parent or care for family","You want a second income","You are returning to work gradually"],
+ ["Weekly hours and shift pattern","How pay is calculated and paid","CPF and leave entitlements","Notice period"])
+jobs_body+=jobsec("work-from-home",True,"Work from home jobs Singapore","Work from home jobs in Singapore","Roles you do from home with agreed hours, common for service and admin work. Work from home in Singapore does not have to mean freelancing.",
+ ["Customer support by chat or email","Data entry and back-office admin","Virtual assistants","Content and social media support","Transcription and translation"],
+ ["You need to be home for family","You want to save commute time and cost","You have a quiet space and reliable internet"],
+ ["Is it an employee contract or freelance?","Who provides equipment?","Expected response times and hours","How performance is measured"])
+jobs_body+=jobsec("remote",False,"Remote job Singapore","Remote jobs in Singapore","Roles where your location is flexible. Some are with Singapore companies, some are with overseas teams that need Singapore hours.",
+ ["Digital marketing and SEO","Graphic and web design","Software and QA","Account and project management","Recruitment coordination"],
+ ["You have specialist skills","You are self-directed","You are comfortable with written communication"],
+ ["Which time zone and core hours","Who is the employer, and is it a Singapore entity?","Pay currency and payment method","Tax and CPF treatment"])
+jobs_body+=jobsec("online",True,"Online jobs","Online jobs and online work from home","Work delivered entirely online, from live teaching to moderating and research. Legitimate online work is paid by a verifiable company for defined work.",
+ ["Online tutoring","Community and chat moderation","Online research and data labelling","E-commerce listing and order support","Virtual event support"],
+ ["You want flexible slots","You enjoy screen-based work","You can commit to reliable schedules"],
+ ["Who pays you and when","Whether any equipment or registration fee is requested (a red flag)","Training provided","Trial-period terms"])
+jobs_body+=jobsec("freelance",False,"Freelance jobs","Freelance jobs in Singapore","Project-based work where you are self-employed. You choose your clients but handle your own CPF contributions, tax and admin.",
+ ["Design, illustration and branding","Copywriting and translation","Video and photo editing","Bookkeeping and admin support","Web and app development"],
+ ["You want control of your schedule","You have a portfolio or specialist skill","You can manage irregular income"],
+ ["Scope, deadlines and revision limits","Payment terms and deposits from the client","Contract for services in writing","Your own tax obligations"])
+jobs_body+=jobsec("contract",True,"Contract and temp","Contract and temporary jobs","Fixed-term roles for project cover, seasonal peaks or maternity cover. A practical way to rebuild recent experience.",
+ ["Admin and operations cover","Seasonal retail and logistics","Project coordinators","Customer service surge teams"],
+ ["You want a defined end date","You are restarting after a break","You want to try a company or industry"],
+ ["Contract length and renewal","Whether it is employed via an agency","Leave and CPF","Conversion to permanent"])
+jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="head"><span class="eyebrow">Make money at home</span><h2>Ways to make money at home, honestly.</h2><p class="lede">Legitimate options are ordinary jobs done from home: part-time employment, freelance projects or contract work. If an offer promises easy money for almost no work, treat it as a scam.</p></div>
+<div class="btn-row"><a class="btn btn-primary" href="scam-check.html">Use the scam checker</a><a class="btn btn-ghost" href="article-job-scams.html">Read the guide</a></div></div></section>'''
+page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapore | WorkNest SG",
+"Explore part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, work from home in Singapore and freelance jobs. What to expect and what to ask.",jobs_body)
+
 # ---------------- SERVICES
-page("services.html","Services | SG Safer","Initial screening, shortlisting, flexible workforce resourcing and career consulting in Singapore.",
-head("Services","Career consulting and screening, built around you.","We help job seekers find flexible work that fits, and help employers meet the right people.")+f'''
+page("services.html","Services | Talent Resourcing for Flexible Jobs in Singapore | WorkNest SG","Talent resourcing services in Singapore: screening, matching and placement for part time jobs, work from home jobs, remote roles and freelance jobs.",
+head("Services","We screen, match and place flexible talent.","WorkNest SG is a talent resourcing agency. We connect job seekers with employers hiring part-time, work from home, remote, online and freelance talent.")+f'''
 <section><div class="wrap">
-<div class="head"><span class="eyebrow">Career consulting</span><h2>For you, seeking work that fits.</h2></div>
-<div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>CV and profile review</h3><p>Presenting your experience, and any career break, in its best light.</p></article>
-<article class="tile reveal"><div class="ic">{IC["split"]}</div><h3>Role matching</h3><p>We talk through your hours, budget and goals, then match you to suitable openings.</p></article>
-<article class="tile reveal"><div class="ic">{IC["chat"]}</div><h3>Interview coaching</h3><p>Gentle practice for interviews, so nerves do not hide your strengths.</p></article>
-<article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Career-return support</h3><p>A kind, practical plan for caregivers and anyone rejoining the workforce.</p></article>
-</div>
-<div class="btn-row"><a class="btn btn-primary" href="for-talent.html">Candidate details</a></div></div></section>
-<section class="alt"><div class="wrap">
-<div class="head"><span class="eyebrow">For hiring teams</span><h2>Employers: we screen so you can focus.</h2></div>
+<div class="head"><span class="eyebrow">For job seekers</span><h2>Free, from sign-up to start date.</h2></div>
 <div class="types">
-{svc("01","Initial screening","Structured first-round interviews against your role brief: skills, availability, communication, motivation and expectations on pay and work mode.")}
-{svc("02","Candidate shortlisting","A concise, ranked shortlist with a written assessment for each person so your hiring managers spend time only on strong matches.")}
-{svc("03","Flexible workforce sourcing","Part-time, remote, hybrid, contract and temporary talent, including seasonal and project cover.")}
-{svc("04","Verification and reference checks","Identity, right-to-work eligibility, qualification and reference checks, carried out with candidate consent under PDPA.")}
-{svc("05","Role design advice","Help shaping hours, work mode, pay bands and job-ad wording so you attract the right applicants.")}
-{svc("06","Onboarding support","Structured check-ins in the first weeks to keep part-time and remote hires engaged and settled.")}
+{svc("01","Talent pool registration","Tell us the work you want: part time job, work from home, remote or freelance. We record your skills, hours and pay expectations.")}
+{svc("02","Initial screening","A short, friendly interview plus identity, eligibility and reference checks, so employers can shortlist you with confidence.")}
+{svc("03","Job matching","We match you to employers we work with who are hiring the flexible roles you want, and put you forward with your consent.")}
+{svc("04","Profile and interview readiness","Practical help with your CV and interview preparation, including video interviews, so you are ready to be hired.")}
+{svc("05","Placement follow-up","We check in after you start to help settle hours, expectations and any questions.")}
+</div><div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a><a class="btn btn-ghost" href="jobs.html">See job types</a></div></div></section>
+<section class="alt"><div class="wrap">
+<div class="head"><span class="eyebrow">For employers</span><h2>Flexible talent, already screened.</h2></div>
+<div class="tiles">
+<article class="tile reveal"><div class="ic">{IC["doc"]}</div><h3>Initial screening</h3><p>Structured first-round interviews and checks against your role brief.</p></article>
+<article class="tile reveal"><div class="ic">{IC["split"]}</div><h3>Shortlisting</h3><p>A short list with a written profile per candidate.</p></article>
+<article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>Flexible workforce</h3><p>Part-time, remote, hybrid, freelance and contract talent.</p></article>
+<article class="tile reveal"><div class="ic">{IC["shield"]}</div><h3>Verification</h3><p>Identity, eligibility and reference checks with candidate consent.</p></article>
 </div><div class="btn-row"><a class="btn btn-primary" href="for-employers.html">Employer details</a></div></div></section>
 <section><div class="wrap"><div class="head"><span class="eyebrow">Our promise</span><h2>Clear terms on both sides.</h2></div>
 <div class="types">
-{svc("-","Candidates pay nothing","Our consulting and placement is funded by employer clients. No fees, deposits or training charges for candidates.")}
-{svc("-","Consent first","We only share a candidate profile with an employer after the candidate agrees.")}
+{svc("-","Job seekers pay nothing","No fees, deposits or training charges. We are funded by employer clients.")}
+{svc("-","Consent first","We only share your profile with an employer after you agree.")}
 {svc("-","Transparent","Role, pay range and work mode are shared before any interview.")}
 </div></div></section>''')
 
 # ---------------- FOR EMPLOYERS
-page("for-employers.html","For Employers | SG Safer","Outsource initial screening and shortlisting for part-time, remote, hybrid and contract roles in Singapore.",
+page("for-employers.html","For Employers | Hire Part-Time & Remote Talent in Singapore | WorkNest SG","Hire part-time, work from home, remote and freelance talent in Singapore. We handle screening and shortlisting.",
 head("For Employers","Hire flexible talent without the screening backlog.","We turn a long applicant list into a short, verified shortlist.")+f'''
 <section><div class="wrap split">
 <div class="reveal"><h2>What you get</h2>
@@ -151,31 +224,24 @@ head("For Employers","Hire flexible talent without the screening backlog.","We t
 <div class="type" style="grid-template-columns:1fr"><div><h3>Remote readiness</h3><p>Communication, tools, self-management and a suitable work setup.</p></div></div>
 <div class="type" style="grid-template-columns:1fr"><div><h3>Eligibility</h3><p>Right to work in Singapore and, where relevant, work pass status.</p></div></div></div></div>
 </div></section>
-<section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">Typical roles</span><h2>Where employers use us most.</h2></div>
-<div class="tiles">
-<article class="tile"><h3>Admin and operations</h3><p>Coordinators, receptionists, data entry, executive assistants.</p></article>
-<article class="tile"><h3>Customer support</h3><p>Remote chat and email agents, service ambassadors.</p></article>
-<article class="tile"><h3>Marketing and content</h3><p>Social media, design, writing, video editing freelancers.</p></article>
-<article class="tile"><h3>Education and services</h3><p>Tutors, centre assistants, admin for SMEs and schools.</p></article>
-</div><div class="btn-row"><a class="btn btn-primary" href="contact.html">Send us a role brief</a></div></div></section>''')
+<section class="alt"><div class="wrap"><div class="btn-row" style="margin-top:0"><a class="btn btn-primary" href="contact.html">Send us a role brief</a></div></div></section>''')
 
-# ---------------- FOR TALENT
-page("for-talent.html","For Talent | SG Safer","Career consulting for Singapore candidates seeking part-time, remote, hybrid and contract work.",
-head("For Talent","You have a lot on your plate. Let us help with one thing.","Free, friendly career consulting to help you find flexible work that fits your life and your budget.")+f'''
+# ---------------- FOR JOB SEEKERS
+page("for-talent.html","For Job Seekers | Find Part Time & Work From Home Jobs in Singapore | WorkNest SG","How WorkNest SG helps job seekers find a part time job Singapore, work from home jobs, remote roles, online jobs and freelance jobs. Free for candidates.",
+head("For Job Seekers","Get screened once. Get introduced to employers who are hiring.","Free for job seekers. Part-time, work from home, remote, online and freelance.")+f'''
 <section><div class="wrap">
 <div class="types">
-{svc("01","A friendly first chat","Twenty to thirty minutes about you: your experience, your commitments and what you need to earn. No judgement, no jargon.")}
-{svc("02","Tune-up together","We polish your CV and profile side by side, and help you talk about career breaks or gaps with confidence.")}
-{svc("03","A relaxed screening","The same conversation employers rely on, made comfortable. It lets your reliability and strengths show.")}
-{svc("04","Introductions and support","With your consent, we introduce you to suitable openings, prepare you for interviews, and check in after you start.")}
+{svc("01","Join the talent pool","Two minutes: your skills, hours and the kind of work you want.")}
+{svc("02","Friendly screening","A short conversation and checks so employers can trust your profile.")}
+{svc("03","We match and introduce","With your consent, we put you forward to employers hiring flexible roles.")}
+{svc("04","Interview and start","We prepare you, schedule the interview and check in once you start.")}
 </div></div></section>
 <section class="alt"><div class="wrap split">
-<div><span class="eyebrow">Who we help</span><h2>Whatever season of life you are in.</h2>
-<ul><li>Parents balancing school runs and childcare costs</li><li>Caregivers looking after ageing parents</li><li>Students topping up allowance and fees</li><li>People restarting after a break or retrenchment</li><li>Mature workers wanting fewer hours, not fewer options</li><li>Anyone whose single income is stretched</li></ul></div>
-<div><h2>Looking out for you</h2><p>When money is tight, fake "easy income" offers are especially cruel. A genuine consultant never charges candidates or asks for bank logins. Learn the signs with our <a href="scam-check.html">scam checker</a> and <a href="glossary.html">glossary</a>.</p>
-<div class="btn-row"><a class="btn btn-warm" href="contact.html">Book a free chat</a></div></div>
+<div><span class="eyebrow">Who joins us</span><h2>Whatever season of life you are in.</h2>
+<ul><li>Parents balancing school runs and childcare costs</li><li>Caregivers looking after ageing parents</li><li>Students topping up allowance and fees</li><li>People restarting after a break or retrenchment</li><li>Mature workers wanting fewer hours</li><li>Anyone whose single income is stretched</li></ul></div>
+<div><h2>Looking out for you</h2><p>When money is tight, fake "easy income" offers are especially cruel. We never charge job seekers or ask for bank logins. Learn the signs with our <a href="scam-check.html">scam checker</a> and <a href="glossary.html">glossary</a>.</p>
+<div class="btn-row"><a class="btn btn-warm" href="contact.html">Join our talent pool</a></div></div>
 </div></section>''')
-
 
 # ---------------- KNOWLEDGE HUB
 posts=[
@@ -196,8 +262,8 @@ cards=""
 for cat,label,href,t,d,m,feat in posts:
     link = f'<a href="{href}">{t}</a>' if href!="#" else f'<a href="#" aria-disabled="true">{t}</a>'
     cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}"><div><div class="meta"><span class="cat">{label}</span><span>{m} read</span>{"<span>Coming soon</span>" if href=="#" else ""}</div><h3>{link}</h3><p>{d}</p></div>{"<div style=\"align-self:end\"><a class=\"btn btn-warm\" href=\""+href+"\">Read now</a></div>" if feat else ""}</article>'
-page("knowledge-hub.html","Knowledge Hub | SG Safer","Blog-style guides on part-time, remote, hybrid and freelance work in Singapore.",
-head("Knowledge Hub","Real-life reads on work, money and family in Singapore.","Warm, plain-English guides on the pressures that push people towards flexible work, and how to handle them.")+f'''
+page("knowledge-hub.html","Knowledge Hub | WorkNest SG","Blog-style guides on part-time, remote, hybrid and freelance work in Singapore.",
+head("Knowledge Hub","Real-life reads on part time jobs, work from home and money in Singapore.","Warm, plain-English guides on the pressures that push people towards flexible work, and how to handle them.")+f'''
 <section><div class="wrap">
 <div class="filters" role="group" aria-label="Filter articles">
 <button class="chip" data-filter="all" aria-pressed="true">All</button>
@@ -211,7 +277,7 @@ head("Knowledge Hub","Real-life reads on work, money and family in Singapore.","
 
 # ---------------- ARTICLES
 def article(fname,title,desc,cat,body):
-    page(fname,title+" | SG Safer",desc,f'''{head(cat,title)}
+    page(fname,title+" | WorkNest SG",desc,f'''{head(cat,title)}
 <section><div class="wrap article">{body}
 <p style="margin-top:2.5rem"><a href="knowledge-hub.html">&larr; Back to Knowledge Hub</a></p></div></section>''')
 
@@ -241,7 +307,7 @@ article("article-rising-costs.html","When the rent goes up and your pay does not
 <h2>Choose the arrangement that suits your budget</h2><ul><li><strong>Part-time:</strong> predictable hours, usually as an employee with a contract.</li><li><strong>Remote or hybrid:</strong> fewer commuting hours and costs.</li><li><strong>Freelance or contract:</strong> can pay more per hour but less predictable, and you handle your own CPF and tax.</li></ul>
 <h2>Look at the whole picture</h2><p>Compare the take-home pay against the extra costs: transport, meals out and childcare. Ask how pay is calculated and how often you are paid.</p>
 <div class="callout"><p>If money is very tight, also explore government support. SupportGoWhere (supportgowhere.gov.sg) lists schemes you may qualify for. Beware of anyone promising fast money for an upfront fee.</p></div>
-<p>Want to talk it through? <a href="contact.html">Book a free chat</a> with a consultant.</p>''')
+<p>Want to talk it through? <a href="contact.html">Book a free chat</a> with our team.</p>''')
 
 article("article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Weighing work against childcare and caregiving in Singapore.","Life & Money",'''
 <p class="lede">For many parents and caregivers the question is not whether you want to work, but whether the numbers and the hours make sense.</p>
@@ -249,7 +315,7 @@ article("article-childcare-caregiving.html","Childcare or caregiving costs eatin
 <h2>Ask about flexibility early</h2><ul><li>Are hours fixed or can you choose slots?</li><li>Can some work be done from home?</li><li>What happens if a child or parent falls ill?</li></ul>
 <h2>Do the sums honestly</h2><p>Subtract childcare, transport and other work-related costs from your expected pay. Sometimes fewer hours in a well-matched role beats more hours in a stressful one.</p>
 <h2>Be kind to yourself</h2><p>Choosing to work part-time, or to pause, is not a failure. It is a decision you can revisit as your family changes.</p>
-<p>A consultant can help you find roles that respect your schedule. <a href="contact.html">Say hello</a>.</p>''')
+<p>Our team can help you find roles that respect your schedule. <a href="contact.html">Say hello</a>.</p>''')
 
 article("article-restart.html","Starting again after a break, retrenchment or illness","Restarting work after a career gap in Singapore.","Life & Money",'''
 <p class="lede">Gaps in a CV are common: caring for family, retrenchment, health, study or simply needing a rest. Employers see them more often than you might fear.</p>
@@ -257,7 +323,7 @@ article("article-restart.html","Starting again after a break, retrenchment or il
 <h2>Restart small</h2><p>Part-time or contract work can rebuild confidence, references and recent experience without the pressure of jumping straight back to full time.</p>
 <h2>Freshen your profile</h2><ul><li>Update your CV with recent skills, courses or volunteering.</li><li>Ask a former colleague for a short reference.</li><li>Look into SkillsFuture options to top up relevant skills.</li></ul>
 <div class="callout"><p>Take the first step at a pace that feels right. There is no deadline on starting again.</p></div>
-<p>We would be glad to help. <a href="for-talent.html">See how our consulting works</a>.</p>''')
+<p>We would be glad to help. <a href="for-talent.html">See how it works</a>.</p>''')
 
 # ---------------- SCAM CHECK
 flags=["I was contacted first, on WhatsApp, Telegram, WeChat or SMS, without applying.",
@@ -268,7 +334,7 @@ flags=["I was contacted first, on WhatsApp, Telegram, WeChat or SMS, without app
 "They asked for Singpass, OTP, banking details or full NRIC copies early on.",
 "The interview was text-only, or I was asked to lend or open a bank account."]
 lis="".join(f'<li><label><input type="checkbox"> <span>{f}</span></label></li>' for f in flags)
-page("scam-check.html","Job Scam Checker | SG Safer","Tick the red flags in a job offer and get guidance.",
+page("scam-check.html","Job Scam Checker | WorkNest SG","Tick the red flags in a job offer and get guidance.",
 head("Scam Check","Does this offer look off?","Tick anything that matches. Nothing is stored or sent anywhere.")+f'''
 <section><div class="wrap split">
 <div><ul class="check" id="scam-check">{lis}</ul>
@@ -305,7 +371,7 @@ terms=[("Part-time employee","Employee contracted for fewer than 35 hours per we
 ("Money mule","Person whose bank account is used to move scam proceeds, often unknowingly. It is a criminal offence."),
 ("ScamShield","Government app and 1799 helpline that filters scam messages and provides advice.")]
 tl="".join(f'<div class="term"><dt>{a}</dt><dd>{b}</dd></div>' for a,b in terms)
-page("glossary.html","Singapore Recruitment Glossary | SG Safer","Definitions of Singapore recruitment, part-time, remote and hybrid work keywords.",
+page("glossary.html","Singapore Recruitment Glossary | WorkNest SG","Definitions of Singapore recruitment, part-time, remote and hybrid work keywords.",
 head("Glossary","Recruitment keywords, decoded.")+f'''
 <section><div class="wrap" style="max-width:860px">
 <label for="glossary-search" class="eyebrow">Search terms</label>
@@ -313,62 +379,65 @@ head("Glossary","Recruitment keywords, decoded.")+f'''
 <dl class="glossary">{tl}</dl><p id="glossary-empty" hidden>No matches. <a href="contact.html">Ask us to add it.</a></p></div></section>''')
 
 # ---------------- FAQ
-faqs=[("Are you a job board?","No. We are a talent resourcing and career consulting practice. We screen and shortlist for employers and coach candidates, rather than publish open listings."),
-("Do candidates pay you?","No. Our services are paid by employer clients. Be cautious of anyone who asks a candidate for fees or deposits."),
-("What does initial screening include?","A structured interview against the role brief, skills and availability checks, and, with consent, eligibility and reference verification."),
-("How quickly can I get a shortlist?","It depends on the role and market. We agree an expected timeline in the brief. Figures on this demo site are illustrative."),
-("What roles do you cover?","Part-time, remote, hybrid, contract and temporary roles, mainly admin, support, marketing, education and operations."),
-("Is candidate data protected?","We handle personal data under Singapore's PDPA and only share a profile with an employer after the candidate consents. See our Privacy page."),
+faqs=[("Are you a job board?","No. WorkNest SG is a talent resourcing agency. We screen and match job seekers with employers, rather than publish open listings."),
+("Do job seekers pay you?","No. Our services are paid by employer clients. Be cautious of anyone who asks a job seeker for fees or deposits."),
+("How do I find a part time job in Singapore?","Join our talent pool. We screen your profile, match you to employers hiring part-time roles and introduce you with your consent. You can also check MyCareersFuture."),
+("Are there genuine work from home jobs in Singapore?","Yes. Customer support, admin, content and many specialist roles can be done from home. Genuine employers pay you for defined work and never ask you to pay to start."),
+("How can I make money at home safely?","Focus on ordinary jobs done from home: part-time employment, freelance projects or contract work. Avoid offers that promise high pay for tasks like liking or rating."),
+("What is the difference between remote and work from home?","Work from home usually means working from home on agreed hours. Remote means location flexibility, sometimes with an overseas team. Ask which applies."),
+("Are online jobs real?","Many are, such as online tutoring, moderation or support. Check who pays you, get terms in writing and never pay a fee to get started."),
+("What are freelance jobs and do they include CPF?","Freelancers are self-employed. You choose your clients and manage your own CPF contributions, tax and admin. See CPF Board and IRAS for current rules."),
 ("Is a part-time job entitled to CPF?","Employees, including part-timers, generally receive CPF contributions subject to age, residency and pay. See CPF Board for current rates."),
-("Can I request remote or hybrid work from my employer?","Employees can submit a formal flexible work arrangement request and employers are expected to consider it fairly under national guidelines. Approval is not guaranteed.")]
+("Can I request remote or hybrid work from my employer?","Employees can submit a formal flexible work arrangement request and employers are expected to consider it fairly under national guidelines. Approval is not guaranteed."),
+("What does initial screening include?","A short interview, skills and availability checks, and with your consent, eligibility and reference verification.")]
 fl="".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faqs)
-page("faq.html","FAQ | SG Safer","Frequently asked questions about SG Safer's talent resourcing and career consulting.",
+page("faq.html","FAQ | Part Time & Work From Home Jobs in Singapore | WorkNest SG","Answers about part time job Singapore, work from home jobs, remote jobs, online work, freelance jobs and how to make money at home safely.",
 head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px">{fl}<p style="margin-top:2rem">Still stuck? <a href="contact.html">Contact us</a>.</p></div></section>')
 
 # ---------------- ABOUT
-page("about.html","About Us | SG Safer","SG Safer is a Singapore talent resourcing and career consulting practice focused on flexible work.",
-head("About Us","We started with a simple belief: work should make life easier, not harder.")+f'''
+page("about.html","About Us | WorkNest SG","WorkNest SG is a Singapore talent resourcing agency connecting job seekers with part-time, work from home, remote and freelance roles.",
+head("About Us","We believe work should make life easier, not harder.")+f'''
 <section><div class="wrap split">
 <div class="reveal"><h2>Why we exist</h2><p>Living in Singapore is expensive, and many capable people are stretched between bills, family and work that will not bend. Many employers, meanwhile, want flexible talent but have no time to screen applicants properly.</p>
-<p>We are here for both. We sit with candidates as career consultants, and do the initial screening for employers, so the right people find each other.</p></div>
+<p>WorkNest SG is a talent resourcing agency built for the middle. We screen job seekers, match them with employers hiring part-time, work from home, remote, online and freelance talent, and introduce them properly.</p></div>
 <div class="reveal"><h2>How we work</h2><div class="types">
-<div class="type" style="grid-template-columns:1fr"><div><h3>Structured, not scattershot</h3><p>Every candidate goes through the same criteria, so comparisons are fair.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Candidate-first ethics</h3><p>Free for candidates, consent before introductions, no pressure.</p></div></div>
-<div class="type" style="grid-template-columns:1fr"><div><h3>Safe by default</h3><p>Verified employers, verified talent, and open advice on avoiding job scams.</p></div></div></div></div>
+<div class="type" style="grid-template-columns:1fr"><div><h3>Structured, not scattershot</h3><p>Every candidate goes through the same criteria, so introductions are fair.</p></div></div>
+<div class="type" style="grid-template-columns:1fr"><div><h3>Job seeker first</h3><p>Free for job seekers, consent before introductions, no pressure.</p></div></div>
+<div class="type" style="grid-template-columns:1fr"><div><h3>Safe by default</h3><p>Verified employers, screened talent and open advice on avoiding job scams.</p></div></div></div></div>
 </div></section>
 <section class="dark"><div class="wrap"><span class="eyebrow">At a glance</span><h2>What we offer</h2>
-<div class="stats"><div><b>2</b>audiences served</div><div><b>4</b>screening stages</div><div><b>0</b>fees for candidates</div><div><b>SG</b>focused</div></div></div></section>
-<section><div class="wrap"><p class="notice" style="max-width:70ch">SG Safer is a demonstration brand. Statistics and service levels shown are placeholders. A real agency must hold a valid Employment Agency licence from MOM and display its licence number.</p><div class="btn-row"><a class="btn btn-primary" href="contact.html">Get in touch</a></div></div></section>''')
+<div class="stats"><div><b>6</b>types of flexible work</div><div><b>4</b>simple steps</div><div><b>$0</b>fees for job seekers</div><div><b>SG</b>focused</div></div></div></section>
+<section><div class="wrap"><p class="notice" style="max-width:70ch">WorkNest SG is a demonstration brand. Figures shown are placeholders. A real agency in Singapore must hold a valid Employment Agency licence from MOM and display its licence number.</p><div class="btn-row"><a class="btn btn-primary" href="contact.html">Get in touch</a></div></div></section>''')
 
 # ---------------- CONTACT
-page("contact.html","Contact Us | SG Safer","Contact SG Safer to brief a role or book a career consultation.",
-head("Contact Us","Say hello. We would love to hear your story.","Tell us a little about your situation, or the role you need to fill, and we will reply with warm, practical next steps. Please do not include NRIC, bank or Singpass details.")+f'''
+page("contact.html","Contact Us | Join Our Talent Pool | WorkNest SG","Join the WorkNest SG talent pool or send an employer role brief. Part time job, work from home jobs and remote job Singapore.",
+head("Contact Us","Join our talent pool, or say hello.","Tell us the work you want, or the role you need to fill. Please do not include NRIC, bank or Singpass details.")+f'''
 <section><div class="wrap split">
 <div>
 <form id="contact-form" class="form" novalidate>
 <div class="field"><label for="name">Name</label><input id="name" required autocomplete="name"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
-<div class="field"><label for="topic">I am</label><select id="topic"><option>A candidate seeking work</option><option>Returning to work after a break</option><option>An employer hiring</option><option>Other</option></select></div>
-<div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
-<button class="btn btn-primary" type="submit">Send message</button>
+<div class="field"><label for="topic">I am looking for</label><select id="topic"><option>Part time job</option><option>Work from home job</option><option>Remote job</option><option>Online job</option><option>Freelance work</option><option>I am an employer hiring</option></select></div>
+<div class="field"><label for="msg">Tell us a little</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
+<button class="btn btn-primary" type="submit">Send</button>
 <p class="notice">Demo form: no data is sent anywhere. Connect a backend or form service before launch.</p>
 </form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, message noted.</h3><p>In a live site we would reply within one or two working days.</p></div>
+<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>In a live site we would reply within one or two working days.</p></div>
 </div>
 <div><h2>Other ways</h2><ul class="contact-list">
-<li><b>Email</b>hello@sgsafer.example</li>
+<li><b>Email</b>hello@worknest.example</li>
 <li><b>Hours</b>Mon to Fri, 9am to 6pm (SGT)</li>
-<li><b>Employers</b>Send a role brief with hours, work mode, pay range and start date.</li>
-<li><b>Candidates</b>Consultations are free. We will never ask you for money, and there is no pressure to decide anything.</li></ul></div>
+<li><b>Job seekers</b>Always free. We will never ask you for money.</li>
+<li><b>Employers</b>Send a role brief with hours, work mode, pay range and start date.</li></ul></div>
 </div></section>''')
 
 # ---------------- PRIVACY
-page("privacy.html","Privacy & PDPA | SG Safer","How SG Safer handles personal data under Singapore's PDPA.",
+page("privacy.html","Privacy & PDPA | WorkNest SG","How WorkNest SG handles personal data under Singapore's PDPA.",
 head("Privacy &amp; PDPA","Privacy notice")+'''
 <section><div class="wrap article">
 <p>This is a template. Have it reviewed before launch.</p>
 <h2>What we collect</h2><p>Only what you submit through the contact form: name, email and message. The scam checker runs in your browser and stores nothing.</p>
 <h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
-<h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at dpo@sgsafer.example.</p>
+<h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at dpo@worknest.example.</p>
 <h2>Cookies</h2><p>This site sets no tracking cookies. Fonts are loaded from Google Fonts.</p></div></section>''')
 print("built")
