@@ -66,95 +66,77 @@ def head(eyebrow, h1, lede=""):
 
 def svc(n,t,d): return f'<div class="type reveal"><span class="n">{n}</span><h3>{t}</h3><p>{d}</p></div>'
 IC.update({
- "laptop":icon('<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 20h20"/>'),
- "globe":icon('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
- "wallet":icon('<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/>'),
- "pen2":icon('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'),
- "check":icon('<path d="M5 12l4 4 10-10"/>'),
- "x":icon('<path d="M6 6l12 12M18 6L6 18"/>'),
-})
-
-def jobtile(cls,ic,t,d,href):
-    return f'<a class="jt {cls} reveal" href="{href}"><span class="ic">{IC[ic]}</span><h3>{t}</h3><p>{d}</p><span class="go">Explore &rarr;</span></a>'
-
-IC.update({
- "laptop":icon('<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 20h20"/>'),
- "globe":icon('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
- "wallet":icon('<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/>'),
- "pen2":icon('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'),
- "check":icon('<path d="M5 12l4 4 10-10"/>'),
- "x":icon('<path d="M6 6l12 12M18 6L6 18"/>'),
  "book":icon('<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 21V5"/>'),
+ "laptop":icon('<rect x="4" y="5" width="16" height="11" rx="2"/><path d="M2 20h20"/>'),
+ "globe":icon('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
+ "wallet":icon('<rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10h18M16 15h2"/>'),
+ "pen2":icon('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'),
+ "check":icon('<path d="M5 12l4 4 10-10"/>'),
+ "x":icon('<path d="M6 6l12 12M18 6L6 18"/>'),
 })
 
-def jobtile(cls,ic,t,d,href):
-    return f'<a class="jt {cls} reveal" href="{href}"><span class="ic">{IC[ic]}</span><h3>{t}</h3><p>{d}</p><span class="go">Read the guide &rarr;</span></a>'
+def jobtile(cls,ic,t,d,facts,href):
+    return f'<a class="jt {cls} reveal" href="{href}"><span class="ic">{IC[ic]}</span><h3>{t}</h3><p>{d}</p><span class="facts">{facts}</span><span class="go">Read the guide &rarr;</span></a>'
+
+KW = ["part time job","work from home jobs","work from home jobs Singapore","remote job Singapore","part time job Singapore","work from home in Singapore","make money at home","online jobs","online work from home","freelance jobs"]
+kwul = "".join(f"<li>{k}</li>" for k in KW)
 
 # ---------------- HOME
-page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | WorkNest SG",
-"Independent guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs and freelance jobs, plus how to make money at home safely. Information only.",f'''
+page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Guide | WorkNest SG",
+"Need a side income? Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, online work from home, freelance jobs and how to make money at home.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Flexible jobs in Singapore</span>
-<h1>Part-time, work from home &amp; remote jobs <span>in Singapore.</span></h1>
-<p class="lede">Discover the kinds of flexible work available here: part time jobs, work from home jobs, remote roles, online jobs and freelance work. Get clear information on typical roles, hours, pay and what to expect.</p>
-<div class="btn-row"><a class="btn btn-warm" href="jobs.html">Explore job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Read the Knowledge Hub</a></div>
-<ul class="kw" aria-label="Popular topics"><li><a href="jobs.html#part-time">part time job Singapore</a></li><li><a href="jobs.html#work-from-home">work from home jobs</a></li><li><a href="jobs.html#remote">remote job Singapore</a></li><li><a href="jobs.html#online">online jobs</a></li><li><a href="jobs.html#freelance">freelance jobs</a></li><li><a href="jobs.html#make-money-at-home">make money at home</a></li></ul>
+<span class="eyebrow">Side income, made simple</span>
+<h1>Part time job or work from home in Singapore? <span>Find the side income that fits.</span></h1>
+<p class="lede">Rising costs make one income feel tight. We share clear information on part time jobs, work from home jobs, remote jobs, online jobs and freelance jobs in Singapore, so you can choose the way to make money at home that suits your hours.</p>
+<div class="btn-row"><a class="btn btn-warm" href="#fit">Find your fit</a><a class="btn btn-ghost" href="jobs.html">Browse job types</a></div>
 </div>
 <div class="mock" aria-hidden="true">
-<div class="mc mc-a"><span class="ic">{IC["check"]}</span><div><b>Before you accept an offer</b><small>Company can be verified</small></div><span class="pill ok">Checklist</span></div>
-<div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home jobs</b><small>What the role really involves</small></div><span class="pill">Guide</span></div>
-<div class="mc mc-c"><span class="ic">{IC["wallet"]}</span><div><b>Pay and hours</b><small>Clear before you start</small></div><span class="pill warm">Ask</span></div>
-<div class="mc mc-d"><span class="ic">{IC["book"]}</span><div><b>Free to read</b><small>No sign-up, no fees</small></div></div>
+<div class="mc mc-a"><span class="ic">{IC["clock"]}</span><div><b>Part time job Singapore</b><small>Under 35 hours a week</small></div><span class="pill ok">Guide</span></div>
+<div class="mc mc-b"><span class="ic">{IC["laptop"]}</span><div><b>Work from home jobs</b><small>Support, admin, content</small></div><span class="pill">Guide</span></div>
+<div class="mc mc-c"><span class="ic">{IC["pen2"]}</span><div><b>Freelance jobs</b><small>Paid per project</small></div><span class="pill warm">Guide</span></div>
+<div class="mc mc-d"><span class="ic">{IC["book"]}</span><div><b>Free to read</b><small>No sign-up</small></div></div>
 <p class="cap">Illustration only</p>
 </div></div></section>
 
-<div class="strip"><div class="marquee"><ul><li>Part time job</li><li>Work from home jobs</li><li>Remote job Singapore</li><li>Online jobs</li><li>Freelance jobs</li><li>Work from home in Singapore</li><li>Online work from home</li><li>Make money at home</li></ul><ul aria-hidden="true"><li>Part time job</li><li>Work from home jobs</li><li>Remote job Singapore</li><li>Online jobs</li><li>Freelance jobs</li><li>Work from home in Singapore</li><li>Online work from home</li><li>Make money at home</li></ul></div></div>
+<div class="strip"><div class="marquee"><ul>{kwul}</ul><ul aria-hidden="true">{kwul}</ul></div></div>
 
-<section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Job types</span><h2>Six kinds of flexible work in Singapore.</h2><p class="lede">See what each one involves, who it suits and what to look out for.</p></div>
-<div class="jgrid">
-{jobtile("c1","clock","Part time job Singapore","Retail, admin, F&amp;B, tutoring and events. How hours, pay and CPF usually work.","jobs.html#part-time")}
-{jobtile("c2","home","Work from home jobs Singapore","Support, data entry, virtual assistant and content roles you can do from home.","jobs.html#work-from-home")}
-{jobtile("c3","globe","Remote job Singapore","Marketing, design, tech and specialist roles with location freedom.","jobs.html#remote")}
-{jobtile("c4","laptop","Online jobs","Online tutoring, moderation, research and e-commerce support, and how to check they are real.","jobs.html#online")}
-{jobtile("c5","pen2","Freelance jobs","Project-based work, plus what being self-employed means for CPF and tax.","jobs.html#freelance")}
-{jobtile("c6","brief","Contract and temp","Fixed-term cover and seasonal work, and what to ask about contracts.","jobs.html#contract")}
-</div></div></section>
+<section id="fit"><div class="wrap fit-wrap">
+<div class="reveal"><span class="eyebrow">Find your fit</span><h2>Which side income suits you?</h2><p class="lede">Answer two quick questions. Nothing is saved or sent.</p></div>
+<form class="fit reveal" id="fit-form" aria-label="Find your fit">
+<div class="field"><label for="fit-setup">Where do you want to work?</label><select id="fit-setup"><option value="">Choose one</option><option value="home">From home</option><option value="any">Anywhere, online</option><option value="site">Happy to go to a workplace</option></select></div>
+<div class="field"><label for="fit-skill">What are you best at?</label><select id="fit-skill"><option value="">Choose one</option><option value="people">Talking to people, admin and organising</option><option value="creative">Creative work: writing, design, video</option><option value="special">A specialist or technical skill</option><option value="none">Not sure yet</option></select></div>
+<div id="fit-out" class="fit-out" role="status" aria-live="polite" hidden></div>
+</form></div></section>
 
-<section class="alt" id="make-money-at-home"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Earning from home</span><h2>Working from home in Singapore.</h2><p class="lede">People who want to make money at home usually choose one of three routes, all of which are ordinary jobs done remotely. Earnings vary by role, skills and hours.</p></div>
-<div class="tiles">
-<article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Part-time employment</h3><p>A regular job with set hours and a contract, done from home or on-site.</p><a class="more" href="jobs.html#part-time">Part-time jobs &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["pen2"]}</div><h3>Freelance projects</h3><p>Be paid per project for skills like design, writing, editing or bookkeeping.</p><a class="more" href="jobs.html#freelance">Freelance jobs &rarr;</a></article>
-<article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>Online work from home</h3><p>Support, tutoring, research and admin delivered online for a set rate.</p><a class="more" href="jobs.html#online">Online jobs &rarr;</a></article>
-</div></div></section>
-
-<section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Finding work</span><h2>Four steps to finding the right job.</h2></div>
-<ol class="steps">
-<li class="reveal"><b>1</b><h3>Learn the job type</h3><p>Read what part-time, work from home, remote or freelance really means.</p></li>
-<li class="reveal"><b>2</b><h3>Check the employer</h3><p>Verify the company, and check any agency on MOM's Employment Agency directory.</p></li>
-<li class="reveal"><b>3</b><h3>Search official channels</h3><p>Use trusted portals such as MyCareersFuture or the employer's own careers page.</p></li>
-<li class="reveal"><b>4</b><h3>Know your rights</h3><p>Understand CPF, contracts and flexible work requests before you sign.</p></li>
-</ol></div></section>
-
-<section class="dark"><div class="wrap split">
-<div><span class="eyebrow">About WorkNest SG</span><h2>Straight answers about flexible work.</h2>
-<p>We share clear information about each type of job in Singapore, from typical roles and hours to CPF and contracts, and link to official sources so you can check for yourself. Everything is free to read.</p>
-<div class="btn-row"><a class="btn btn-warm" href="about.html">About us</a></div></div>
-<div class="stats" style="margin-top:0"><div><b>6</b>job types covered</div><div><b>20+</b>glossary terms</div><div><b>5</b>guides to read</div></div>
+<section class="alt"><div class="wrap split">
+<div class="reveal"><span class="eyebrow">Why we are here</span><h2>One income does not always stretch far enough.</h2></div>
+<div class="reveal"><p class="lede">Many people in Singapore look for a part time job, online work from home or freelance jobs to cover the gap, but the choices and the jargon can be confusing.</p>
+<p>So we explain each kind of work in one place: what it involves, the hours, who it suits, and what to ask before you say yes.</p></div>
 </div></section>
 
 <section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Knowledge Hub</span><h2>Real-life reads for real-life pressures.</h2></div>
+<div class="head reveal"><span class="eyebrow">Job types</span><h2>Six ways to earn on the side in Singapore.</h2></div>
+<div class="jgrid">
+{jobtile("c1","clock","Part time job Singapore","Retail, admin, F&amp;B, tutoring and events.","Under 35 hrs a week &middot; often set shifts","jobs.html#part-time")}
+{jobtile("c2","home","Work from home jobs Singapore","Support, data entry, virtual assistant and content roles.","Work from home in Singapore &middot; agreed hours","jobs.html#work-from-home")}
+{jobtile("c3","globe","Remote job Singapore","Marketing, design, tech and specialist roles.","Location flexible &middot; skills needed","jobs.html#remote")}
+{jobtile("c4","laptop","Online jobs","Tutoring, moderation, research and e-commerce support.","Online work from home &middot; flexible slots","jobs.html#online")}
+{jobtile("c5","pen2","Freelance jobs","Design, writing, video and bookkeeping projects.","Paid per project &middot; you set the schedule","jobs.html#freelance")}
+{jobtile("c6","wallet","Make money at home","The main routes to earn from home, compared.","Part-time, freelance or online","jobs.html#make-money-at-home")}
+</div>
+<p class="after-tiles"><a href="jobs.html#where-to-look">Ready to look for openings? See where to find them &rarr;</a></p>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<div class="head reveal"><span class="eyebrow">Knowledge Hub</span><h2>Read before you decide.</h2></div>
 <div class="posts">
 <article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can ease the squeeze.</p></article>
 <article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
-<article class="post reveal"><div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each really means</a></h3><p>Understand the words in a job ad.</p></article>
-</div><div class="btn-row"><a class="btn btn-ghost" href="knowledge-hub.html">See all guides</a></div></div></section>
+<article class="post reveal"><div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each means</a></h3><p>Understand the words in a job ad.</p></article>
+</div></div></section>
 
-<section class="cta-band"><div class="wrap"><h2>Find the kind of work that suits you.</h2><p class="lede">Start with the job types, then read the guides for tips.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="jobs.html">Explore job types</a><a class="btn btn-ghost-light" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
+<section class="cta-band"><div class="wrap"><h2>Find the work that fits your day.</h2><p class="lede">Start with the job types, then head to official sources for current openings.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-warm" href="jobs.html">Browse job types</a><a class="btn btn-ghost-light" href="jobs.html#where-to-look">Where to find openings</a></div></div></section>
 ''')
 
 # ---------------- JOBS
