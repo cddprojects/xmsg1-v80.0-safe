@@ -52,10 +52,10 @@ def page(fname, title, desc, body, extra_head=""):
 <p style="margin-top:1rem;max-width:32ch">Independent information on part time jobs, work from home jobs, remote jobs and freelance jobs in Singapore.</p></div>
 <div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
 <div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
 <div class="legal"><p>WorkNest SG is an information website only. We are not an employment agency, do not hold an MOM Employment Agency licence, and do not recruit, screen, place or introduce candidates or publish vacancies. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
-<p>&copy; 2026 WorkNest SG. Demo brand for illustration.</p></div>
+<p>&copy; 2026 WorkNest SG</p></div>
 </div></footer>
 <script src="js/main.js"></script>
 </body></html>'''
@@ -123,7 +123,7 @@ page("index.html","Part Time Jobs & Work From Home Jobs in Singapore: Guides | W
 </div></div></section>
 
 <section class="alt" id="make-money-at-home"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Earn from home</span><h2>Ways to make money at home in Singapore.</h2><p class="lede">Most ways to make money at home are everyday jobs done remotely. Here are the three most common routes.</p></div>
+<div class="head reveal"><span class="eyebrow">Earning from home</span><h2>Working from home in Singapore.</h2><p class="lede">People who want to make money at home usually choose one of three routes, all of which are ordinary jobs done remotely. Earnings vary by role, skills and hours.</p></div>
 <div class="tiles">
 <article class="tile reveal"><div class="ic">{IC["clock"]}</div><h3>Part-time employment</h3><p>A regular job with set hours and a contract, done from home or on-site.</p><a class="more" href="jobs.html#part-time">Part-time jobs &rarr;</a></article>
 <article class="tile reveal"><div class="ic">{IC["pen2"]}</div><h3>Freelance projects</h3><p>Be paid per project for skills like design, writing, editing or bookkeeping.</p><a class="more" href="jobs.html#freelance">Freelance jobs &rarr;</a></article>
@@ -192,7 +192,7 @@ jobs_body+=jobsec("contract",True,"Contract and temp","Contract and temporary jo
  ["Admin and operations cover","Seasonal retail and logistics","Project coordinators","Customer service surge teams"],
  ["You want a defined end date","You are restarting after a break","You want to try a company or industry"],
  ["Contract length and renewal","Whether it is employed via an agency","Leave and CPF","Conversion to permanent"])
-jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="head"><span class="eyebrow">Make money at home</span><h2>Ways to make money at home.</h2><p class="lede">Earning from home usually means one of three things: a part-time job, freelance projects or contract work. Each is covered above, so pick the one that fits your hours and skills.</p></div>
+jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="head"><span class="eyebrow">Earning from home</span><h2>Working from home: the main routes.</h2><p class="lede">People who want to make money at home usually choose a part-time job, freelance projects or contract work. Each is covered above. Earnings vary by role, skills and hours, and are never guaranteed.</p></div>
 <div class="btn-row"><a class="btn btn-primary" href="#part-time">Part-time jobs</a><a class="btn btn-ghost" href="#freelance">Freelance jobs</a><a class="btn btn-ghost" href="article-work-modes.html">Read: what each term means</a></div></div></section>
 <section class="alt" id="where-to-look"><div class="wrap"><div class="head"><span class="eyebrow">Where to look</span><h2>Find real openings through official channels.</h2><p class="lede">Current openings are posted on these trusted sources.</p></div>
 <div class="types">
@@ -362,7 +362,7 @@ faqs=[("Does WorkNest SG list jobs?","We share information about job types in Si
 ("Is WorkNest SG free?","Yes. All guides and tools are free to read with no sign-up. Never pay anyone to get a job."),
 ("How do I find a part time job in Singapore?","Search official channels such as MyCareersFuture and employers' own careers pages. Our part-time guide lists what to ask before you accept."),
 ("Are there genuine work from home jobs in Singapore?","Yes. Customer support, admin, content and many specialist roles can be done from home. Genuine employers pay you for defined work and never ask you to pay to start."),
-("How can I make money at home safely?","Focus on ordinary jobs done from home: part-time employment, freelance projects or contract work. Avoid offers that promise high pay for tasks like liking or rating."),
+("How can I make money at home?","Most people do it through ordinary jobs done from home: part-time employment, freelance projects or contract work. Earnings vary by role, skills and hours, and are not guaranteed."),
 ("What is the difference between remote and work from home?","Work from home usually means working from home on agreed hours. Remote means location flexibility, sometimes with an overseas team. Ask which applies."),
 ("Are online jobs real?","Many are, such as online tutoring, moderation or support. Check who pays you, get terms in writing and never pay a fee to get started."),
 ("What are freelance jobs and do they include CPF?","Freelancers are self-employed. You choose your clients and manage your own CPF contributions, tax and admin. See CPF Board and IRAS for current rules."),
@@ -370,7 +370,7 @@ faqs=[("Does WorkNest SG list jobs?","We share information about job types in Si
 ("Can I request remote or hybrid work from my employer?","Employees can submit a formal flexible work arrangement request and employers are expected to consider it fairly under national guidelines. Approval is not guaranteed."),
 ("How do I check that a recruiter is licensed?","Search the Employment Agency directory on the MOM website before sharing personal details.")]
 fl="".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faqs)
-page("faq.html","FAQ | Part Time & Work From Home Jobs in Singapore | WorkNest SG","Answers about part time job Singapore, work from home jobs, remote jobs, online work, freelance jobs and how to make money at home safely.",
+page("faq.html","FAQ | Part Time & Work From Home Jobs in Singapore | WorkNest SG","Answers about part time job Singapore, work from home jobs, remote jobs, online work, freelance jobs and how to make money at home.",
 head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px">{fl}<p style="margin-top:2rem">Still stuck? <a href="contact.html">Contact us</a>.</p></div></section>')
 
 # ---------------- ABOUT
@@ -408,6 +408,18 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <li><b>Hours</b>Mon to Fri, 9am to 6pm (SGT)</li>
 <li><b>Looking for openings?</b>Try <a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a>.</li>
 <li><b>Suspected scam?</b>Call the ScamShield helpline on 1799 and report to the Police.</li></ul></div>
+</div></section>''')
+
+
+# ---------------- DISCLAIMER
+page("disclaimer.html","Disclaimer | WorkNest SG","Disclaimer for WorkNest SG, an information website about part time, work from home, remote and freelance work in Singapore.",
+head("Disclaimer","Disclaimer")+'''
+<section><div class="wrap article">
+<h2>Information only</h2><p>WorkNest SG publishes general information about part-time, work from home, remote, online, freelance and contract work in Singapore. We are not an employment agency, we do not publish job vacancies, and we do not recruit, screen, place or introduce candidates.</p>
+<h2>No earnings or job guarantees</h2><p>Nothing on this site promises employment or a level of income. Pay, hours and conditions differ between employers and roles, and change over time.</p>
+<h2>Not professional advice</h2><p>Content is not legal, financial, tax or employment advice. Rules on CPF, employment terms and flexible work can change. Please confirm details with the Ministry of Manpower, CPF Board, IRAS or a qualified professional.</p>
+<h2>Third-party links</h2><p>We link to official and third-party websites for reference. We do not control their content and are not responsible for it.</p>
+<h2>Accuracy</h2><p>We aim to keep information accurate and up to date, but we cannot guarantee that every detail is current. If you spot an error, please <a href="contact.html">contact us</a>.</p>
 </div></section>''')
 
 # ---------------- PRIVACY
