@@ -48,9 +48,9 @@
   var ff=document.getElementById('fit-form');
   if(ff){
     var out=document.getElementById('fit-out'),setup=document.getElementById('fit-setup'),skill=document.getElementById('fit-skill');
-    var L={pt:['Part time job Singapore','jobs.html#part-time'],wfh:['Work from home jobs Singapore','jobs.html#work-from-home'],
-      rem:['Remote job Singapore','jobs.html#remote'],on:['Online jobs and online work from home','jobs.html#online'],
-      fr:['Freelance jobs','jobs.html#freelance'],mm:['Make money at home: the main routes','jobs.html#make-money-at-home']};
+    var L={pt:['Part time job Singapore','part-time-jobs-singapore.html'],wfh:['Work from home jobs Singapore','work-from-home-jobs-singapore.html'],
+      rem:['Remote job Singapore','remote-jobs-singapore.html'],on:['Online jobs and online work from home','online-jobs-singapore.html'],
+      fr:['Freelance jobs','freelance-jobs-singapore.html'],mm:['Make money at home: the main routes','make-money-at-home-singapore.html']};
     var pick=function(){
       if(!setup.value||!skill.value){out.hidden=true;return;}
       var r=[];
@@ -65,5 +65,14 @@
       out.innerHTML='<b>Good places to start</b><ul>'+list.map(function(k){return '<li><a href="'+L[k][1]+'">'+L[k][0]+' &rarr;</a></li>';}).join('')+'</ul>';
       out.hidden=false;};
     setup.addEventListener('change',pick);skill.addEventListener('change',pick);
+  }
+
+  var cf=document.getElementById('calc');
+  if(cf){
+    var t=document.getElementById('c-target'),r=document.getElementById('c-rate'),o=document.getElementById('c-out');
+    var run=function(){var a=parseFloat(t.value),b=parseFloat(r.value);
+      if(!(a>0)||!(b>0)){o.hidden=true;return;}
+      var h=a/b/4.33;o.innerHTML='<b>About '+(Math.round(h*10)/10)+' hours a week</b><br>to reach $'+a+' a month at $'+b+' an hour, before tax and costs. A rough guide only; it is not a promise of income.';o.hidden=false;};
+    t.addEventListener('input',run);r.addEventListener('input',run);
   }
 })();

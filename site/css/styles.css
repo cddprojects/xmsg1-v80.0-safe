@@ -274,3 +274,26 @@ section[id]{scroll-margin-top:90px}
 .takeaways{background:var(--mint);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.75rem 0}
 .takeaways h2{font-size:1.15rem!important;margin:0 0 .6rem!important}
 .takeaways ul{margin:0}
+
+/* job pages */
+.jobhero{border-bottom:0}
+.jh-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center}
+@media(max-width:900px){.jh-grid{grid-template-columns:1fr}}
+.jobhero .page-head h1,.jobhero h1{max-width:20ch}
+.jh1{background:oklch(94% .06 165)}.jh2{background:oklch(94% .07 85)}.jh3{background:oklch(93% .05 230)}
+.jh4{background:oklch(94% .05 320)}.jh5{background:oklch(94% .06 32)}.jh6{background:oklch(93% .04 120)}
+.qf{background:#fff;border-radius:22px;padding:1.5rem 1.6rem;box-shadow:0 24px 40px -30px oklch(30% .06 178/.5)}
+.qf h2{font-size:1.1rem;margin-bottom:.8rem}
+.qf dl{margin:0}.qf dt{font:700 .78rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--coral-ink);margin-top:.8rem}
+.qf dd{margin:.15rem 0 0;font-weight:500}
+.qf .rv{font-size:.8rem;color:var(--ink-2);margin:1rem 0 0}
+.qlist{padding:0;margin:0;list-style:none;display:grid;gap:.6rem}
+.qlist li{padding:.8rem 1rem .8rem 2.6rem;background:#fff;border:1px solid var(--line);border-radius:12px;position:relative}
+.qlist li::before{content:"";position:absolute;left:1rem;top:1.15rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--pine)}
+.qlist.bad li::before{background:var(--coral)}
+.rels{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.rel{display:block;padding:1.2rem 1.4rem;border:1px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink);background:#fff;transition:transform .25s,box-shadow .25s}
+.rel:hover{transform:translateY(-3px);box-shadow:0 14px 26px -18px oklch(30% .06 178/.5);color:var(--ink)}
+.rel b{display:block;font-family:var(--f-head);font-size:1.1rem}.rel span{color:var(--ink-2);font-size:.92rem}
+.cmp td a{text-decoration:none}
+.nav ul a{padding:.5rem .65rem;font-size:.95rem}
