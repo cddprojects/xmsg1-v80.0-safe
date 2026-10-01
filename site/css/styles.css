@@ -178,7 +178,7 @@ details p{margin:.8rem 0 0;color:var(--ink-2);max-width:70ch}
 /* footer */
 .site-footer{background:var(--ink);color:color-mix(in oklch,#fff 78%,transparent);padding:4rem 0 2rem}
 .site-footer a{color:#fff}
-.foot-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2rem}
+.foot-grid{display:grid;grid-template-columns:1.5fr repeat(2,1fr);gap:2rem}
 @media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
 .site-footer h4{color:#fff;font-size:1rem;font-family:var(--f-body);letter-spacing:.05em;text-transform:uppercase}
 .site-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
@@ -335,3 +335,10 @@ section[id]{scroll-margin-top:90px}
 .mini:hover{transform:translateY(-2px)}
 .mini b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem;color:oklch(37% .075 178)}
 .mini span{font-size:.92rem;opacity:.8}
+.shifts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.shifts li{border-top:3px solid oklch(37% .075 178);padding-top:1rem}
+.shifts .no{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:.9rem;font-weight:700;color:oklch(60% .19 32);letter-spacing:.08em;margin-bottom:.5rem}
+.shifts h3{margin:0 0 .4rem;font-size:1.25rem}
+.shifts p{margin:0;font-size:.95rem;line-height:1.5}
+@media(max-width:900px){.shifts{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.shifts{grid-template-columns:1fr}}

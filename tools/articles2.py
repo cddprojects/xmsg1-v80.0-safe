@@ -36,7 +36,7 @@ EXTRA.update({
 "article-read-labour-data.html":([("What is the difference between job vacancies and openings you see online?","Official figures count vacancies reported by employers. Listings online may be duplicated or already filled."),("Where are the official tables?","The MOM Manpower Research and Statistics pages and SingStat publish them.")],[("article-sectors-hiring.html","Sectors to watch"),("article-in-demand-roles.html","Top in-demand roles"),("glossary.html","Glossary")]),
 })
 
-article("article-sectors-hiring.html","Which sectors are hiring in Singapore right now","A plain-language read of the industries that official labour reports keep pointing to, and what it means for your next career move.","Industry trends",f'''
+article("article-sectors-hiring.html","Singapore Hiring Outlook: Sectors Driving Job Demand","A plain-language read of the industries that official labour reports keep pointing to, and what it means for your next career move.","Industry trends",f'''
 <p class="lede">Singapore's job market is not moving in one direction. A few sectors keep growing, others are reshaping, and the roles inside each are changing fast. Here is the big picture.</p>
 {stats([("5","sectors most often highlighted: healthcare, tech, finance, professional services, logistics"),("Quarterly","how often MOM publishes labour market reports"),("35 hrs","the line between part-time and full-time")])}
 <h2>Healthcare and care services</h2><p>An ageing population keeps demand steady for nurses, allied health, eldercare and community care staff. Many roles offer part-time and shift-based options.</p>
@@ -46,7 +46,7 @@ article("article-sectors-hiring.html","Which sectors are hiring in Singapore rig
 <h2>What this means for you</h2><p>Whether you want a main career move or a part time job Singapore employers offer alongside it, look at which skills sit behind a sector rather than the job title. Adjacent skills move across sectors more easily than most people expect.</p>
 <div class="callout"><p>Figures change each quarter. Always confirm with the latest MOM and Workforce Singapore publications listed below.</p></div>''')
 
-article("article-in-demand-roles.html","Top in-demand roles in Singapore now","The kinds of roles employers are asking for, across care, data, digital, finance and operations, and how to read the trend.","In-demand roles",f'''
+article("article-in-demand-roles.html","In-Demand Roles in Singapore: Skills Employers Are Seeking","The kinds of roles employers are asking for, across care, data, digital, finance and operations, and how to read the trend.","In-demand roles",f'''
 <p class="lede">Job titles come and go, but the skills employers keep asking for fall into a few clear groups.</p>
 {stats([("Care","nursing, allied health, eldercare"),("Data","analysts, engineers, AI support"),("Digital","product, marketing, cybersecurity"),("Ops","logistics, projects, compliance")])}
 <h2>Care and health roles</h2><p>Nurses, therapists, care associates and community support staff appear consistently in manpower plans.</p>
@@ -56,7 +56,7 @@ article("article-in-demand-roles.html","Top in-demand roles in Singapore now","T
 <h2>How to use this list</h2><ul><li>Check recent listings on MyCareersFuture for the real salary range.</li><li>Look at the skills section, not only the title.</li><li>Ask whether part-time, hybrid or contract options exist.</li></ul>
 <p>Looking at the types of work behind these roles? See our <a href="jobs.html">job types</a> overview.</p>''')
 
-article("article-why-second-income.html","Why a side income is on more Singaporeans' minds","A part time job, work from home jobs and freelance jobs are common ways people add income. Here is why the idea keeps growing.","Side income",f'''
+article("article-why-second-income.html","The Rise of Side Income in Singapore: Trends and Considerations","A part time job, work from home jobs and freelance jobs are common ways people add income. Here is why the idea keeps growing.","Side income",f'''
 <p class="lede">More people are looking at a part time job on top of a main role, or a freelance project on weekends. The reasons are practical.</p>
 {stats([("<35 hrs","part-time contracted hours per week"),("3","common routes: part-time, freelance, online"),("1","income that rarely fits every cost")])}
 <h2>Costs are the main push</h2><p>Housing, childcare, healthcare and daily expenses all weigh on households. A side income gives breathing room without changing your main career.</p>
@@ -65,7 +65,7 @@ article("article-why-second-income.html","Why a side income is on more Singapore
 <h2>What to settle first</h2><ul><li>Your realistic weekly hours.</li><li>Tax and CPF treatment for employee or self-employed work.</li><li>Whether your main contract allows outside work.</li></ul>
 <p>Compare the types in our <a href="make-money-at-home-singapore.html">work-at-home routes guide</a>.</p>''')
 
-article("article-remote-work-trend.html","Remote, hybrid and flexible work: where Singapore stands","How flexible work requests, remote roles and hybrid schedules have become part of normal employment conversations.","Industry trends",f'''
+article("article-remote-work-trend.html","Flexible Work in Singapore: The Shift Towards Remote and Hybrid Models","How flexible work requests, remote roles and hybrid schedules have become part of normal employment conversations.","Industry trends",f'''
 <p class="lede">Flexible work has moved from a perk to a standard conversation between employees and employers.</p>
 {stats([("2024","year national flexible work guidelines took effect"),("2 months","time for an employer to reply to a formal request"),("3","forms: flexi-place, flexi-time, flexi-load")])}
 <h2>What changed</h2><p>Employers are now expected to have a process for considering flexible work requests. This does not guarantee approval, but it gives you a clear way to ask.</p>
@@ -73,7 +73,7 @@ article("article-remote-work-trend.html","Remote, hybrid and flexible work: wher
 <h2>What employers look for</h2><p>Clear communication, reliable output, and a suitable workspace. A short trial with a review date often helps.</p>
 <p>Ready to ask? Read <a href="article-flexible-work-request.html">how to submit a flexible work request</a>.</p>''')
 
-article("article-upskilling-2026.html","Upskilling in Singapore: what is available and what is worth it","SkillsFuture credits, subsidies and short courses, and how to choose training tied to roles employers actually want.","Education & skills",f'''
+article("article-upskilling-2026.html","Upskilling in Singapore: Funding, Courses and Career Impact","SkillsFuture credits, subsidies and short courses, and how to choose training tied to roles employers actually want.","Education & skills",f'''
 <p class="lede">Training can open a new path, but only if it connects to roles you can see advertised.</p>
 {stats([("$500","opening SkillsFuture Credit for citizens 25+"),("$4,000","SkillsFuture Level-Up credit for citizens 40+"),("Modular","courses designed for working adults")])}
 <h2>Start from the role, not the course</h2><p>Pick two or three job ads you would like, list the skills they ask for, then match courses to the gaps.</p>
@@ -82,7 +82,7 @@ article("article-upskilling-2026.html","Upskilling in Singapore: what is availab
 <h2>Avoid</h2><ul><li>Paying for unapproved courses.</li><li>Training promises that guarantee a job or income.</li></ul>
 <p>Looking to restart? See <a href="article-restart.html">starting again after a break</a>.</p>''')
 
-article("article-read-labour-data.html","How to read Singapore's labour market data","A quick guide to unemployment, job vacancies and wage figures, so you can read official reports like a pro.","Career advice",f'''
+article("article-read-labour-data.html","Reading Singapore's Labour Market Data: A Practical Guide","A quick guide to unemployment, job vacancies and wage figures, so you can read official reports like a pro.","Career advice",f'''
 <p class="lede">Headlines compress a lot. Here is what the main labour figures actually measure.</p>
 {stats([("Unemployment","share of the labour force looking for work"),("Vacancies","openings reported by employers"),("Median wage","the middle, not the average")])}
 <h2>Unemployment rate</h2><p>Shows how many people are looking for work. It is low in Singapore, but it does not show underemployment or mismatches.</p>

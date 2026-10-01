@@ -51,7 +51,6 @@ def page(fname, title, desc, body, extra_head=""):
 <div><a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
 <p style="margin-top:1rem;max-width:32ch">Independent articles on Singapore careers, industries and skills, including part time job and work from home information.</p></div>
 <div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-<div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
 <div class="legal"><p>WorkNest SG is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
@@ -115,29 +114,29 @@ page("index.html","Singapore Careers & Job Market Trends: Part Time Job, Work Fr
 <p class="lede">Articles on in-demand roles, hiring sectors and upskilling, plus why a part time job, work from home jobs or freelance jobs are becoming a common side income. Sourced from official publications and updated regularly.</p>
 <div class="btn-row"><a class="btn btn-primary" href="knowledge-hub.html">Read more articles</a><a class="btn btn-ghost" href="#second-income">Why a side income</a></div>
 </div>
-<a class="lead-card" href="article-sectors-hiring.html"><img src="img/sectors-hiring.jpg" alt="" width="1280" height="720"><span class="cat">Lead story &middot; Industry trends</span><h2>Which sectors are hiring in Singapore right now</h2><span class="go">Read the article &rarr;</span></a>
+<a class="lead-card" href="article-sectors-hiring.html"><img src="img/sectors-hiring.jpg" alt="" width="1280" height="720"><span class="cat">Lead story &middot; Industry trends</span><h2>Singapore Hiring Outlook: Sectors Driving Job Demand</h2><span class="go">Read the article &rarr;</span></a>
 </div></section>
 
 <section class="alt"><div class="wrap">
 <div class="head reveal"><span class="eyebrow">The big picture</span><h2>Four shifts shaping careers in Singapore.</h2></div>
-<div class="statrow">
-<div class="stat reveal"><b>Sectors</b><span>Care, tech, finance and logistics keep appearing in national reports</span></div>
-<div class="stat reveal"><b>Skills</b><span>Employers describe roles by skills, not just titles</span></div>
-<div class="stat reveal"><b>Flexibility</b><span>Formal flexible work guidelines make remote and hybrid requests normal</span></div>
-<div class="stat reveal"><b>Side income</b><span>Part-time, online and freelance work fill the gap for many households</span></div>
-</div>
-<p class="src-note">Sources: Ministry of Manpower, Workforce Singapore, SkillsFuture Singapore. See each article for details.</p>
+<ol class="shifts">
+<li class="reveal"><span class="no">01</span><h3>Sectors</h3><p>Care, technology, finance and logistics keep appearing in national reports.</p></li>
+<li class="reveal"><span class="no">02</span><h3>Skills</h3><p>Employers increasingly describe roles by skills, not only job titles.</p></li>
+<li class="reveal"><span class="no">03</span><h3>Flexibility</h3><p>Formal flexible work guidelines make remote and hybrid requests routine.</p></li>
+<li class="reveal"><span class="no">04</span><h3>Side income</h3><p>Part-time, online and freelance work help many households close the gap.</p></li>
+</ol>
+<p class="src-note">Sources: Ministry of Manpower, Workforce Singapore, SkillsFuture Singapore.</p>
 </div></section>
 
 <section><div class="wrap">
 <div class="head reveal"><span class="eyebrow">Latest reads</span><h2>Career paths, roles and skills.</h2></div>
 <div class="posts">
-{card("article-in-demand-roles.html","In-demand roles","Top in-demand roles in Singapore now","Care, data, digital, finance and operations: the skills behind the titles.")}
-{card("article-why-second-income.html","Side income","Why a side income is on more minds","A part time job, work from home or freelance work: why it keeps growing.")}
-{card("article-upskilling-2026.html","Education &amp; skills","Upskilling in Singapore: what is worth it","SkillsFuture credits and short courses tied to real roles.")}
-{card("article-remote-work-trend.html","Industry trends","Remote, hybrid and flexible work: where we stand","What national guidelines changed for remote job Singapore roles.")}
-{card("article-read-labour-data.html","Career advice","How to read Singapore's labour data","Unemployment, vacancies and wages, explained.","4 min")}
-{card("article-rising-costs.html","Life &amp; money","When the rent goes up and your pay does not","How flexible work can help household budgets.")}
+{card("article-in-demand-roles.html","In-demand roles","In-Demand Roles in Singapore: Skills Employers Are Seeking","Care, data, digital, finance and operations: the skills behind the titles.")}
+{card("article-why-second-income.html","Side income","The Rise of Side Income in Singapore: Trends and Considerations","A part time job, work from home or freelance work: why it keeps growing.")}
+{card("article-upskilling-2026.html","Education &amp; skills","Upskilling in Singapore: Funding, Courses and Career Impact","SkillsFuture credits and short courses tied to real roles.")}
+{card("article-remote-work-trend.html","Industry trends","Flexible Work in Singapore: The Shift Towards Remote and Hybrid Models","What national guidelines changed for remote job Singapore roles.")}
+{card("article-read-labour-data.html","Career advice","Reading Singapore's Labour Market Data: A Practical Guide","Unemployment, vacancies and wages, explained.","4 min")}
+{card("article-rising-costs.html","Life &amp; money","Cost of Living and Household Income: The Case for Flexible Work","How flexible work can help household budgets.")}
 </div>
 <p class="after-tiles"><a href="knowledge-hub.html">Read more &rarr;</a></p>
 </div></section>
@@ -163,9 +162,9 @@ page("index.html","Singapore Careers & Job Market Trends: Part Time Job, Work Fr
 <section class="alt"><div class="wrap">
 <div class="head reveal"><span class="eyebrow">Rights &amp; money</span><h2>Practical reads.</h2></div>
 <div class="posts">
-{card("article-flexible-work-request.html","Rights","How to ask your employer for flexible work","A step-by-step guide to a formal request.")}
-{card("article-part-time-cpf.html","Rights","Part-time work and CPF","Check your payslip.","4 min")}
-{card("article-remote-cv.html","Career","A CV for remote and work from home roles","Show you can deliver independently.","4 min")}
+{card("article-flexible-work-request.html","Rights","Requesting Flexible Work: A Step-by-Step Guide","A step-by-step guide to a formal request.")}
+{card("article-part-time-cpf.html","Rights","Part-Time Employment and CPF","Check your payslip.","4 min")}
+{card("article-remote-cv.html","Career","Preparing a CV for Remote and Home-Based Roles","Show you can deliver independently.","4 min")}
 </div></div></section>
 
 <section id="contact-us"><div class="wrap split">
@@ -253,21 +252,21 @@ head("Services","What we publish.","Free articles, guides and tools on Singapore
 
 # ---------------- KNOWLEDGE HUB
 posts=[
-("trends","Industry trends","article-sectors-hiring.html","Which sectors are hiring in Singapore right now","The industries official labour reports keep pointing to, and what it means for your next move.","5 min",True),
-("roles","In-demand roles","article-in-demand-roles.html","Top in-demand roles in Singapore now","Care, data, digital, finance and operations: the skills behind the titles.","5 min",False),
-("second","Side income","article-why-second-income.html","Why a side income is on more minds","Why part-time, online and freelance work keep growing.","5 min",False),
-("trends","Industry trends","article-remote-work-trend.html","Remote, hybrid and flexible work: where Singapore stands","How guidelines made flexible work requests normal.","4 min",False),
-("edu","Education & skills","article-upskilling-2026.html","Upskilling in Singapore: what is worth it","SkillsFuture credits and short courses tied to real roles.","5 min",False),
-("career","Career advice","article-read-labour-data.html","How to read Singapore's labour data","Unemployment, vacancies and wages, explained.","4 min",False),
-("second","Side income","article-rising-costs.html","When the rent goes up and your pay does not","How flexible work can help household budgets.","5 min",False),
-("second","Side income","article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Options to explore before you decide.","5 min",False),
-("career","Career advice","article-restart.html","Starting again after a break, retrenchment or illness","How to talk about gaps and take the first step.","5 min",False),
-("career","Career advice","article-remote-cv.html","A CV for remote and work from home roles","Show you can deliver independently.","4 min",False),
-("rights","Rights & money","article-flexible-work-request.html","How to ask your employer for flexible work","A step-by-step guide to a formal request.","5 min",False),
-("rights","Rights & money","article-part-time-cpf.html","Part-time work and CPF: check your payslip","Is CPF actually being paid, and correctly?","4 min",False),
-("career","Career advice","article-work-modes.html","Part-time, remote, hybrid, freelance: what each means","The words in a job ad describe different things.","5 min",False),
-("career","Career advice","article-read-job-ad.html","How to read a job ad for flexible roles","The details that decide whether a role fits.","4 min",False),
-("scam","Scams","article-job-scams.html","Seven signs a work-from-home offer is a scam","How to spot fake offers.","6 min",False),
+("trends","Industry trends","article-sectors-hiring.html","Singapore Hiring Outlook: Sectors Driving Job Demand","The industries official labour reports keep pointing to, and what it means for your next move.","5 min",True),
+("roles","In-demand roles","article-in-demand-roles.html","In-Demand Roles in Singapore: Skills Employers Are Seeking","Care, data, digital, finance and operations: the skills behind the titles.","5 min",False),
+("second","Side income","article-why-second-income.html","The Rise of Side Income in Singapore: Trends and Considerations","Why part-time, online and freelance work keep growing.","5 min",False),
+("trends","Industry trends","article-remote-work-trend.html","Flexible Work in Singapore: The Shift Towards Remote and Hybrid Models","How guidelines made flexible work requests normal.","4 min",False),
+("edu","Education & skills","article-upskilling-2026.html","Upskilling in Singapore: Funding, Courses and Career Impact","SkillsFuture credits and short courses tied to real roles.","5 min",False),
+("career","Career advice","article-read-labour-data.html","Reading Singapore's Labour Market Data: A Practical Guide","Unemployment, vacancies and wages, explained.","4 min",False),
+("second","Side income","article-rising-costs.html","Cost of Living and Household Income: The Case for Flexible Work","How flexible work can help household budgets.","5 min",False),
+("second","Side income","article-childcare-caregiving.html","Balancing Work and Caregiving: Costs and Options for Families","Options to explore before you decide.","5 min",False),
+("career","Career advice","article-restart.html","Returning to Work After a Career Break: A Practical Approach","How to talk about gaps and take the first step.","5 min",False),
+("career","Career advice","article-remote-cv.html","Preparing a CV for Remote and Home-Based Roles","Show you can deliver independently.","4 min",False),
+("rights","Rights & money","article-flexible-work-request.html","Requesting Flexible Work: A Step-by-Step Guide","A step-by-step guide to a formal request.","5 min",False),
+("rights","Rights & money","article-part-time-cpf.html","Part-Time Employment and CPF: What to Verify on Your Payslip","Is CPF actually being paid, and correctly?","4 min",False),
+("career","Career advice","article-work-modes.html","Part-Time, Remote, Hybrid and Freelance Work: Key Definitions","The words in a job ad describe different things.","5 min",False),
+("career","Career advice","article-read-job-ad.html","Reading Job Advertisements for Flexible Roles","The details that decide whether a role fits.","4 min",False),
+("scam","Scams","article-job-scams.html","Recognising Fraudulent Remote Work Offers: Seven Warning Signs","How to spot fake offers.","6 min",False),
 ]
 cards=""
 for cat,label,href,t,d,m,feat in posts:
@@ -315,12 +314,12 @@ def article(fname,title,desc,cat,body):
 EXTRA.update({
 "article-job-scams.html":([("What should I do if I already replied?","Stop replying, do not send money, keep screenshots and speak to your bank. Call the ScamShield helpline on 1799 for advice."),("How can I check a job is real?","Look for the role on the company's own website or MyCareersFuture, and contact the company using details you found yourself.")],[("part-time-jobs-singapore.html","Part time job guide"),("online-jobs-singapore.html","Online jobs guide"),("scam-check.html","Scam checker")]),
 "article-work-modes.html":([("Is part-time the same as freelance?","No. Part-time employees have a contract of service and are employees. Freelancers are self-employed."),("Can a job be both remote and part-time?","Yes. Hours and location are separate. A role can be part-time and remote, or full-time and on-site.")],[("part-time-jobs-singapore.html","Part time job guide"),("remote-jobs-singapore.html","Remote jobs guide"),("freelance-jobs-singapore.html","Freelance jobs guide")]),
-"article-rising-costs.html":([("How many hours would I need for a meaningful side income?","It depends on the rate and your target. Try our <a href='make-money-at-home-singapore.html'>hours calculator</a>."),("Is a side income taxable?","Income from employment and freelance work is generally taxable and must be declared. Check IRAS.")],[("make-money-at-home-singapore.html","Make money at home"),("part-time-jobs-singapore.html","Part time job guide"),("article-part-time-cpf.html","Part-time work and CPF")]),
+"article-rising-costs.html":([("How many hours would I need for a meaningful side income?","It depends on the rate and your target. Try our <a href='make-money-at-home-singapore.html'>hours calculator</a>."),("Is a side income taxable?","Income from employment and freelance work is generally taxable and must be declared. Check IRAS.")],[("make-money-at-home-singapore.html","Make money at home"),("part-time-jobs-singapore.html","Part time job guide"),("article-part-time-cpf.html","Part-Time Employment and CPF")]),
 "article-childcare-caregiving.html":([("Are there jobs that fit school hours?","Some part-time and work from home roles offer hours that work around school. Ask early about flexibility."),("Can I ask my current employer for changed hours?","You can make a formal flexible work request. See our guide on how to do it.")],[("article-flexible-work-request.html","How to ask for flexible work"),("work-from-home-jobs-singapore.html","Work from home jobs guide"),("part-time-jobs-singapore.html","Part time job guide")]),
 "article-restart.html":([("How long a gap is too long?","There is no fixed limit. Employers care more about what you can do now and how you explain the gap."),("Should I take part-time work first?","Part-time or contract work can help rebuild confidence and recent experience, and many people use it as a first step.")],[("part-time-jobs-singapore.html","Part time job guide"),("article-remote-cv.html","A CV for remote roles"),("article-read-job-ad.html","How to read a job ad")]),
 "article-flexible-work-request.html":([("Can my employer say no?","Yes. Employers can decline a request but are expected to give reasons in writing. See the MOM guidelines."),("Should I offer a trial?","A trial period with a review date can make it easier for an employer to say yes.")],[("article-work-modes.html","What each work mode means"),("work-from-home-jobs-singapore.html","Work from home jobs guide"),("remote-jobs-singapore.html","Remote jobs guide")]),
 "article-part-time-cpf.html":([("Do part-time workers get an itemised payslip?","Employees should receive an itemised payslip. Check MOM for the current requirements."),("Do freelancers get CPF from clients?","No. Freelancers are self-employed. Check CPF Board for MediSave obligations.")],[("part-time-jobs-singapore.html","Part time job guide"),("freelance-jobs-singapore.html","Freelance jobs guide"),("glossary.html","Glossary")]),
-"article-read-job-ad.html":([("What does 'up to' salary mean?","It is the top of the range, not a guaranteed amount. Ask what most people in the role are paid."),("What is a probation period?","An initial trial period after you start, during which the notice period may differ. Check your contract.")],[("glossary.html","Glossary"),("part-time-jobs-singapore.html","Part time job guide"),("article-part-time-cpf.html","Part-time work and CPF")]),
+"article-read-job-ad.html":([("What does 'up to' salary mean?","It is the top of the range, not a guaranteed amount. Ask what most people in the role are paid."),("What is a probation period?","An initial trial period after you start, during which the notice period may differ. Check your contract.")],[("glossary.html","Glossary"),("part-time-jobs-singapore.html","Part time job guide"),("article-part-time-cpf.html","Part-Time Employment and CPF")]),
 "article-remote-cv.html":([("Should I mention my time zone?","Yes. State your location, hours and any overlap you can commit to."),("Do I need a portfolio?","A small portfolio helps for creative, technical and content roles, but it is not required for every job.")],[("remote-jobs-singapore.html","Remote jobs guide"),("work-from-home-jobs-singapore.html","Work from home jobs guide"),("online-jobs-singapore.html","Online jobs guide")]),
 })
 
@@ -331,7 +330,7 @@ TAKE.update({
 "article-childcare-caregiving.html":["Start with the hours you can truly commit.","Ask about flexibility before accepting.","Subtract childcare and work costs from expected pay.","You can revisit your decision as circumstances change."],
 "article-restart.html":["Career gaps are common and easier to explain than people expect.","Keep the explanation short and honest.","Part-time or contract work can be a gentle restart.","Refresh your CV, references and skills."],
 })
-article("article-job-scams.html","Seven signs a work-from-home offer is a scam","How to recognise fake remote and part-time job offers in Singapore.","Scams",'''
+article("article-job-scams.html","Recognising Fraudulent Remote Work Offers: Seven Warning Signs","How to recognise fake remote and part-time job offers in Singapore.","Scams",'''
 <p class="lede">Scammers favour part-time and remote jobs because the promise of easy, flexible income is hard to resist. These are the patterns to look for.</p>
 <h2>1. You did not apply</h2><p>An unsolicited WhatsApp, Telegram or SMS offering a job is a major red flag. Legitimate employers rarely cold-message strangers with pay figures.</p>
 <h2>2. Pay is too good for the work</h2><p>Hundreds of dollars a day to "like" videos, boost ratings or complete simple tasks does not match how real businesses pay.</p>
@@ -342,7 +341,7 @@ article("article-job-scams.html","Seven signs a work-from-home offer is a scam",
 <h2>7. The job is not on official channels</h2><p>Check whether the employer and role appear on MyCareersFuture or the company's official website.</p>
 <div class="callout"><p><strong>If you have engaged:</strong> stop all payments, keep screenshots, call your bank, and contact the Police. For advice, call the ScamShield helpline at 1799. Try our <a href="scam-check.html">scam checker</a>.</p></div>''')
 
-article("article-work-modes.html","Part-time, remote, hybrid, freelance: what each really means","Definitions of common flexible work terms in Singapore.","Basics",'''
+article("article-work-modes.html","Part-Time, Remote, Hybrid and Freelance Work: Key Definitions","Definitions of common flexible work terms in Singapore.","Basics",'''
 <p class="lede">Job ads mix up three separate ideas: how many hours you work, where you work, and your legal status. Untangling them is the first step.</p>
 <h2>Hours: part-time vs full-time</h2><p>Under Singapore's Part-Time Employment Regulations, a part-time employee is contracted to work fewer than 35 hours a week. Part-timers are still employees with a contract, and many protections apply on a pro-rated basis. Check MOM for the current rules.</p>
 <h2>Place: remote, hybrid, on-site</h2><ul><li><strong>Remote / WFH:</strong> you work away from the employer's premises, often from home.</li><li><strong>Hybrid:</strong> a mix. Ask how many office days are required and whether they are fixed.</li><li><strong>On-site:</strong> you work at a workplace or client location.</li></ul>
@@ -351,7 +350,7 @@ article("article-work-modes.html","Part-time, remote, hybrid, freelance: what ea
 <p>Unsure about a term? Search our <a href="glossary.html">glossary</a>.</p>''')
 
 
-article("article-rising-costs.html","When the rent goes up and your pay does not","How flexible work can ease cost-of-living pressure in Singapore.","Life & Money",'''
+article("article-rising-costs.html","Cost of Living and Household Income: The Case for Flexible Work","How flexible work can ease cost-of-living pressure in Singapore.","Life & Money",'''
 <p class="lede">If every month feels tighter than the last, you are not imagining it, and you are not alone. Housing, groceries, transport and family costs weigh on many households here.</p>
 <h2>Why a side income can help</h2><p>You may not be able to change your rent, but you may be able to change your income. Part-time, remote or contract work can add to what you earn without demanding a rigid full-time schedule.</p>
 <h2>Choose the arrangement that suits your budget</h2><ul><li><strong>Part-time:</strong> predictable hours, usually as an employee with a contract.</li><li><strong>Remote or hybrid:</strong> fewer commuting hours and costs.</li><li><strong>Freelance or contract:</strong> can pay more per hour but less predictable, and you handle your own CPF and tax.</li></ul>
@@ -359,7 +358,7 @@ article("article-rising-costs.html","When the rent goes up and your pay does not
 <div class="callout"><p>If money is very tight, also explore government support. SupportGoWhere (supportgowhere.gov.sg) lists schemes you may qualify for. Beware of anyone promising fast money for an upfront fee.</p></div>
 <p>Explore flexible options in our <a href="jobs.html">job types guide</a>.</p>''')
 
-article("article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Weighing work against childcare and caregiving in Singapore.","Life & Money",'''
+article("article-childcare-caregiving.html","Balancing Work and Caregiving: Costs and Options for Families","Weighing work against childcare and caregiving in Singapore.","Life & Money",'''
 <p class="lede">For many parents and caregivers the question is not whether you want to work, but whether the numbers and the hours make sense.</p>
 <h2>Start with your real hours</h2><p>Write down the hours you can truly commit each week, including the school run, meals and appointments. A role that fits those hours is worth more than a higher rate that does not.</p>
 <h2>Ask about flexibility early</h2><ul><li>Are hours fixed or can you choose slots?</li><li>Can some work be done from home?</li><li>What happens if a child or parent falls ill?</li></ul>
@@ -367,7 +366,7 @@ article("article-childcare-caregiving.html","Childcare or caregiving costs eatin
 <h2>Be kind to yourself</h2><p>Choosing to work part-time, or to pause, is not a failure. It is a decision you can revisit as your family changes.</p>
 <p>Explore roles with flexible hours in our <a href="jobs.html">job types guide</a>.</p>''')
 
-article("article-restart.html","Starting again after a break, retrenchment or illness","Restarting work after a career gap in Singapore.","Life & Money",'''
+article("article-restart.html","Returning to Work After a Career Break: A Practical Approach","Restarting work after a career gap in Singapore.","Life & Money",'''
 <p class="lede">Gaps in a CV are common: caring for family, retrenchment, health, study or simply needing a rest. Employers see them more often than you might fear.</p>
 <h2>Say it simply and honestly</h2><p>One or two calm sentences are enough: what happened, what you learned or did during that time, and what you want next.</p>
 <h2>Restart small</h2><p>Part-time or contract work can rebuild confidence, references and recent experience without the pressure of jumping straight back to full time.</p>

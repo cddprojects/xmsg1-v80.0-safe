@@ -29,8 +29,8 @@ def jobpage(fname,cls,eyebrow,h1,seo_title,seo_desc,intro,facts,roles,week,steps
 <section class="alt"><div class="wrap" style="text-align:center;max-width:680px"><h2>Spotted something out of date?</h2><p class="lede" style="margin-inline:auto">Rules and conditions change. Tell us if anything here needs updating.</p><div class="btn-row" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Contact Us</a></div></div></section>'''
     page(fname,seo_title,seo_desc,body)
 
-R_FLEX=("article-flexible-work-request.html","How to ask your employer for flexible work","Step-by-step: putting in a request")
-R_CPF=("article-part-time-cpf.html","Part-time work and CPF","What to check on your payslip")
+R_FLEX=("article-flexible-work-request.html","Requesting Flexible Work: A Step-by-Step Guide","Step-by-step: putting in a request")
+R_CPF=("article-part-time-cpf.html","Part-Time Employment and CPF","What to check on your payslip")
 R_AD=("article-read-job-ad.html","How to read a Singapore job ad","Decode pay, hours and terms")
 R_CV=("article-remote-cv.html","A CV for remote roles","Show you can work independently")
 R_MODES=("article-work-modes.html","Part-time, remote, hybrid, freelance","What each really means")
@@ -50,7 +50,7 @@ jobpage("part-time-jobs-singapore.html","jh1","Part time job Singapore","Part ti
 ["How many hours a week, and are they fixed or rostered?","What is the hourly or monthly rate, and when is it paid?","Is this an employee contract with CPF?","How much notice do I get for shift changes?","Is there a probation period and what is the notice period?","Who do I contact if my hours need to change?"],
 ["Accepting without knowing the hours","Not asking whether pay is hourly or monthly","Overcommitting and burning out","Ignoring the terms in your main job's contract"],
 [("How many hours is a part time job in Singapore?","An employee contracted to work fewer than 35 hours a week is classed as part-time under Singapore's part-time employment rules."),("Do part-time employees get leave?","Yes, generally on a pro-rated basis. Check the current rules on the MOM website."),("Can I do a part time job and keep my full-time job?","Often yes, but read your full-time contract first. Some employers require approval for outside work.")],
-[("article-part-time-cpf.html","Part-time work and CPF","What to check on your payslip"),("article-read-job-ad.html","How to read a Singapore job ad","Decode pay, hours and terms"),("work-from-home-jobs-singapore.html","Work from home jobs","The next guide")])
+[("article-part-time-cpf.html","Part-Time Employment and CPF","What to check on your payslip"),("article-read-job-ad.html","How to read a Singapore job ad","Decode pay, hours and terms"),("work-from-home-jobs-singapore.html","Work from home jobs","The next guide")])
 
 jobpage("work-from-home-jobs-singapore.html","jh2","Work from home jobs Singapore","Work from home jobs in Singapore: what they involve and how to start",
 "Work From Home Jobs Singapore: Roles, Setup and What to Ask | WorkNest SG",
@@ -144,14 +144,14 @@ TAKE.update({
 "article-remote-cv.html":["Show results you delivered independently.","List the remote tools you already use.","Mention time zones and availability clearly.","Keep it to one or two pages."],
 })
 
-article("article-flexible-work-request.html","How to ask your employer for flexible work","A step-by-step guide to a flexible work arrangement request in Singapore.","Rights",'''
+article("article-flexible-work-request.html","Requesting Flexible Work: A Step-by-Step Guide","A step-by-step guide to a flexible work arrangement request in Singapore.","Rights",'''
 <p class="lede">If you already have a job and want part-time hours, remote days or flexible timing, you can put in a formal request. Preparing it well makes a yes more likely.</p>
 <h2>Know what you are asking for</h2><ul><li><strong>Flexi-place:</strong> working from home or another location some or all of the time.</li><li><strong>Flexi-time:</strong> different start and end times.</li><li><strong>Flexi-load:</strong> fewer hours, such as part-time or job-sharing.</li></ul>
 <h2>Step by step</h2><ol><li>Check your contract and any company policy.</li><li>Decide what you want, for how long and from when.</li><li>Explain how the work will still get done, and any handover needed.</li><li>Offer a trial period and a review date.</li><li>Submit the request in writing.</li><li>Follow up politely if you do not hear back.</li></ol>
 <h2>What to expect</h2><p>Under national guidelines on flexible work arrangement requests, employers are expected to consider requests fairly, respond in writing within a set period and explain their reasons if they decline. Check the current details on the MOM website.</p>
 <div class="callout"><p>A request is not a guarantee. A clear, practical proposal with a trial period is your strongest approach.</p></div>''')
 
-article("article-part-time-cpf.html","Part-time work and CPF: check your payslip","How CPF applies to part-time work in Singapore.","Rights",'''
+article("article-part-time-cpf.html","Part-Time Employment and CPF: What to Verify on Your Payslip","How CPF applies to part-time work in Singapore.","Rights",'''
 <p class="lede">You know CPF exists. The practical question for a part-time gig is whether it is actually being paid, and correctly.</p>
 <h2>Who gets CPF contributions</h2><p>CPF contributions apply to employees who are Singapore Citizens or Permanent Residents, subject to age and monthly wages. Foreigners on work passes are generally not covered. Rates change, so check the CPF Board website.</p>
 <h2>Reading your payslip</h2><ul><li>Your gross pay and pay period.</li><li>Deductions, including employee CPF contribution where it applies.</li><li>Employer CPF contribution, which is shown separately.</li><li>Net pay.</li></ul>
@@ -159,7 +159,7 @@ article("article-part-time-cpf.html","Part-time work and CPF: check your payslip
 <h2>Questions to ask</h2><ul><li>Am I an employee under a contract of service?</li><li>Will CPF be contributed each month?</li><li>Will I receive an itemised payslip?</li></ul>
 <p>See our <a href="part-time-jobs-singapore.html">part time job guide</a> for more.</p>''')
 
-article("article-read-job-ad.html","How to read a job ad for flexible roles","What to look for in part-time, work from home and remote job ads in Singapore.","Basics",'''
+article("article-read-job-ad.html","Reading Job Advertisements for Flexible Roles","What to look for in part-time, work from home and remote job ads in Singapore.","Basics",'''
 <p class="lede">You have read plenty of job ads. Flexible roles have their own habits, and these are the details that matter most.</p>
 <h2>Details that decide whether it fits</h2><ul><li><strong>Hours:</strong> fixed shifts, a roster, or "flexible" with no numbers.</li><li><strong>Work mode:</strong> "WFH" can mean fully home, or one day a week. Ask.</li><li><strong>Employment type:</strong> employee, contract or freelance. It changes CPF, leave and tax.</li><li><strong>Pay basis:</strong> hourly, monthly, per task or commission.</li></ul>
 <h2>Watch the pay wording</h2><p>"Up to" is a ceiling, not a promise. Commission-only pay depends entirely on results. A range on MyCareersFuture is a guide to what the employer expects to pay. Ask what typical earnings are for the role.</p>
@@ -167,7 +167,7 @@ article("article-read-job-ad.html","How to read a job ad for flexible roles","Wh
 <h2>Check the employer</h2><p>Confirm the company exists and is the one actually hiring. Prefer official channels such as MyCareersFuture or the company's careers page. Our <a href="glossary.html">glossary</a> covers less common terms.</p>''')
 
 
-article("article-remote-cv.html","A CV for remote and work from home roles","How to tailor a CV for remote and work from home jobs in Singapore.","Career",'''
+article("article-remote-cv.html","Preparing a CV for Remote and Home-Based Roles","How to tailor a CV for remote and work from home jobs in Singapore.","Career",'''
 <p class="lede">Remote employers cannot watch you work, so they look for evidence that you can deliver independently.</p>
 <h2>Lead with results</h2><p>Use short bullets that show what you achieved on your own: tickets resolved, campaigns delivered, projects completed on time.</p>
 <h2>Show remote skills</h2><ul><li>Tools you already use: email, chat platforms, spreadsheets, video calls, project boards.</li><li>Written communication: clear, brief and polite.</li><li>Time management and reliability.</li></ul>
