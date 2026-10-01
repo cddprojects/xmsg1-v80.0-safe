@@ -362,3 +362,6 @@ section[id]{scroll-margin-top:90px}
 .menu-btn[aria-expanded="true"] .bars::before{top:0;transform:rotate(45deg)}
 .menu-btn[aria-expanded="true"] .bars::after{top:0;transform:rotate(-45deg)}
 .menu-btn:hover{background:var(--paper-2)}
+.site-footer ul a{text-decoration:none}
+.site-footer ul a:hover,.site-footer ul a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.site-footer :focus-visible{outline-color:var(--sun)}
