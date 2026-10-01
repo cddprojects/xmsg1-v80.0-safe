@@ -54,7 +54,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
 <div class="legal"><p>WorkNest SG is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
-<p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; +65 8396 3756 &middot; <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></p></div>
+<p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; +65 8396 3756 &middot; support@worknestsg.com</p></div>
 </div></footer>
 <script src="js/main.js"></script>
 </body></html>'''
@@ -191,7 +191,7 @@ page("index.html","Singapore Careers & Job Market Trends: Part Time Job, Work Fr
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send</button></form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks for getting in touch.</h3><p>Your email app should open with your message ready to send. If it does not, please email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> directly.</p></div></div>
+<div id="form-ok" class="ok" hidden tabindex="-1" role="status"><h3>Thank you for your message.</h3><p>Your email app should now be open with your message ready to send. Just press send when you are ready.</p><p class="ok-sub">If nothing opened, no worries. You can write to us at support@worknestsg.com and we will be glad to hear from you.</p></div></div>
 </div></section>
 ''')
 
@@ -483,10 +483,10 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <button class="btn btn-primary" type="submit">Send</button>
 <p class="notice">Sending opens your email app with your message ready to send to support@worknestsg.com.</p>
 </form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks for getting in touch.</h3><p>Your email app should open with your message ready to send. If it does not, please email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> directly.</p></div>
+<div id="form-ok" class="ok" hidden tabindex="-1" role="status"><h3>Thank you for your message.</h3><p>Your email app should now be open with your message ready to send. Just press send when you are ready.</p><p class="ok-sub">If nothing opened, no worries. You can write to us at support@worknestsg.com and we will be glad to hear from you.</p></div>
 </div>
 <div><h2>Other ways</h2><ul class="contact-list">
-<li><b>Email</b><a href="mailto:support@worknestsg.com">support@worknestsg.com</a></li>
+<li><b>Email</b>support@worknestsg.com</li>
 <li><b>Phone</b>+65 8396 3756</li>
 <li><b>Address</b>22 Orchard Road, #03-01, Singapore 238885</li>
 </ul></div>
@@ -556,7 +556,7 @@ head("Privacy Policy","Privacy Policy","Last updated: 1 October 2026")+'''
 
 <h2>12. Contact our Data Protection Officer</h2>
 <p>If you have questions, a request or a complaint about how we handle personal data, please contact:</p>
-<ul><li><strong>Data Protection Officer, WorkNest SG</strong></li><li>Email: <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></li><li>Phone: +65 8396 3756</li><li>Address: 22 Orchard Road, #03-01, Singapore 238885</li></ul>
+<ul><li><strong>Data Protection Officer, WorkNest SG</strong></li><li>Email: support@worknestsg.com</li><li>Phone: +65 8396 3756</li><li>Address: 22 Orchard Road, #03-01, Singapore 238885</li></ul>
 <p>If you are not satisfied with our response, you may contact the Personal Data Protection Commission at <a href="https://www.pdpc.gov.sg" rel="noopener">www.pdpc.gov.sg</a>.</p>
 </div></section>''')
 
@@ -566,7 +566,7 @@ head("Thank you","Thanks for getting in touch.","We have received your message a
 <section><div class="wrap" style="max-width:720px">
 <p>In the meantime, you are welcome to keep reading our latest articles on Singapore careers, industries and skills.</p>
 <div class="btn-row"><a class="btn btn-primary" href="knowledge-hub.html">Read more articles</a><a class="btn btn-ghost" href="index.html">Back to home</a></div>
-<p class="notice" style="margin-top:2rem">Need to add something? Email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> or call +65 8396 3756.</p>
+<p class="notice" style="margin-top:2rem">Need to add something? Email support@worknestsg.com or call +65 8396 3756.</p>
 </div></section>''',extra_head='<meta name="robots" content="noindex">')
 exec(open(pathlib.Path(__file__).with_name("articles2.py"),encoding="utf-8").read())
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())
