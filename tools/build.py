@@ -40,7 +40,7 @@ def page(fname, title, desc, body, extra_head=""):
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap nav">
 <a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
-<button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
+<button class="menu-btn" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>
 <ul id="nav-list">{nav}</ul>
 </div></header>
 <main id="main">

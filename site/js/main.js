@@ -1,7 +1,7 @@
 (function(){
   var btn=document.querySelector('.menu-btn'),list=document.getElementById('nav-list');
   if(btn&&list){btn.addEventListener('click',function(){
-    var o=list.classList.toggle('open');btn.setAttribute('aria-expanded',o);});}
+    var o=list.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Close menu':'Open menu');});}
 
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
