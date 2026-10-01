@@ -2,8 +2,8 @@
 import pathlib
 OUT = pathlib.Path(__file__).resolve().parent.parent / "site"
 
-NAV = [("index.html","Home"),("services.html","Services"),("jobs.html","Job Types"),
-       ("knowledge-hub.html","Knowledge Hub"),("about.html","About Us"),("contact.html","Contact Us")]
+NAV = [("index.html","Home"),("knowledge-hub.html","Knowledge Hub"),("jobs.html","Job Types"),
+       ("services.html","Services"),("about.html","About Us"),("contact.html","Contact Us")]
 
 LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="oklch(37% .075 178)"/><path d="M6 16.500L16 7l10 9.500" stroke="oklch(97.6% .009 88)" stroke-width="2.400" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.500 15v9h13v-9" fill="oklch(97.6% .009 88)"/><circle cx="16" cy="19.500" r="2.400" fill="oklch(60% .19 32)"/></svg>'
 
@@ -49,12 +49,12 @@ def page(fname, title, desc, body, extra_head=""):
 <footer class="site-footer"><div class="wrap">
 <div class="foot-grid">
 <div><a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
-<p style="margin-top:1rem;max-width:32ch">Independent information on part time jobs, work from home jobs, remote jobs and freelance jobs in Singapore.</p></div>
+<p style="margin-top:1rem;max-width:32ch">Independent briefings on Singapore careers, industries and skills, including part time job and work from home information.</p></div>
 <div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
 <div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
-<div class="legal"><p>WorkNest SG is an information website. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
+<div class="legal"><p>WorkNest SG is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
 <p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; <a href="tel:+6583963756">+65 8396 3756</a> &middot; <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></p></div>
 </div></footer>
 <script src="js/main.js"></script>
@@ -82,6 +82,12 @@ KW = ["part time job","work from home jobs","work from home jobs Singapore","rem
 kwul = "".join(f"<li>{k}</li>" for k in KW)
 
 IMG={
+"article-sectors-hiring.html":("sectors-hiring.jpg","Bar chart and city skyline illustrating sectors hiring in Singapore"),
+"article-in-demand-roles.html":("in-demand-roles.jpg","Role cards for care, data and digital jobs"),
+"article-why-second-income.html":("second-income.jpg","Two streams of coins merging, illustrating a second income"),
+"article-remote-work-trend.html":("remote-growth.jpg","Rising line chart with a home office and city"),
+"article-upskilling-2026.html":("upskilling.jpg","Steps with books and certificates, illustrating upskilling"),
+"article-read-labour-data.html":("labour-data.jpg","Charts and magnifying glass illustrating labour data"),
 "article-rising-costs.html":("rising-costs.jpg","Calculator, coins, house key and laptop on a desk, illustrating household costs and a second income"),
 "article-childcare-caregiving.html":("childcare-caregiving.jpg","Parent and child at a table with a laptop, backpack and clock, illustrating work around family"),
 "article-restart.html":("restart.jpg","A figure taking a first step on a path towards a sunrise over a city, illustrating restarting work"),
@@ -97,50 +103,69 @@ def thumb(href,lazy=True):
     f,alt=IMG[href]
     return f'<a class="thumb" href="{href}" tabindex="-1" aria-hidden="true"><img src="img/{f}" alt="" width="1280" height="720"{" loading=\"lazy\"" if lazy else ""}></a>'
 # ---------------- HOME
-page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Guide | WorkNest SG",
-"Need a side income? Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, online work from home, freelance jobs and how to make money at home.",f'''
+def card(href,label,t,d,m="5 min"):
+    return f'<article class="post reveal">{thumb(href)}<div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{d}</p></article>'
+def tile_s(href,t,d): return f'<a class="mini reveal" href="{href}"><b>{t}</b><span>{d}</span></a>'
+page("index.html","Singapore Careers & Job Market Trends: Part Time Job, Work From Home Jobs | WorkNest SG",
+"Independent Singapore career and industry publication: sectors hiring, in-demand roles, upskilling, and why a part time job, work from home jobs or freelance jobs are growing as a second income.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Information for job seekers in Singapore</span>
-<h1>Part time job or work from home in Singapore? <span>Explore side income options that fit.</span></h1>
-<p class="lede">Rising costs make one income feel tight. We share clear information on part time jobs, work from home jobs, remote jobs, online jobs and freelance jobs in Singapore, so you can choose the way to make money at home that suits your hours.</p>
-<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Read the Knowledge Hub</a></div>
+<span class="eyebrow">Singapore careers, industries and skills</span>
+<h1>What is changing in Singapore's job market. <span>And what it means for your career.</span></h1>
+<p class="lede">Briefings on in-demand roles, hiring sectors and upskilling, plus why a part time job, work from home jobs or freelance jobs are becoming a common second income. Sourced from official publications and updated regularly.</p>
+<div class="btn-row"><a class="btn btn-primary" href="knowledge-hub.html">Read the latest briefings</a><a class="btn btn-ghost" href="#second-income">Why a second income</a></div>
 </div>
-<aside class="glance" aria-label="Job types at a glance"><h2>At a glance</h2>
-<a href="part-time-jobs-singapore.html"><b>Part time job</b><span>Under 35 hrs a week</span></a>
-<a href="work-from-home-jobs-singapore.html"><b>Work from home</b><span>Agreed hours, at home</span></a>
-<a href="remote-jobs-singapore.html"><b>Remote</b><span>Location flexible</span></a>
-<a href="online-jobs-singapore.html"><b>Online jobs</b><span>Flexible sessions</span></a>
-<a href="freelance-jobs-singapore.html"><b>Freelance</b><span>Paid per project</span></a>
-</aside></div></section>
-
-
-
-<section class="alt"><div class="wrap split">
-<div class="reveal"><span class="eyebrow">Why we are here</span><h2>One income does not always stretch far enough.</h2></div>
-<div class="reveal"><p class="lede">Many people in Singapore look for a part time job, online work from home or freelance jobs to cover the gap, but the choices and the jargon can be confusing.</p>
-<p>So we explain each kind of work in one place: what it involves, the hours, who it suits, and what to ask before you say yes.</p></div>
-</div></section>
-
-<section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Job types</span><h2>Six ways to earn on the side in Singapore.</h2></div>
-<div class="jgrid">
-{jobtile("c1","clock","Part time job Singapore","Retail, admin, F&amp;B, tutoring and events.","Under 35 hrs a week &middot; often set shifts","part-time-jobs-singapore.html")}
-{jobtile("c2","home","Work from home jobs Singapore","Support, data entry, virtual assistant and content roles.","Work from home in Singapore &middot; agreed hours","work-from-home-jobs-singapore.html")}
-{jobtile("c3","globe","Remote job Singapore","Marketing, design, tech and specialist roles.","Location flexible &middot; skills needed","remote-jobs-singapore.html")}
-{jobtile("c4","laptop","Online jobs","Tutoring, moderation, research and e-commerce support.","Online work from home &middot; flexible slots","online-jobs-singapore.html")}
-{jobtile("c5","pen2","Freelance jobs","Design, writing, video and bookkeeping projects.","Paid per project &middot; you set the schedule","freelance-jobs-singapore.html")}
-{jobtile("c6","wallet","Make money at home","The main routes to earn from home, compared.","Part-time, freelance or online","make-money-at-home-singapore.html")}
-</div>
-<p class="after-tiles"><a href="jobs.html#where-to-look">Ready to look for openings? See where to find them &rarr;</a></p>
+<a class="lead-card" href="article-sectors-hiring.html"><img src="img/sectors-hiring.jpg" alt="" width="1280" height="720"><span class="cat">Lead story &middot; Industry trends</span><h2>Which sectors are hiring in Singapore right now</h2><span class="go">Read the briefing &rarr;</span></a>
 </div></section>
 
 <section class="alt"><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Knowledge Hub</span><h2>Read before you decide.</h2></div>
+<div class="head reveal"><span class="eyebrow">The big picture</span><h2>Four shifts shaping careers in Singapore.</h2></div>
+<div class="statrow">
+<div class="stat reveal"><b>Sectors</b><span>Care, tech, finance and logistics keep appearing in national reports</span></div>
+<div class="stat reveal"><b>Skills</b><span>Employers describe roles by skills, not just titles</span></div>
+<div class="stat reveal"><b>Flexibility</b><span>Formal flexible work guidelines make remote and hybrid requests normal</span></div>
+<div class="stat reveal"><b>Second income</b><span>Part-time, online and freelance work fill the gap for many households</span></div>
+</div>
+<p class="src-note">Sources: Ministry of Manpower, Workforce Singapore, SkillsFuture Singapore. See each briefing for details.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="head reveal"><span class="eyebrow">Latest briefings</span><h2>Career paths, roles and skills.</h2></div>
 <div class="posts">
-<article class="post reveal">{thumb("article-rising-costs.html")}<div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can help.</p></article>
-<article class="post reveal">{thumb("article-childcare-caregiving.html")}<div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
-<article class="post reveal">{thumb("article-work-modes.html")}<div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each means</a></h3><p>Understand the words in a job ad.</p></article>
+{card("article-in-demand-roles.html","In-demand roles","Top in-demand roles in Singapore now","Care, data, digital, finance and operations: the skills behind the titles.")}
+{card("article-why-second-income.html","Second income","Why a second income is on more minds","A part time job, work from home or freelance work: why it keeps growing.")}
+{card("article-upskilling-2026.html","Education &amp; skills","Upskilling in Singapore: what is worth it","SkillsFuture credits and short courses tied to real roles.")}
+{card("article-remote-work-trend.html","Industry trends","Remote, hybrid and flexible work: where we stand","What national guidelines changed for remote job Singapore roles.")}
+{card("article-read-labour-data.html","Career advice","How to read Singapore's labour data","Unemployment, vacancies and wages, explained.","4 min")}
+{card("article-rising-costs.html","Life &amp; money","When the rent goes up and your pay does not","How flexible work can help household budgets.")}
+</div>
+<p class="after-tiles"><a href="knowledge-hub.html">See all briefings &rarr;</a></p>
+</div></section>
+
+<section class="alt" id="second-income"><div class="wrap split">
+<div class="reveal"><span class="eyebrow">Second income</span><h2>Why part-time work is helping more people add a stream.</h2></div>
+<div class="reveal"><p class="lede">With living costs up, many in Singapore pair their main job with a part time job Singapore employers offer, online work from home, or freelance jobs.</p>
+<p>Flexible options such as work from home jobs Singapore, work from home in Singapore arrangements and remote job Singapore roles save commuting time. Many readers also ask how to make money at home through ordinary paid work. Pay depends on the role and hours, and is never guaranteed.</p>
+<p><a href="article-why-second-income.html">Read the briefing &rarr;</a></p></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="head reveal"><span class="eyebrow">Work types explained</span><h2>The six common ways people work flexibly.</h2></div>
+<div class="minis">
+{tile_s("part-time-jobs-singapore.html","Part time job","Under 35 hours a week")}
+{tile_s("work-from-home-jobs-singapore.html","Work from home jobs","Agreed hours, at home")}
+{tile_s("remote-jobs-singapore.html","Remote job Singapore","Location flexible")}
+{tile_s("online-jobs-singapore.html","Online jobs","Flexible sessions")}
+{tile_s("freelance-jobs-singapore.html","Freelance jobs","Paid per project")}
+{tile_s("make-money-at-home-singapore.html","Earn from home","Routes compared")}
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<div class="head reveal"><span class="eyebrow">Rights &amp; money</span><h2>Practical reads.</h2></div>
+<div class="posts">
+{card("article-flexible-work-request.html","Rights","How to ask your employer for flexible work","A step-by-step guide to a formal request.")}
+{card("article-part-time-cpf.html","Rights","Part-time work and CPF","Check your payslip.","4 min")}
+{card("article-remote-cv.html","Career","A CV for remote and work from home roles","Show you can deliver independently.","4 min")}
 </div></div></section>
 
 <section id="contact-us"><div class="wrap split">
@@ -212,7 +237,7 @@ page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapor
 
 # ---------------- SERVICES
 page("services.html","Services | Guides & Tools for Part Time and Work From Home Jobs | WorkNest SG","Free guides and tools for job seekers: part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs, plus a weekly hours calculator.",
-head("Services","What you will find on WorkNest SG.","Free guides and tools on flexible work in Singapore, with no sign-up.")+f'''
+head("Services","What we publish.","Free briefings, guides and tools on Singapore careers and flexible work, with no sign-up.")+f'''
 <section><div class="wrap">
 <div class="tiles">
 <article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>In-depth job type guides</h3><p>Roles, a sample week, how to start, and what to check on contracts, pay and CPF for six kinds of flexible work.</p><a class="more" href="jobs.html">Browse job types &rarr;</a></article>
@@ -228,36 +253,44 @@ head("Services","What you will find on WorkNest SG.","Free guides and tools on f
 
 # ---------------- KNOWLEDGE HUB
 posts=[
-("life","Life & Money","article-rising-costs.html","When the rent goes up and your pay does not","Many households feel squeezed by Singapore living costs. Here is how flexible work can help, and how to choose it wisely.","5 min",True),
-("basics","Basics","article-work-modes.html","Part-time, remote, hybrid, freelance: what each really means","The words in a job ad describe different things: hours, place and employment status.","5 min",False),
-("basics","Basics","article-read-job-ad.html","How to read a job ad for flexible roles","The details that decide whether a role fits.","4 min",False),
-("rights","Rights","article-flexible-work-request.html","How to ask your employer for flexible work","A step-by-step guide to a formal request.","5 min",False),
-("rights","Rights","article-part-time-cpf.html","Part-time work and CPF: check your payslip","Is CPF actually being paid, and correctly?","4 min",False),
-("career","Career","article-remote-cv.html","A CV for remote and work from home roles","Show you can deliver independently.","4 min",False),
-("life","Life & Money","article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Options to explore before you decide.","5 min",False),
-("life","Life & Money","article-restart.html","Starting again after a break, retrenchment or illness","How to talk about gaps and take the first step.","5 min",False),
+("trends","Industry trends","article-sectors-hiring.html","Which sectors are hiring in Singapore right now","The industries official labour reports keep pointing to, and what it means for your next move.","5 min",True),
+("roles","In-demand roles","article-in-demand-roles.html","Top in-demand roles in Singapore now","Care, data, digital, finance and operations: the skills behind the titles.","5 min",False),
+("second","Second income","article-why-second-income.html","Why a second income is on more minds","Why part-time, online and freelance work keep growing.","5 min",False),
+("trends","Industry trends","article-remote-work-trend.html","Remote, hybrid and flexible work: where Singapore stands","How guidelines made flexible work requests normal.","4 min",False),
+("edu","Education & skills","article-upskilling-2026.html","Upskilling in Singapore: what is worth it","SkillsFuture credits and short courses tied to real roles.","5 min",False),
+("career","Career advice","article-read-labour-data.html","How to read Singapore's labour data","Unemployment, vacancies and wages, explained.","4 min",False),
+("second","Second income","article-rising-costs.html","When the rent goes up and your pay does not","How flexible work can help household budgets.","5 min",False),
+("second","Second income","article-childcare-caregiving.html","Childcare or caregiving costs eating your pay?","Options to explore before you decide.","5 min",False),
+("career","Career advice","article-restart.html","Starting again after a break, retrenchment or illness","How to talk about gaps and take the first step.","5 min",False),
+("career","Career advice","article-remote-cv.html","A CV for remote and work from home roles","Show you can deliver independently.","4 min",False),
+("rights","Rights & money","article-flexible-work-request.html","How to ask your employer for flexible work","A step-by-step guide to a formal request.","5 min",False),
+("rights","Rights & money","article-part-time-cpf.html","Part-time work and CPF: check your payslip","Is CPF actually being paid, and correctly?","4 min",False),
+("career","Career advice","article-work-modes.html","Part-time, remote, hybrid, freelance: what each means","The words in a job ad describe different things.","5 min",False),
+("career","Career advice","article-read-job-ad.html","How to read a job ad for flexible roles","The details that decide whether a role fits.","4 min",False),
 ("scam","Scams","article-job-scams.html","Seven signs a work-from-home offer is a scam","How to spot fake offers.","6 min",False),
 ]
 cards=""
 for cat,label,href,t,d,m,feat in posts:
     body_=f'<div><div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{d}</p>{"<a class=\"btn btn-warm\" href=\""+href+"\">Read now</a>" if feat else ""}</div>'
     cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}">{thumb(href, not feat)}{body_}</article>'
-page("knowledge-hub.html","Knowledge Hub | WorkNest SG","Blog-style guides on part-time, remote, hybrid and freelance work in Singapore.",
-head("Knowledge Hub","Real-life reads on part time jobs, work from home and money in Singapore.","Plain-English guides on flexible work, your rights and the money side of a second income.")+f'''
+page("knowledge-hub.html","Knowledge Hub | WorkNest SG","Briefings on Singapore career paths, industry trends, in-demand roles, upskilling and part time job Singapore options.",
+head("Knowledge Hub","Briefings on Singapore careers, industries and skills.","Industry trends, in-demand roles, education and the rise of the second income, with sources.")+f'''
 <section><div class="wrap">
 <div class="filters" role="group" aria-label="Filter articles">
 <button class="chip" data-filter="all" aria-pressed="true">All</button>
-<button class="chip" data-filter="life" aria-pressed="false">Life &amp; Money</button>
-<button class="chip" data-filter="scam" aria-pressed="false">Scams</button>
-<button class="chip" data-filter="basics" aria-pressed="false">Basics</button>
-<button class="chip" data-filter="rights" aria-pressed="false">Rights</button>
-<button class="chip" data-filter="career" aria-pressed="false">Career</button>
-<button class="chip" data-filter="gig" aria-pressed="false">Freelance</button></div>
+<button class="chip" data-filter="trends" aria-pressed="false">Industry trends</button>
+<button class="chip" data-filter="roles" aria-pressed="false">In-demand roles</button>
+<button class="chip" data-filter="edu" aria-pressed="false">Education &amp; skills</button>
+<button class="chip" data-filter="second" aria-pressed="false">Second income</button>
+<button class="chip" data-filter="career" aria-pressed="false">Career advice</button>
+<button class="chip" data-filter="rights" aria-pressed="false">Rights &amp; money</button>
+<button class="chip" data-filter="scam" aria-pressed="false">Scams</button></div>
 <div class="posts">{cards}</div></div></section>''')
 
 # ---------------- ARTICLES
 TAKE={}
 EXTRA={}
+SOURCES={}
 def article(fname,title,desc,cat,body):
     tk=TAKE.get(fname)
     box=("<div class=\"takeaways\"><h2>Key takeaways</h2><ul>"+"".join(f"<li>{t}</li>" for t in tk)+"</ul></div>") if tk else ""
@@ -266,6 +299,10 @@ def article(fname,title,desc,cat,body):
     if ex:
         body+="<h2>Common questions</h2>"+"".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in ex[0])
         body+='<h2>Keep reading</h2><ul>'+"".join(f'<li><a href="{h}">{t}</a></li>' for h,t in ex[1])+'</ul>'
+    src=SOURCES.get(fname)
+    if src:
+        body+='<h2>Sources</h2><ul class="sources">'+"".join(f'<li><a href="{u}" rel="noopener">{t}</a></li>' for t,u in src)+'</ul>'
+    body='<p class="byline">Last reviewed October 2026</p>'+body
     hero=""
     if fname in IMG:
         f,alt=IMG[fname]
@@ -406,14 +443,14 @@ head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px
 page("about.html","About Us | WorkNest SG","WorkNest SG shares practical, sourced information on part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs.",
 head("About Us","Information on flexible work in Singapore.")+f'''
 <section><div class="wrap split">
-<div class="reveal"><h2>Who this is for</h2><p>If one income feels tight and you are looking at a part time job, work from home in Singapore, online work or freelance jobs, this site is for you.</p>
+<div class="reveal"><h2>Who this is for</h2><p>WorkNest SG is an independent publication on Singapore career paths, industry trends and skills. It is for anyone planning their next move, or looking at a part time job, work from home in Singapore, online work or freelance jobs as a second income. We are not affiliated with any government agency.</p>
 <p>You have limited hours, real bills and no time to sift through jargon. So each guide tells you what the work involves, what it usually looks like week to week, and what to check before you agree to anything.</p></div>
 <div class="reveal"><h2>How we write our guides</h2><div class="types">
 <div class="type" style="grid-template-columns:1fr"><div><h3>From your point of view</h3><p>Every guide answers the questions a job seeker asks: hours, pay basis, CPF, contract and how to start.</p></div></div>
 <div class="type" style="grid-template-columns:1fr"><div><h3>Checked against official sources</h3><p>We link to MOM, CPF Board, IRAS and MyCareersFuture so you can confirm details yourself.</p></div></div>
 <div class="type" style="grid-template-columns:1fr"><div><h3>Reviewed and dated</h3><p>Guides show when they were last reviewed, so you know how current they are.</p></div></div></div></div>
 </div></section>
-<section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">What you will find</span><h2>Six job types, five guides and growing.</h2></div>
+<section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">What you will find</span><h2>Briefings, job type guides and tools.</h2></div>
 <div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
 <section><div class="wrap"><p class="notice" style="max-width:70ch">WorkNest SG shares general information about jobs in Singapore. It is not legal, financial or employment advice. Find us at 22 Orchard Road, #03-01, Singapore 238885.</p></div></section>''')
 
@@ -462,5 +499,6 @@ head("Privacy &amp; PDPA","Privacy notice")+'''
 <h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
 <h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at support@worknestsg.com.</p>
 <h2>Cookies</h2><p>This site sets no tracking cookies. Fonts are loaded from Google Fonts.</p></div></section>''')
+exec(open(pathlib.Path(__file__).with_name("articles2.py"),encoding="utf-8").read())
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())
 print("built")
