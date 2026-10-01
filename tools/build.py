@@ -102,8 +102,25 @@ def thumb(href,lazy=True):
     f,alt=IMG[href]
     return f'<a class="thumb" href="{href}" tabindex="-1" aria-hidden="true"><img src="img/{f}" alt="" width="1280" height="720"{" loading=\"lazy\"" if lazy else ""}></a>'
 # ---------------- HOME
+EXC={
+"article-sectors-hiring.html":"Singapore's job market is not moving in one direction. A few sectors keep growing, others are reshaping, and the roles inside each are changing fast, from healthcare and technology to finance and logistics...",
+"article-in-demand-roles.html":"Job titles come and go, but the skills employers keep asking for fall into a few clear groups. Care, data, digital marketing, finance and operations roles appear again and again in manpower plans...",
+"article-why-second-income.html":"More people are looking at a part time job on top of a main role, or a freelance project on weekends. Rising costs are the main push, but flexible options have also widened what is possible...",
+"article-remote-work-trend.html":"Flexible work has moved from a perk to a standard conversation between employees and employers. Employers are now expected to have a process for considering requests, which gives you a clear way to ask...",
+"article-upskilling-2026.html":"Training can open a new path, but only if it connects to roles you can see advertised. Start from two or three job ads you would like, list the skills they ask for, then match courses to the gaps...",
+"article-read-labour-data.html":"Headlines compress a lot. Unemployment, job vacancies and wage figures each measure something different, and reading them together tells a very different story from any single number...",
+"article-rising-costs.html":"If every month feels tighter than the last, you are not imagining it. Housing, groceries, transport and family costs weigh on many households here, and a second source of income can ease the pressure...",
+"article-childcare-caregiving.html":"For many parents and caregivers the question is not whether you want to work, but whether the numbers and the hours make sense. Start by writing down the hours you can truly commit each week...",
+"article-restart.html":"Gaps in a CV are common: caring for family, retrenchment, health, study or simply needing a rest. Employers see them more often than you might fear, and a calm, simple explanation is usually enough...",
+"article-remote-cv.html":"A remote employer cannot watch you work, so your CV has to show that you can deliver independently. Lead with results, show how you communicate in writing, and state your location and hours clearly...",
+"article-flexible-work-request.html":"Asking for flexible work is easier when you treat it as a proposal rather than a favour. Describe the arrangement you want, show how the work will still get done, and offer a trial period...",
+"article-part-time-cpf.html":"Part-time employees are still employees, and CPF contributions generally apply depending on age, residency and pay. Your payslip is the quickest place to check that the right amounts are going in...",
+"article-work-modes.html":"Job ads mix up three separate ideas: how many hours you work, where you work, and your legal status. Untangling hours, place and status is the first step to understanding any listing...",
+"article-read-job-ad.html":"Two job ads can look alike and describe very different roles. The details that matter are often in the small print: how pay is worked out, what hours are expected and what the notice period is...",
+"article-job-scams.html":"Scammers favour part-time and remote jobs because the promise of easy, flexible income is hard to resist. These are the patterns to look for, from unsolicited chat messages to requests for upfront fees...",
+}
 def card(href,label,t,d,m="5 min"):
-    return f'<article class="post reveal">{thumb(href)}<div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{d}</p></article>'
+    return f'<article class="post reveal">{thumb(href)}<div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{EXC.get(href,d)}</p></article>'
 def tile_s(href,t,d): return f'<a class="mini reveal" href="{href}"><b>{t}</b><span>{d}</span></a>'
 page("index.html","Singapore Careers & Job Market Trends: Part Time Job, Work From Home Jobs | WorkNest SG",
 "Independent Singapore career and industry publication: sectors hiring, in-demand roles, upskilling, and why a part time job, work from home jobs or freelance jobs are growing as a side income.",f'''
@@ -270,7 +287,7 @@ posts=[
 ]
 cards=""
 for cat,label,href,t,d,m,feat in posts:
-    body_=f'<div><div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{d}</p>{"<a class=\"btn btn-warm\" href=\""+href+"\">Read now</a>" if feat else ""}</div>'
+    body_=f'<div><div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{EXC.get(href,d)}</p>{"<a class=\"btn btn-warm\" href=\""+href+"\">Read now</a>" if feat else ""}</div>'
     cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}">{thumb(href, not feat)}{body_}</article>'
 page("knowledge-hub.html","Knowledge Hub | WorkNest SG","Articles on Singapore career paths, industry trends, in-demand roles, upskilling and part time job Singapore options.",
 head("Knowledge Hub","Articles on Singapore careers, industries and skills.","Industry trends, in-demand roles, education and the rise of the side income, with sources.")+f'''
