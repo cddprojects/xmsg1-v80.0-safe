@@ -515,6 +515,15 @@ head("Privacy &amp; PDPA","Privacy notice")+'''
 <h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
 <h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at support@worknestsg.com.</p>
 <h2>Cookies</h2><p>This site sets no tracking cookies. Fonts are loaded from Google Fonts.</p></div></section>''')
+
+# ---------------- THANK YOU
+page("thank-you.html","Thank You | WorkNest SG","Thank you for contacting WorkNest SG.",
+head("Thank you","Thanks for getting in touch.","We have received your message and will reply by email as soon as we can.")+'''
+<section><div class="wrap" style="max-width:720px">
+<p>In the meantime, you are welcome to keep reading our latest articles on Singapore careers, industries and skills.</p>
+<div class="btn-row"><a class="btn btn-primary" href="knowledge-hub.html">Read more articles</a><a class="btn btn-ghost" href="index.html">Back to home</a></div>
+<p class="notice" style="margin-top:2rem">Need to add something? Email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> or call <a href="tel:+6583963756">+65 8396 3756</a>.</p>
+</div></section>''')
 exec(open(pathlib.Path(__file__).with_name("articles2.py"),encoding="utf-8").read())
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())
 print("built")
