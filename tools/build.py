@@ -105,7 +105,7 @@ def thumb(href,lazy=True):
 EXC={
 "article-sectors-hiring.html":"Healthcare, technology, finance and logistics keep growing, while roles inside each are changing fast...",
 "article-in-demand-roles.html":"Job titles change, but the skills employers keep asking for fall into clear groups...",
-"article-why-second-income.html":"More people are adding a part time job or freelance work on top of their main role...",
+"article-why-second-income.html":"More people add a part time job or freelance work alongside their main role...",
 "article-remote-work-trend.html":"Flexible work has moved from a perk to a standard conversation between employers and employees...",
 "article-upskilling-2026.html":"Training only pays off when it connects to roles you can actually see advertised...",
 "article-read-labour-data.html":"Unemployment, vacancies and wages each measure something different. The real story is in combining them...",
