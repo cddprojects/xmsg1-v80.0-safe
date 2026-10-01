@@ -522,9 +522,8 @@ head("Privacy Policy","Privacy Policy","Last updated: 1 October 2026")+'''
 <p>Please do not send sensitive information such as your NRIC number, Singpass details, OTPs, bank account details or passwords. We will never ask for them.</p>
 <p>The hours calculator and the scam checker run entirely in your browser. The information you enter into them is not sent to us or stored.</p>
 
-<h2>3. Technical data and cookies</h2>
-<p>Our web server may automatically log standard technical information such as your IP address, browser type and the pages requested, for security and to keep the site running. We do not use advertising or tracking cookies on this website. If we introduce analytics or advertising measurement in future, we will update this policy and, where required, seek your consent.</p>
-<p>This website loads fonts from Google Fonts. When a page loads, your browser may send your IP address and browser information to Google. Please see Google's privacy policy for details.</p>
+<h2>3. Technical data</h2>
+<p>Our web server may automatically log standard technical information such as your IP address, browser type and the pages requested, for security and to keep the site running.</p>
 
 <h2>4. How we use your personal data</h2>
 <p>We use your personal data only for the following purposes:</p>
