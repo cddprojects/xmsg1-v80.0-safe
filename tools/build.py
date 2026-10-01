@@ -489,7 +489,6 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <li><b>Email</b><a href="mailto:support@worknestsg.com">support@worknestsg.com</a></li>
 <li><b>Phone</b><a href="tel:+6583963756">+65 8396 3756</a></li>
 <li><b>Address</b>22 Orchard Road, #03-01, Singapore 238885</li>
-<li><b>Looking for openings?</b>Try <a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a>.</li>
 <li><b>Suspected scam?</b>Call the ScamShield helpline on 1799 and report to the Police.</li></ul></div>
 </div></section>''')
 
