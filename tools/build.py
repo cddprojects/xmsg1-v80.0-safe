@@ -166,7 +166,7 @@ page("index.html","Singapore Careers & Job Market Trends: Part Time Job, Work Fr
 </div></section>
 
 <section><div class="wrap">
-<div class="head reveal"><span class="eyebrow">Work types explained</span><h2>The six common ways people work flexibly.</h2></div>
+<div class="head reveal"><span class="eyebrow">Work types</span><h2>The six common ways people work flexibly.</h2></div>
 <div class="minis">
 {tile_s("part-time-jobs-singapore.html","Part time job","Under 35 hours a week")}
 {tile_s("work-from-home-jobs-singapore.html","Work from home jobs","Agreed hours, at home")}
