@@ -81,6 +81,21 @@ def jobtile(cls,ic,t,d,facts,href):
 KW = ["part time job","work from home jobs","work from home jobs Singapore","remote job Singapore","part time job Singapore","work from home in Singapore","make money at home","online jobs","online work from home","freelance jobs"]
 kwul = "".join(f"<li>{k}</li>" for k in KW)
 
+IMG={
+"article-rising-costs.html":("rising-costs.jpg","Calculator, coins, house key and laptop on a desk, illustrating household costs and a second income"),
+"article-childcare-caregiving.html":("childcare-caregiving.jpg","Parent and child at a table with a laptop, backpack and clock, illustrating work around family"),
+"article-restart.html":("restart.jpg","A figure taking a first step on a path towards a sunrise over a city, illustrating restarting work"),
+"article-work-modes.html":("work-modes.jpg","Icons for part-time, work from home, remote and freelance work connected together"),
+"article-job-scams.html":("job-scams.jpg","Magnifying glass over a job listing with a checklist, shield and warning sign"),
+"article-flexible-work-request.html":("flexible-work-request.jpg","Calendar, laptop and speech bubble illustrating a request for flexible work"),
+"article-part-time-cpf.html":("part-time-cpf.jpg","Payslip, piggy bank and calculator illustrating checking contributions on a payslip"),
+"article-read-job-ad.html":("read-job-ad.jpg","Job advertisement with highlighted phrases, magnifying glass and sticky notes"),
+"article-remote-cv.html":("remote-cv.jpg","Laptop showing a CV with webcam, headset and coffee on a home desk"),
+}
+def thumb(href,lazy=True):
+    if href not in IMG: return ""
+    f,alt=IMG[href]
+    return f'<a class="thumb" href="{href}" tabindex="-1" aria-hidden="true"><img src="img/{f}" alt="" width="1280" height="720"{" loading=\"lazy\"" if lazy else ""}></a>'
 # ---------------- HOME
 page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Guide | WorkNest SG",
 "Need a side income? Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, online work from home, freelance jobs and how to make money at home.",f'''
@@ -123,9 +138,9 @@ page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Gu
 <section class="alt"><div class="wrap">
 <div class="head reveal"><span class="eyebrow">Knowledge Hub</span><h2>Read before you decide.</h2></div>
 <div class="posts">
-<article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can help.</p></article>
-<article class="post reveal"><div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
-<article class="post reveal"><div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each means</a></h3><p>Understand the words in a job ad.</p></article>
+<article class="post reveal">{thumb("article-rising-costs.html")}<div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-rising-costs.html">When the rent goes up and your pay does not</a></h3><p>How a part time job or work from home income can help.</p></article>
+<article class="post reveal">{thumb("article-childcare-caregiving.html")}<div class="meta"><span class="cat">Life &amp; Money</span><span>5 min read</span></div><h3><a href="article-childcare-caregiving.html">Childcare or caregiving costs eating your pay?</a></h3><p>Options to explore before you decide.</p></article>
+<article class="post reveal">{thumb("article-work-modes.html")}<div class="meta"><span class="cat">Basics</span><span>5 min read</span></div><h3><a href="article-work-modes.html">Part-time, remote, hybrid, freelance: what each means</a></h3><p>Understand the words in a job ad.</p></article>
 </div></div></section>
 
 <section id="contact-us"><div class="wrap split">
@@ -225,8 +240,8 @@ posts=[
 ]
 cards=""
 for cat,label,href,t,d,m,feat in posts:
-    link = f'<a href="{href}">{t}</a>' if href!="#" else f'<a href="#" aria-disabled="true">{t}</a>'
-    cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}"><div><div class="meta"><span class="cat">{label}</span><span>{m} read</span>{"<span>Coming soon</span>" if href=="#" else ""}</div><h3>{link}</h3><p>{d}</p></div>{"<div style=\"align-self:end\"><a class=\"btn btn-warm\" href=\""+href+"\">Read now</a></div>" if feat else ""}</article>'
+    body_=f'<div><div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{d}</p>{"<a class=\"btn btn-warm\" href=\""+href+"\">Read now</a>" if feat else ""}</div>'
+    cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}">{thumb(href, not feat)}{body_}</article>'
 page("knowledge-hub.html","Knowledge Hub | WorkNest SG","Blog-style guides on part-time, remote, hybrid and freelance work in Singapore.",
 head("Knowledge Hub","Real-life reads on part time jobs, work from home and money in Singapore.","Plain-English guides on flexible work, your rights and the money side of a second income.")+f'''
 <section><div class="wrap">
@@ -251,8 +266,12 @@ def article(fname,title,desc,cat,body):
     if ex:
         body+="<h2>Common questions</h2>"+"".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in ex[0])
         body+='<h2>Keep reading</h2><ul>'+"".join(f'<li><a href="{h}">{t}</a></li>' for h,t in ex[1])+'</ul>'
+    hero=""
+    if fname in IMG:
+        f,alt=IMG[fname]
+        hero=f'<div class="wrap article"><figure class="hero-img"><img src="img/{f}" alt="{alt}" width="1280" height="720"></figure></div>'
     page(fname,title+" | WorkNest SG",desc,f'''{head(cat,title)}
-<section><div class="wrap article">{body}
+{hero}<section style="padding-top:2rem"><div class="wrap article">{body}
 <p style="margin-top:2.5rem"><a href="knowledge-hub.html">&larr; Back to Knowledge Hub</a></p></div></section>''')
 
 
