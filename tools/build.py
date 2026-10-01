@@ -54,7 +54,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div><h4>Resources</h4><ul><li><a href="scam-check.html">Job scam checker</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="https://www.scamshield.gov.sg" rel="noopener">ScamShield</a></li><li><a href="https://www.mom.gov.sg" rel="noopener">Ministry of Manpower</a></li><li><a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
-<div class="legal"><p>WorkNest SG is an information website only. We are not an employment agency, do not hold an MOM Employment Agency licence, and do not recruit, screen, place or introduce candidates or publish vacancies. Guides are general information, not legal advice; confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
+<div class="legal"><p>WorkNest SG is an information website. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
 <p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; <a href="tel:+6583963756">+65 8396 3756</a> &middot; <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></p></div>
 </div></footer>
 <script src="js/main.js"></script>
@@ -150,7 +150,7 @@ page("index.html","Part Time Job Singapore & Work From Home Jobs: Side Income Gu
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send</button></form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>We will reply to your message.</p></div></div>
+<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks for getting in touch.</h3><p>Your email app should open with your message ready to send. If it does not, please email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> directly.</p></div></div>
 </div></section>
 ''')
 
@@ -425,12 +425,12 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <form id="contact-form" class="form" novalidate>
 <div class="field"><label for="name">Name</label><input id="name" required autocomplete="name"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
-<div class="field"><label for="topic">Topic</label><select id="topic"><option>A question about part time jobs</option><option>A question about work from home or remote jobs</option><option>Online jobs or freelance work</option><option>I think I saw a scam</option><option>Suggest an article</option><option>Correction or feedback</option></select></div>
+<div class="field"><label for="topic">Topic</label><select id="topic"><option>A question about part time jobs</option><option>A question about work from home or remote jobs</option><option>Online jobs or freelance work</option><option>Report a problem or concern</option><option>Suggest an article</option><option>Correction or feedback</option></select></div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send</button>
-<p class="notice">Demo form: no data is sent anywhere. Connect a backend or form service before launch.</p>
+<p class="notice">Sending opens your email app with your message ready to send to support@worknestsg.com.</p>
 </form>
-<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks, we have noted it.</h3><p>In a live site we would reply within a few working days.</p></div>
+<div id="form-ok" class="ok" hidden tabindex="-1"><h3>Thanks for getting in touch.</h3><p>Your email app should open with your message ready to send. If it does not, please email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> directly.</p></div>
 </div>
 <div><h2>Other ways</h2><ul class="contact-list">
 <li><b>Email</b><a href="mailto:support@worknestsg.com">support@worknestsg.com</a></li>
@@ -457,7 +457,7 @@ head("Disclaimer","Disclaimer")+'''
 page("privacy.html","Privacy & PDPA | WorkNest SG","How WorkNest SG handles personal data under Singapore's PDPA.",
 head("Privacy &amp; PDPA","Privacy notice")+'''
 <section><div class="wrap article">
-<p>This is a template. Have it reviewed before launch.</p>
+<p>This notice explains what personal information WorkNest SG collects through this website and how it is used.</p>
 <h2>What we collect</h2><p>Only what you submit through our contact form: name, email and your message. The hours calculator and scam checker run in your browser and store nothing.</p>
 <h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
 <h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at support@worknestsg.com.</p>

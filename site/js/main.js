@@ -42,7 +42,13 @@
       var err=i.parentElement.querySelector('.err'),bad=!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value));
       err.textContent=bad?(i.type==='email'?'Please enter a valid email.':'This field is required.'):'';
       i.setAttribute('aria-invalid',bad);if(bad)ok=false;});
-    if(ok){f.hidden=true;document.getElementById('form-ok').hidden=false;document.getElementById('form-ok').focus();}
+    if(ok){
+      var v=function(id){var e=document.getElementById(id);return e?e.value.trim():'';};
+      var subj='Website enquiry'+(v('topic')?': '+v('topic'):'');
+      var body='Name: '+v('name')+'\nEmail: '+v('email')+'\n\n'+v('msg');
+      f.hidden=true;var okEl=document.getElementById('form-ok');okEl.hidden=false;okEl.focus();
+      window.location.href='mailto:support@worknestsg.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    }
   });}
 
   var cf=document.getElementById('calc');
