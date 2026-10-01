@@ -523,8 +523,7 @@ head("Thank you","Thanks for getting in touch.","We have received your message a
 <p>In the meantime, you are welcome to keep reading our latest articles on Singapore careers, industries and skills.</p>
 <div class="btn-row"><a class="btn btn-primary" href="knowledge-hub.html">Read more articles</a><a class="btn btn-ghost" href="index.html">Back to home</a></div>
 <p class="notice" style="margin-top:2rem">Need to add something? Email <a href="mailto:support@worknestsg.com">support@worknestsg.com</a> or call <a href="tel:+6583963756">+65 8396 3756</a>.</p>
-</div></section>''',extra_head='<meta name="robots" content="noindex">
-')
+</div></section>''',extra_head='<meta name="robots" content="noindex">')
 exec(open(pathlib.Path(__file__).with_name("articles2.py"),encoding="utf-8").read())
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())
 print("built")
