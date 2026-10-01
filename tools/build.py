@@ -51,7 +51,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div><a class="brand" href="index.html">{LOGO}Work<em>Nest</em> SG</a>
 <p style="margin-top:1rem;max-width:32ch">Independent articles on Singapore careers, industries and skills, including part time job and work from home information.</p></div>
 <div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy &amp; PDPA</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
 <div class="legal"><p>WorkNest SG is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
 <p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; <a href="tel:+6583963756">+65 8396 3756</a> &middot; <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></p></div>
@@ -507,14 +507,60 @@ head("Disclaimer","Disclaimer")+'''
 </div></section>''')
 
 # ---------------- PRIVACY
-page("privacy.html","Privacy & PDPA | WorkNest SG","How WorkNest SG handles personal data under Singapore's PDPA.",
-head("Privacy &amp; PDPA","Privacy notice")+'''
+page("privacy.html","Privacy Policy | WorkNest SG","How WorkNest SG collects, uses, discloses and protects personal data in accordance with Singapore's Personal Data Protection Act 2012 (PDPA).",
+head("Privacy Policy","Privacy Policy","Last updated: 1 October 2026")+'''
 <section><div class="wrap article">
-<p>This notice explains what personal information WorkNest SG collects through this website and how it is used.</p>
-<h2>What we collect</h2><p>Only what you submit through our contact form: name, email and your message. The hours calculator and scam checker run in your browser and store nothing.</p>
-<h2>How we use it</h2><p>To reply to your enquiry. We do not sell personal data.</p>
-<h2>Your rights</h2><p>Under Singapore's Personal Data Protection Act you may request access to or correction of your data, or withdraw consent, by emailing our Data Protection Officer at support@worknestsg.com.</p>
-<h2>Cookies</h2><p>This site sets no tracking cookies. Fonts are loaded from Google Fonts.</p></div></section>''')
+<p>WorkNest SG ("we", "us", "our") respects your privacy and is committed to protecting your personal data in accordance with Singapore's Personal Data Protection Act 2012 ("PDPA"). This policy explains how we collect, use, disclose and protect personal data when you use this website.</p>
+<p>By using this website or submitting your personal data to us, you acknowledge that you have read and understood this policy.</p>
+
+<h2>1. Who we are</h2>
+<p>WorkNest SG is an independent information website on Singapore careers, industries and skills. We publish articles and tools only. We are not an employment agency, we do not publish job vacancies, and we do not recruit, screen or place candidates.</p>
+
+<h2>2. Personal data we collect</h2>
+<p>We collect personal data only when you choose to give it to us, for example when you send a message through our contact form or email us. This may include:</p>
+<ul><li>your name;</li><li>your email address;</li><li>the contents of your message, and any other information you choose to include.</li></ul>
+<p>Please do not send sensitive information such as your NRIC number, Singpass details, OTPs, bank account details or passwords. We will never ask for them.</p>
+<p>The hours calculator and the scam checker run entirely in your browser. The information you enter into them is not sent to us or stored.</p>
+
+<h2>3. Technical data and cookies</h2>
+<p>Our web server may automatically log standard technical information such as your IP address, browser type and the pages requested, for security and to keep the site running. We do not use advertising or tracking cookies on this website. If we introduce analytics or advertising measurement in future, we will update this policy and, where required, seek your consent.</p>
+<p>This website loads fonts from Google Fonts. When a page loads, your browser may send your IP address and browser information to Google. Please see Google's privacy policy for details.</p>
+
+<h2>4. How we use your personal data</h2>
+<p>We use your personal data only for the following purposes:</p>
+<ul><li>to respond to your questions, feedback or correction requests;</li><li>to consider topic suggestions you send us;</li><li>to maintain the security and proper functioning of this website;</li><li>to comply with applicable laws and regulatory requirements.</li></ul>
+<p>We do not use your personal data for direct marketing unless you have given us your consent. We do not sell your personal data.</p>
+
+<h2>5. Disclosure of personal data</h2>
+<p>We do not disclose your personal data to third parties except:</p>
+<ul><li>to service providers who help us operate the website and handle email, and who are required to protect your data;</li><li>where required or authorised by law, such as by a court order or a regulatory or law enforcement authority;</li><li>with your consent.</li></ul>
+
+<h2>6. Transfer of personal data outside Singapore</h2>
+<p>Some of our service providers may store or process data outside Singapore. Where this happens, we take reasonable steps to ensure that your personal data receives a standard of protection comparable to that required under the PDPA.</p>
+
+<h2>7. Protection and retention</h2>
+<p>We take reasonable security measures to protect personal data in our possession against unauthorised access, collection, use, disclosure, copying, modification or disposal. No method of transmission over the internet is completely secure, so we cannot guarantee absolute security.</p>
+<p>We keep your personal data only as long as it is needed for the purposes in section 4 or as required by law. When it is no longer needed, we delete it or anonymise it.</p>
+
+<h2>8. Your rights</h2>
+<p>Under the PDPA you may:</p>
+<ul><li>ask for access to the personal data we hold about you, and information on how it has been used or disclosed in the past year;</li><li>ask us to correct personal data that is inaccurate or incomplete;</li><li>withdraw your consent to our collection, use or disclosure of your personal data.</li></ul>
+<p>To make a request, email our Data Protection Officer at the address below. We may need to verify your identity first, and we will respond within a reasonable time. If you withdraw consent, we will explain the likely consequences, and we may not be able to continue to deal with your enquiry.</p>
+
+<h2>9. Third-party websites</h2>
+<p>Our articles may link to websites run by others, including government agencies. We are not responsible for their privacy practices. Please read their policies before giving them your personal data.</p>
+
+<h2>10. Children</h2>
+<p>This website is intended for a general audience and is not directed at children. If you believe a child has given us personal data, please contact us and we will delete it.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>We may update this policy from time to time. The latest version will always be on this page, with the date it was last updated.</p>
+
+<h2>12. Contact our Data Protection Officer</h2>
+<p>If you have questions, a request or a complaint about how we handle personal data, please contact:</p>
+<ul><li><strong>Data Protection Officer, WorkNest SG</strong></li><li>Email: <a href="mailto:support@worknestsg.com">support@worknestsg.com</a></li><li>Phone: <a href="tel:+6583963756">+65 8396 3756</a></li><li>Address: 22 Orchard Road, #03-01, Singapore 238885</li></ul>
+<p>If you are not satisfied with our response, you may contact the Personal Data Protection Commission at <a href="https://www.pdpc.gov.sg" rel="noopener">www.pdpc.gov.sg</a>.</p>
+</div></section>''')
 
 # ---------------- THANK YOU
 page("thank-you.html","Thank You | WorkNest SG","Thank you for contacting WorkNest SG.",
