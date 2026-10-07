@@ -21,7 +21,7 @@ def _clean_link(target, prefix):
         path, frag = target, ""
     if path == "" or path.startswith(("http://", "https://", "mailto:", "tel:", "//", "data:")):
         return None
-    if path == "favicon.svg" or path.startswith(("css/", "js/", "img/")):
+    if path in ("favicon.svg", "styles.css", "main.js") or path.startswith("img/"):
         return (prefix + path + frag) if prefix else None
     if path.endswith(".html"):
         if path == "index.html":
@@ -73,7 +73,7 @@ def page(fname, title, desc, body, extra_head=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="styles.css">
 {extra_head}</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -95,7 +95,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div class="legal"><p>WorkNest SG is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
 <p>&copy; 2026 WorkNest SG &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; +65 8396 3756 &middot; support@worknestsg.com</p></div>
 </div></footer>
-<script src="js/main.js"></script>
+<script src="main.js"></script>
 </body></html>'''
     html = rewrite_links(html, fname)
     dest = out_path(fname)
