@@ -1,6 +1,44 @@
-"""Generates the static pages in ../site from shared header/footer partials."""
-import pathlib
-OUT = pathlib.Path(__file__).resolve().parent.parent / "site"
+"""Generates the static pages in the project root from shared header/footer partials."""
+import pathlib, re
+OUT = pathlib.Path(__file__).resolve().parent.parent
+# privacy.html is the only page whose folder name differs from the file name.
+FOLDERS = {"privacy.html": "privacy-policy"}
+_ATTR = re.compile(r"\b(href|src)=([\'\"])([^\'\"]+)\2")
+
+def out_path(fname):
+    if fname == "index.html":
+        return OUT / "index.html"
+    folder = FOLDERS.get(fname)
+    if folder is None:
+        folder = fname[:-5] if fname.endswith(".html") else fname
+    return OUT / folder / "index.html"
+
+def _clean_link(target, prefix):
+    if "#" in target:
+        path, frag = target.split("#", 1)
+        frag = "#" + frag
+    else:
+        path, frag = target, ""
+    if path == "" or path.startswith(("http://", "https://", "mailto:", "tel:", "//", "data:")):
+        return None
+    if path.startswith(("css/", "js/", "img/")):
+        return (prefix + path + frag) if prefix else None
+    if path.endswith(".html"):
+        if path == "index.html":
+            return (prefix or "./") + frag
+        name = FOLDERS.get(path, path[:-5])
+        return f"{prefix}{name}/{frag}"
+    return None
+
+def rewrite_links(html, fname):
+    """Point internal pages at folder/index.html URLs and fix asset paths one level down."""
+    prefix = "" if fname == "index.html" else "../"
+    def repl(m):
+        new = _clean_link(m.group(3), prefix)
+        if new is None:
+            return m.group(0)
+        return f"{m.group(1)}={m.group(2)}{new}{m.group(2)}"
+    return _ATTR.sub(repl, html)
 
 NAV = [("index.html","Home"),("knowledge-hub.html","Knowledge Hub"),("jobs.html","Job Types"),
        ("services.html","Services"),("about.html","About Us"),("contact.html","Contact Us")]
@@ -58,7 +96,10 @@ def page(fname, title, desc, body, extra_head=""):
 </div></footer>
 <script src="js/main.js"></script>
 </body></html>'''
-    (OUT/fname).write_text(html, encoding="utf-8")
+    html = rewrite_links(html, fname)
+    dest = out_path(fname)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(html, encoding="utf-8")
 
 def head(eyebrow, h1, lede=""):
     return f'<div class="page-head"><div class="wrap"><span class="eyebrow">{eyebrow}</span><h1>{h1}</h1>{"<p class=lede>"+lede+"</p>" if lede else ""}</div></div>'
@@ -570,4 +611,7 @@ head("Thank you","Thanks for getting in touch.","We have received your message a
 </div></section>''',extra_head='<meta name="robots" content="noindex">')
 exec(open(pathlib.Path(__file__).with_name("articles2.py"),encoding="utf-8").read())
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())
+for old in OUT.glob("*.html"):
+    if old.name != "index.html":
+        old.unlink()
 print("built")

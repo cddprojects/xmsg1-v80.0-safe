@@ -123,7 +123,7 @@ jobpage("make-money-at-home-singapore.html","jh6","Make money at home","How to m
 [("part-time-jobs-singapore.html","Part time jobs","Steady hours"),("freelance-jobs-singapore.html","Freelance jobs","Control your schedule"),("article-rising-costs.html","When the rent goes up","Why a side income helps")])
 
 # calculator on make-money page
-_p=OUT/"make-money-at-home-singapore.html"
+_p=out_path("make-money-at-home-singapore.html")
 _h=_p.read_text(encoding="utf-8")
 _calc='''<section class="alt"><div class="wrap split"><div><span class="eyebrow">Simple calculator</span><h2>How many hours a week would you need?</h2><p class="lede">Enter your own numbers. Nothing is saved or sent, and this is not a promise of income.</p></div>
 <form class="fit" id="calc" onsubmit="return false"><div class="field"><label for="c-target">Extra income you want per month ($)</label><input id="c-target" type="number" min="0" inputmode="decimal"></div>
