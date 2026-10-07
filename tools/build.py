@@ -21,7 +21,7 @@ def _clean_link(target, prefix):
         path, frag = target, ""
     if path == "" or path.startswith(("http://", "https://", "mailto:", "tel:", "//", "data:")):
         return None
-    if path.startswith(("css/", "js/", "img/")):
+    if path == "favicon.svg" or path.startswith(("css/", "js/", "img/")):
         return (prefix + path + frag) if prefix else None
     if path.endswith(".html"):
         if path == "index.html":
@@ -69,6 +69,7 @@ def page(fname, title, desc, body, extra_head=""):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#1f5a4f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
