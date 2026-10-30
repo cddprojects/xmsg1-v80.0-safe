@@ -168,11 +168,11 @@ page("index.html","Part Time, Work From Home & Freelance Job Guides in Singapore
 "Free guides to part time, work from home, remote and freelance work in Singapore: typical hours, how pay works, CPF, contracts and the questions to ask before you accept.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Flexible work guides &middot; Singapore</span>
-<h1>Find flexible work that fits your life. <span>Part time, from home or freelance.</span></h1>
+<span class="eyebrow">Free guides &middot; Singapore</span>
+<h1>Flexible work in Singapore, explained. <span>Part time, from home or freelance.</span></h1>
 <p class="lede">Short, clear guides to part time, work from home, remote and freelance work in Singapore: the hours to expect, how you get paid, what happens with CPF, and what to ask before you accept an offer.</p>
 <div class="btn-row"><a class="btn btn-primary" href="jobs.html">Explore job types</a><a class="btn btn-ghost" href="make-money-at-home-singapore.html#calc">Try the hours calculator</a></div>
-<p class="scope-note">Ready to apply? <a href="jobs.html#where-to-look">See where to find current openings</a>.</p>
+<p class="scope-note">Looking for current openings? <a href="jobs.html#where-to-look">See the official job portals</a>.</p>
 </div>
 <a class="lead-card" href="article-sectors-hiring.html"><img src="img/sectors-hiring.jpg" alt="" width="1280" height="720"><span class="cat">Lead story &middot; Industry trends</span><h2>Singapore Hiring Outlook: Sectors Driving Job Demand</h2><span class="go">Read the article &rarr;</span></a>
 </div></section>
