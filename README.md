@@ -1,4 +1,4 @@
-# WorkNest SG
+# Sider Jobs
 
 Independent information website (HTML, CSS, JS) with guides on part-time, work from home, remote and freelance work in Singapore. It does not list vacancies or place candidates.
 

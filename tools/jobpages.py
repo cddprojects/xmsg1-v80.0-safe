@@ -39,7 +39,7 @@ def rel(*ks): return [k for k in ks]
 WEEK_NOTE=None
 
 jobpage("part-time-jobs-singapore.html","jh1","Part time job Singapore","Part time jobs in Singapore: roles, hours and what to check",
-"Part Time Job Singapore: Roles, Hours, CPF and How to Start | WorkNest SG",
+"Part Time Job Singapore: Roles, Hours, CPF and How to Start | Sider Jobs",
 "A practical guide to part time job Singapore: common roles, typical hours, how to start, and what to check on contracts, pay and CPF before you accept.",
 "Most people pick up a part time job around a day job, studies or caring duties. The useful questions are less about the rules and more about the practicalities: which shifts, how they are rostered, and whether the pay still works after transport and time.",
 [("Typical hours","Fewer than 35 a week"),("Where","On-site, sometimes from home"),("Usual status","Employee"),("CPF","Generally applies for employees*"),("Good for","Students, parents, caregivers, anyone adding a side income")],
@@ -53,7 +53,7 @@ jobpage("part-time-jobs-singapore.html","jh1","Part time job Singapore","Part ti
 [("article-part-time-cpf.html","Part-Time Employment and CPF","What to check on your payslip"),("article-read-job-ad.html","How to read a Singapore job ad","Decode pay, hours and terms"),("work-from-home-jobs-singapore.html","Work from home jobs","The next guide")])
 
 jobpage("work-from-home-jobs-singapore.html","jh2","Work from home jobs Singapore","Work from home jobs in Singapore: what they involve and how to start",
-"Work From Home Jobs Singapore: Roles, Setup and What to Ask | WorkNest SG",
+"Work From Home Jobs Singapore: Roles, Setup and What to Ask | Sider Jobs",
 "Guide to work from home jobs Singapore: common roles, a sample week, the setup you need, and what to check on contracts and expectations for work from home in Singapore.",
 "Work from home jobs in Singapore are mostly service and admin roles with set hours. The gap between a good one and a poor one usually sits in the details: equipment, monitoring and who pays for what.",
 [("Typical hours","Agreed hours, part or full time"),("Where","From home"),("Usual status","Usually employee"),("CPF","Generally applies for employees*"),("Good for","Parents, caregivers, anyone saving commute time")],
@@ -67,7 +67,7 @@ jobpage("work-from-home-jobs-singapore.html","jh2","Work from home jobs Singapor
 [("remote-jobs-singapore.html","Remote jobs in Singapore","The wider picture"),("article-work-modes.html","Part-time, remote, hybrid, freelance","What each really means"),("article-flexible-work-request.html","How to ask for flexible work","If you already have a job")])
 
 jobpage("remote-jobs-singapore.html","jh3","Remote job Singapore","Remote jobs in Singapore: skills, employers and what to clarify",
-"Remote Job Singapore: Roles, Skills, Time Zones and Tax | WorkNest SG",
+"Remote Job Singapore: Roles, Skills, Time Zones and Tax | Sider Jobs",
 "Guide to remote job Singapore: common roles, skills employers look for, time zone and employer-entity questions, and how tax and CPF can differ.",
 "Remote roles tend to reward specialist skills, and many are with overseas teams. For someone based here, the questions are practical: which entity employs you, which hours overlap, and how tax and CPF work out.",
 [("Typical hours","Part or full time"),("Where","Anywhere, with agreed overlap hours"),("Usual status","Employee or contractor"),("CPF","Depends on employer and status*"),("Good for","People with specialist skills who are self-directed")],
@@ -81,7 +81,7 @@ jobpage("remote-jobs-singapore.html","jh3","Remote job Singapore","Remote jobs i
 [("freelance-jobs-singapore.html","Freelance jobs in Singapore","If you would rather be self-employed"),("article-remote-cv.html","A CV for remote roles","Show you can work independently"),("online-jobs-singapore.html","Online jobs","Work delivered fully online")])
 
 jobpage("online-jobs-singapore.html","jh4","Online jobs","Online jobs and online work from home in Singapore",
-"Online Jobs Singapore: Online Work From Home Roles and What to Check | WorkNest SG",
+"Online Jobs Singapore: Online Work From Home Roles and What to Check | Sider Jobs",
 "Guide to online jobs and online work from home in Singapore: common roles, a sample week, how to start, and questions to ask about pay and terms.",
 "Online jobs range from tutoring and moderation to research and e-commerce support. Because the range is so wide, the things to pin down are who is paying you and on what terms.",
 [("Typical hours","Flexible slots or set sessions"),("Where","Online"),("Usual status","Varies: employee or freelance"),("CPF","Depends on status*"),("Good for","People who want flexible slots and enjoy screen-based work")],
@@ -95,7 +95,7 @@ jobpage("online-jobs-singapore.html","jh4","Online jobs","Online jobs and online
 [("work-from-home-jobs-singapore.html","Work from home jobs","Set-hours roles from home"),("freelance-jobs-singapore.html","Freelance jobs","Self-employed online work"),("article-read-job-ad.html","How to read a job ad","Decode pay and terms")])
 
 jobpage("freelance-jobs-singapore.html","jh5","Freelance jobs","Freelance jobs in Singapore: how to start and what to know",
-"Freelance Jobs Singapore: How to Start, Contracts, Tax and MediSave | WorkNest SG",
+"Freelance Jobs Singapore: How to Start, Contracts, Tax and MediSave | Sider Jobs",
 "Guide to freelance jobs in Singapore: common freelance roles, how to find clients, contracts, invoicing, tax and MediSave basics.",
 "Freelancing trades a steady payslip for control over your time and clients. The admin, from contracts and invoices to tax, becomes yours.",
 [("Typical hours","You decide"),("Where","Anywhere"),("Usual status","Self-employed"),("CPF","You manage your own contributions*"),("Good for","People with a portfolio or specialist skill")],
@@ -109,7 +109,7 @@ jobpage("freelance-jobs-singapore.html","jh5","Freelance jobs","Freelance jobs i
 [("remote-jobs-singapore.html","Remote jobs","If you prefer being employed"),("article-work-modes.html","What each term means","Freelance vs employee"),("make-money-at-home-singapore.html","Make money at home","Compare the routes")])
 
 jobpage("make-money-at-home-singapore.html","jh6","Make money at home","How to make money at home in Singapore: the main routes compared",
-"Make Money at Home in Singapore: Part-Time, Freelance and Online Work Compared | WorkNest SG",
+"Make Money at Home in Singapore: Part-Time, Freelance and Online Work Compared | Sider Jobs",
 "Compare the main ways to make money at home in Singapore: part time job, work from home jobs, online work from home and freelance jobs, with a simple calculator.",
 "People who want to make money at home in Singapore usually pick one of four routes: a part time job, a work from home job, online work or freelance jobs. Each suits different hours, skills and need for stability.",
 [("Routes","Part-time, work from home, online, freelance"),("Time needed","From a few hours a week"),("Best start","Match your hours to the route"),("Earnings","Vary by role and skills, never guaranteed")],

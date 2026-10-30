@@ -47,7 +47,7 @@
       var subj='Website enquiry'+(v('topic')?': '+v('topic'):'');
       var body='Name: '+v('name')+'\nEmail: '+v('email')+'\n\n'+v('msg');
       f.hidden=true;var okEl=document.getElementById('form-ok');okEl.hidden=false;okEl.focus();
-      window.location.href='mailto:support@worknestsg.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+      window.location.href='mailto:support@siderjobs.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
     }
   });}
 
