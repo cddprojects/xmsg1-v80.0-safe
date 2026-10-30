@@ -93,7 +93,7 @@ def page(fname, title, desc, body, extra_head=""):
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
 <div class="legal"><p>Sider Jobs is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
-<p>&copy; 2026 Sider Jobs &middot; 22 Orchard Road, #03-01, Singapore 238885 &middot; +65 8396 3756 &middot; support@siderjobs.com</p></div>
+<p>&copy; 2026 Sider Jobs &middot; 1 Raffles Place, Singapore 048616 &middot; +65 8396 3756 &middot; support@siderjobs.com</p></div>
 </div></footer>
 <script src="main.js"></script>
 </body></html>'''
@@ -519,7 +519,7 @@ head("About Us","Information on flexible work in Singapore.")+f'''
 </div></section>
 <section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">What you will find</span><h2>Articles, job type guides and tools.</h2></div>
 <div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
-<section><div class="wrap"><p class="notice" style="max-width:70ch">Sider Jobs shares general information about jobs in Singapore. It is not legal, financial or employment advice. Find us at 22 Orchard Road, #03-01, Singapore 238885.</p></div></section>''')
+<section><div class="wrap"><p class="notice" style="max-width:70ch">Sider Jobs shares general information about jobs in Singapore. It is not legal, financial or employment advice. Find us at 1 Raffles Place, Singapore 048616.</p></div></section>''')
 
 # ---------------- CONTACT
 page("contact.html","Contact Us | Sider Jobs","Contact Sider Jobs with a question, correction or topic suggestion about part time job Singapore, work from home jobs and remote work.",
@@ -539,7 +539,7 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <div><h2>Other ways</h2><ul class="contact-list">
 <li><b>Email</b>support@siderjobs.com</li>
 <li><b>Phone</b>+65 8396 3756</li>
-<li><b>Address</b>22 Orchard Road, #03-01, Singapore 238885</li>
+<li><b>Address</b>1 Raffles Place, Singapore 048616</li>
 </ul></div>
 </div></section>''')
 
@@ -607,7 +607,7 @@ head("Privacy Policy","Privacy Policy","Last updated: 1 October 2026")+'''
 
 <h2>12. Contact our Data Protection Officer</h2>
 <p>If you have questions, a request or a complaint about how we handle personal data, please contact:</p>
-<ul><li><strong>Data Protection Officer, Sider Jobs</strong></li><li>Email: support@siderjobs.com</li><li>Phone: +65 8396 3756</li><li>Address: 22 Orchard Road, #03-01, Singapore 238885</li></ul>
+<ul><li><strong>Data Protection Officer, Sider Jobs</strong></li><li>Email: support@siderjobs.com</li><li>Phone: +65 8396 3756</li><li>Address: 1 Raffles Place, Singapore 048616</li></ul>
 <p>If you are not satisfied with our response, you may contact the Personal Data Protection Commission at <a href="https://www.pdpc.gov.sg" rel="noopener">www.pdpc.gov.sg</a>.</p>
 </div></section>''')
 
