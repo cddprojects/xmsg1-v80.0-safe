@@ -1,6 +1,6 @@
 # WorkNest SG
 
-Talent resourcing agency website (HTML, CSS, JS) for part-time, remote, hybrid and contract work in Singapore.
+Independent information website (HTML, CSS, JS) with free guides on part-time, work from home, remote and freelance work in Singapore. It does not list vacancies or place candidates.
 
 - The website lives in the project root. Run `python3 -m http.server` here so the homepage is `/`.
 - `tools/build.py`: regenerates the HTML pages (`python3 tools/build.py`).

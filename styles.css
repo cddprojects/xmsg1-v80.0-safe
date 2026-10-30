@@ -368,3 +368,10 @@ section[id]{scroll-margin-top:90px}
 .ok h3{font-size:1.2rem;margin:0 0 .5rem;color:var(--pine-2)}
 .ok p{margin:0 0 .6rem}
 .ok .ok-sub{margin:0;font-size:.95rem;color:var(--ink-2)}
+
+.clarity{padding:clamp(1.5rem,3vw,2.5rem) 0;border-block:1px solid var(--line);background:#fff}
+.clarity-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,3vw,2.5rem)}
+.clarity-grid h3{margin:0 0 .35rem;font-size:1.1rem;color:var(--pine)}
+.clarity-grid p{margin:0;font-size:.97rem;line-height:1.55;color:var(--ink-2)}
+@media(max-width:800px){.clarity-grid{grid-template-columns:1fr}}
+.scope-note{margin:1.25rem 0 0;font-size:.95rem;color:var(--ink-2);max-width:56ch}
