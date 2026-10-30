@@ -165,10 +165,10 @@ def card(href,label,t,d,m="5 min"):
     return f'<article class="post reveal">{thumb(href)}<div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{EXC.get(href,d)}</p></article>'
 def tile_s(href,t,d): return f'<a class="mini reveal" href="{href}"><b>{t}</b><span>{d}</span></a>'
 page("index.html","Part Time, Work From Home & Freelance Job Guides in Singapore | WorkNest SG",
-"Free guides to part time, work from home, remote and freelance work in Singapore: typical hours, how pay works, CPF, contracts and the questions to ask before you accept.",f'''
+"Guides to part time, work from home, remote and freelance work in Singapore: typical hours, how pay works, CPF, contracts and the questions to ask before you accept.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Free guides &middot; Singapore</span>
+<span class="eyebrow">Flexible work guides &middot; Singapore</span>
 <h1>Flexible work in Singapore. <span>Part time, from home or freelance.</span></h1>
 <p class="lede">Short, clear guides to part time, work from home, remote and freelance work in Singapore: the hours to expect, how you get paid, what happens with CPF, and what to ask before you accept an offer.</p>
 <div class="btn-row"><a class="btn btn-primary" href="jobs.html">Explore job types</a><a class="btn btn-ghost" href="make-money-at-home-singapore.html#calc">Try the hours calculator</a></div>
@@ -303,8 +303,8 @@ page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapor
 "Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, work from home in Singapore and freelance jobs: what to expect and what to ask.",jobs_body)
 
 # ---------------- SERVICES
-page("services.html","Services | Guides & Tools for Part Time and Work From Home Jobs | WorkNest SG","Free guides and tools for job seekers: part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs, plus a weekly hours calculator.",
-head("Services","What we publish.","Free articles, guides and tools on Singapore careers and flexible work, with no sign-up.")+f'''
+page("services.html","Services | Guides & Tools for Part Time and Work From Home Jobs | WorkNest SG","Guides and tools for job seekers: part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs, plus a weekly hours calculator.",
+head("Services","What we publish.","Articles, guides and tools on Singapore careers and flexible work, with no sign-up needed.")+f'''
 <section><div class="wrap">
 <div class="tiles">
 <article class="tile reveal"><div class="ic">{IC["laptop"]}</div><h3>In-depth job type guides</h3><p>Roles, a sample week, how to start, and what to check on contracts, pay and CPF for six kinds of flexible work.</p><a class="more" href="jobs.html">Browse job types &rarr;</a></article>
@@ -493,7 +493,7 @@ head("Glossary","Job-ad terms, explained.")+f'''
 
 # ---------------- FAQ
 faqs=[("Does WorkNest SG list jobs?","We share information about job types in Singapore. For current openings, see MyCareersFuture and employers' own careers pages."),
-("Is WorkNest SG free?","Yes. All guides and tools are free to read with no sign-up. Never pay anyone to get a job."),
+("Does it cost anything to use WorkNest SG?","No. You can read every guide and use every tool without paying or creating an account. Never pay anyone to get a job."),
 ("How do I find a part time job in Singapore?","Search official channels such as MyCareersFuture and employers' own careers pages. Our part-time guide lists what to ask before you accept."),
 ("Are there genuine work from home jobs in Singapore?","Yes. Customer support, admin, content and many specialist roles can be done from home. Genuine employers pay you for defined work and never ask you to pay to start."),
 ("How can I make money at home?","Most people do it through ordinary jobs done from home: part-time employment, freelance projects or contract work. Earnings vary by role, skills and hours, and are not guaranteed."),
