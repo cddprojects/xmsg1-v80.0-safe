@@ -165,22 +165,23 @@ def card(href,label,t,d,m="5 min"):
     return f'<article class="post reveal">{thumb(href)}<div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{EXC.get(href,d)}</p></article>'
 def tile_s(href,t,d): return f'<a class="mini reveal" href="{href}"><b>{t}</b><span>{d}</span></a>'
 page("index.html","Part Time, Work From Home & Freelance Job Guides in Singapore | WorkNest SG",
-"Free, independent guides to part time, work from home, remote and freelance work in Singapore: hours, pay, CPF and contracts. We do not list vacancies or place candidates.",f'''
+"Free guides to part time, work from home, remote and freelance work in Singapore: typical hours, how pay works, CPF, contracts and the questions to ask before you accept.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
-<span class="eyebrow">Free information guides &middot; Singapore</span>
-<h1>Plain-English guides to part time, work from home and freelance jobs in Singapore. <span>Know what to check before you say yes.</span></h1>
-<p class="lede">WorkNest SG is an independent information website. We explain how each type of flexible work works in Singapore, including hours, how pay is calculated, CPF and contracts, so you can make an informed choice. <strong>We do not list jobs, recruit or place candidates.</strong></p>
-<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Compare job types</a><a class="btn btn-ghost" href="jobs.html#where-to-look">Where to find real openings</a></div>
+<span class="eyebrow">Flexible work guides &middot; Singapore</span>
+<h1>Find flexible work that fits your life. <span>Part time, from home or freelance.</span></h1>
+<p class="lede">Short, clear guides to part time, work from home, remote and freelance work in Singapore: the hours to expect, how you get paid, what happens with CPF, and what to ask before you accept an offer.</p>
+<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Explore job types</a><a class="btn btn-ghost" href="make-money-at-home-singapore.html#calc">Try the hours calculator</a></div>
+<p class="scope-note">Ready to apply? <a href="jobs.html#where-to-look">See where to find current openings</a>.</p>
 </div>
 <a class="lead-card" href="article-sectors-hiring.html"><img src="img/sectors-hiring.jpg" alt="" width="1280" height="720"><span class="cat">Lead story &middot; Industry trends</span><h2>Singapore Hiring Outlook: Sectors Driving Job Demand</h2><span class="go">Read the article &rarr;</span></a>
 </div></section>
 
 <section class="clarity"><div class="wrap">
 <ul class="clarity-grid">
-<li class="reveal"><h3>What you get here</h3><p>Free guides on six kinds of flexible work, a hours calculator, a glossary and articles on Singapore careers. No sign-up and no fees.</p></li>
-<li class="reveal"><h3>What we do not do</h3><p>We do not advertise vacancies, recruit, screen or place candidates, or promise any income. Pay and conditions depend on each employer.</p></li>
-<li class="reveal"><h3>Looking for an actual job?</h3><p>Search current openings on <a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a> or on employers' own careers pages. <a href="jobs.html#where-to-look">More official sources &rarr;</a></p></li>
+<li class="reveal"><h3>Work that fits your hours</h3><p>See what a typical week looks like in part-time, home-based, remote and freelance work, so you can match it to your studies, family or day job.</p></li>
+<li class="reveal"><h3>Know your pay and CPF</h3><p>Understand how pay is worked out, when CPF applies and what to look for on a contract or payslip.</p></li>
+<li class="reveal"><h3>Spot a good offer, and a bad one</h3><p>Checklists of questions to ask, plus a quick scam checker, before you share any personal details.</p></li>
 </ul>
 </div></section>
 

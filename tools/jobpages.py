@@ -13,8 +13,7 @@ def jobpage(fname,cls,eyebrow,h1,seo_title,seo_desc,intro,facts,roles,week,steps
     body=f'''
 <div class="page-head jobhero {cls}"><div class="wrap jh-grid">
 <div><span class="eyebrow">{eyebrow}</span><h1>{h1}</h1><p class="lede">{intro}</p>
-<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Compare all job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a></div>
-<p class="scope-note">This is a free information guide. WorkNest SG does not list vacancies or place candidates. For current openings, see <a href="https://www.mycareersfuture.gov.sg" rel="noopener">MyCareersFuture</a>.</p></div>
+<div class="btn-row"><a class="btn btn-primary" href="jobs.html">Compare all job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a></div></div>
 <aside class="qf" aria-label="Quick facts"><h2>Quick facts</h2><dl>{facts_html}</dl><p class="rv">Last reviewed September 2026</p></aside>
 </div></div>
 <section><div class="wrap"><div class="head"><span class="eyebrow">Common roles</span><h2>What people actually do in this kind of work.</h2></div>
