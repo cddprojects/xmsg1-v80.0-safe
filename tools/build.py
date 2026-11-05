@@ -21,7 +21,7 @@ def _clean_link(target, prefix):
         path, frag = target, ""
     if path == "" or path.startswith(("http://", "https://", "mailto:", "tel:", "//", "data:")):
         return None
-    if path in ("favicon.svg", "styles.css", "main.js") or path.startswith("img/"):
+    if path in ("favicon.png", "styles.css", "main.js") or path.startswith("img/"):
         return (prefix + path + frag) if prefix else None
     if path.endswith(".html"):
         if path == "index.html":
@@ -43,7 +43,7 @@ def rewrite_links(html, fname):
 NAV = [("index.html","Home"),("knowledge-hub.html","Knowledge Hub"),("jobs.html","Job Types"),
        ("services.html","Services"),("about.html","About Us"),("contact.html","Contact Us")]
 
-LOGO = '<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="oklch(37% .075 178)"/><rect x="6" y="12" width="20" height="13.200" rx="2.600" fill="oklch(97.6% .009 88)"/><path d="M12.400 12V9.500a1.700 1.700 0 0 1 1.700-1.700h3.800a1.700 1.700 0 0 1 1.700 1.700V12" fill="none" stroke="oklch(97.6% .009 88)" stroke-width="2.200" stroke-linecap="round"/><rect x="14.300" y="16.400" width="3.400" height="3" rx="0.700" fill="oklch(60% .19 32)"/></svg>'
+LOGO = '<img src="favicon.png" alt="" width="32" height="32">'
 
 def icon(p):
     return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{p}</svg>'
@@ -69,7 +69,7 @@ def page(fname, title, desc, body, extra_head=""):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#1f5a4f">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -78,7 +78,7 @@ def page(fname, title, desc, body, extra_head=""):
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap nav">
-<a class="brand" href="index.html">{LOGO}Sider <em>Jobs</em></a>
+<a class="brand" href="index.html">{LOGO}Talentinova</a>
 <button class="menu-btn" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>
 <ul id="nav-list">{nav}</ul>
 </div></header>
@@ -87,13 +87,13 @@ def page(fname, title, desc, body, extra_head=""):
 </main>
 <footer class="site-footer"><div class="wrap">
 <div class="foot-grid">
-<div><a class="brand" href="index.html">{LOGO}Sider <em>Jobs</em></a>
+<div><a class="brand" href="index.html">{LOGO}Talentinova</a>
 <p style="margin-top:1rem;max-width:32ch">Independent articles on Singapore careers, industries and skills, including part time job and work from home information.</p></div>
 <div><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="jobs.html">Job types</a></li><li><a href="knowledge-hub.html">Knowledge Hub</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul></div>
 </div>
-<div class="legal"><p>Sider Jobs is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
-<p>&copy; 2026 Sider Jobs &middot; 1 Raffles Place, Singapore 048616 &middot; +65 8396 3756 &middot; support@siderjobs.com</p></div>
+<div class="legal"><p>Talentinova is an information website. We are independent and not affiliated with any government agency. We do not recruit or place candidates or publish vacancies. Guides are general information, not legal advice; please confirm details with MOM or CPF Board. Scam helpline: <strong>1799</strong>.</p>
+<p>&copy; 2026 Talentinova &middot; 21 Bukit Batok Crescent, Singapore 658065 &middot; +65 8396 3756 &middot; support@talentinova.com</p></div>
 </div></footer>
 <script src="main.js"></script>
 </body></html>'''
@@ -164,7 +164,7 @@ EXC={
 def card(href,label,t,d,m="5 min"):
     return f'<article class="post reveal">{thumb(href)}<div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{EXC.get(href,d)}</p></article>'
 def tile_s(href,t,d): return f'<a class="mini reveal" href="{href}"><b>{t}</b><span>{d}</span></a>'
-page("index.html","Part Time, Work From Home & Freelance Job Guides in Singapore | Sider Jobs",
+page("index.html","Part Time, Work From Home & Freelance Job Guides in Singapore | Talentinova",
 "Guides to part time, work from home, remote and freelance work in Singapore: typical hours, how pay works, CPF, contracts and the questions to ask before you accept.",f'''
 <section class="hero"><div class="wrap hero-grid">
 <div>
@@ -242,7 +242,7 @@ page("index.html","Part Time, Work From Home & Freelance Job Guides in Singapore
 <div class="field"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><div class="err" aria-live="polite"></div></div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send</button></form>
-<div id="form-ok" class="ok" hidden tabindex="-1" role="status"><h3>Thank you for your message.</h3><p>Your email app should now be open with your message ready to send. Just press send when you are ready.</p><p class="ok-sub">If nothing opened, no worries. You can write to us at support@siderjobs.com and we will be glad to hear from you.</p></div></div>
+<div id="form-ok" class="ok" hidden tabindex="-1" role="status"><h3>Thank you for your message.</h3><p>Your email app should now be open with your message ready to send. Just press send when you are ready.</p><p class="ok-sub">If nothing opened, no worries. You can write to us at support@talentinova.com and we will be glad to hear from you.</p></div></div>
 </div></section>
 ''')
 
@@ -299,11 +299,11 @@ jobs_body+='''<section id="make-money-at-home"><div class="wrap"><div class="hea
 <div class="type"><span class="n">02</span><h3>Employer careers pages</h3><p>Apply directly on the official website of a company you have verified.</p></div>
 <div class="type"><span class="n">03</span><h3><a href="https://www.mom.gov.sg" rel="noopener">MOM Employment Agency directory</a></h3><p>Confirm that any recruiter or agency holds a valid licence before you share details.</p></div>
 </div></div></section>'''
-page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapore | Sider Jobs",
+page("jobs.html","Part Time, Work From Home, Remote & Freelance Jobs in Singapore | Talentinova",
 "Guides to part time job Singapore, work from home jobs Singapore, remote job Singapore, online jobs, work from home in Singapore and freelance jobs: what to expect and what to ask.",jobs_body)
 
 # ---------------- SERVICES
-page("services.html","Services | Guides & Tools for Part Time and Work From Home Jobs | Sider Jobs","Guides and tools for job seekers: part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs, plus a weekly hours calculator.",
+page("services.html","Services | Guides & Tools for Part Time and Work From Home Jobs | Talentinova","Guides and tools for job seekers: part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs, plus a weekly hours calculator.",
 head("Services","What we publish.","Articles, guides and tools on Singapore careers and flexible work, with no sign-up needed.")+f'''
 <section><div class="wrap">
 <div class="tiles">
@@ -340,7 +340,7 @@ cards=""
 for cat,label,href,t,d,m,feat in posts:
     body_=f'<div><div class="meta"><span class="cat">{label}</span><span>{m} read</span></div><h3><a href="{href}">{t}</a></h3><p>{EXC.get(href,d)}</p>{"<a class=\"btn btn-warm\" href=\""+href+"\">Read now</a>" if feat else ""}</div>'
     cards+=f'<article class="post{" feature" if feat else ""}" data-cat="{cat}">{thumb(href, not feat)}{body_}</article>'
-page("knowledge-hub.html","Knowledge Hub | Sider Jobs","Articles on Singapore career paths, industry trends, in-demand roles, upskilling and part time job Singapore options.",
+page("knowledge-hub.html","Knowledge Hub | Talentinova","Articles on Singapore career paths, industry trends, in-demand roles, upskilling and part time job Singapore options.",
 head("Knowledge Hub","Articles on Singapore careers, industries and skills.","Industry trends, in-demand roles, education and the rise of the side income, with sources.")+f'''
 <section><div class="wrap">
 <div class="filters" role="group" aria-label="Filter articles">
@@ -374,7 +374,7 @@ def article(fname,title,desc,cat,body):
     if fname in IMG:
         f,alt=IMG[fname]
         hero=f'<div class="wrap article"><figure class="hero-img"><img src="img/{f}" alt="{alt}" width="1280" height="720"></figure></div>'
-    page(fname,title+" | Sider Jobs",desc,f'''{head(cat,title)}
+    page(fname,title+" | Talentinova",desc,f'''{head(cat,title)}
 {hero}<section style="padding-top:2rem"><div class="wrap article">{body}
 <p style="margin-top:2.5rem"><a href="knowledge-hub.html">&larr; Back to Knowledge Hub</a></p></div></section>''')
 
@@ -451,7 +451,7 @@ flags=["I was contacted first, on WhatsApp, Telegram, WeChat or SMS, without app
 "They asked for Singpass, OTP, banking details or full NRIC copies early on.",
 "The interview was text-only, or I was asked to lend or open a bank account."]
 lis="".join(f'<li><label><input type="checkbox"> <span>{f}</span></label></li>' for f in flags)
-page("scam-check.html","Job Scam Checker | Sider Jobs","Tick the red flags in a job offer and get guidance.",
+page("scam-check.html","Job Scam Checker | Talentinova","Tick the red flags in a job offer and get guidance.",
 head("Scam Check","Does this offer look off?","Tick anything that matches. Nothing is stored or sent anywhere.")+f'''
 <section><div class="wrap split">
 <div><ul class="check" id="scam-check">{lis}</ul>
@@ -484,7 +484,7 @@ terms=[("Base pay","The fixed part of your pay, before commission, bonuses or al
 ("PMET","Professionals, Managers, Executives and Technicians."),
 ("Money mule","Person whose bank account is used to move scam proceeds, often unknowingly. It is a criminal offence.")]
 tl="".join(f'<div class="term"><dt>{a}</dt><dd>{b}</dd></div>' for a,b in terms)
-page("glossary.html","Singapore Recruitment Glossary | Sider Jobs","Definitions of Singapore recruitment, part-time, remote and hybrid work keywords.",
+page("glossary.html","Singapore Recruitment Glossary | Talentinova","Definitions of Singapore recruitment, part-time, remote and hybrid work keywords.",
 head("Glossary","Job-ad terms, explained.")+f'''
 <section><div class="wrap" style="max-width:860px">
 <label for="glossary-search" class="eyebrow">Search terms</label>
@@ -492,8 +492,8 @@ head("Glossary","Job-ad terms, explained.")+f'''
 <dl class="glossary">{tl}</dl><p id="glossary-empty" hidden>No matches. <a href="contact.html">Ask us to add it.</a></p></div></section>''')
 
 # ---------------- FAQ
-faqs=[("Does Sider Jobs list jobs?","We share information about job types in Singapore. For current openings, see MyCareersFuture and employers' own careers pages."),
-("Does it cost anything to use Sider Jobs?","No. You can read every guide and use every tool without paying or creating an account. Never pay anyone to get a job."),
+faqs=[("Does Talentinova list jobs?","We share information about job types in Singapore. For current openings, see MyCareersFuture and employers' own careers pages."),
+("Does it cost anything to use Talentinova?","No. You can read every guide and use every tool without paying or creating an account. Never pay anyone to get a job."),
 ("How do I find a part time job in Singapore?","Search official channels such as MyCareersFuture and employers' own careers pages. Our part-time guide lists what to ask before you accept."),
 ("Are there genuine work from home jobs in Singapore?","Yes. Customer support, admin, content and many specialist roles can be done from home. Genuine employers pay you for defined work and never ask you to pay to start."),
 ("How can I make money at home?","Most people do it through ordinary jobs done from home: part-time employment, freelance projects or contract work. Earnings vary by role, skills and hours, and are not guaranteed."),
@@ -503,14 +503,14 @@ faqs=[("Does Sider Jobs list jobs?","We share information about job types in Sin
 ("Can I request remote or hybrid work from my employer?","Employees can submit a formal flexible work arrangement request and employers are expected to consider it fairly under national guidelines. Approval is not guaranteed."),
 ("How do I check that a recruiter is licensed?","Search the Employment Agency directory on the MOM website before sharing personal details.")]
 fl="".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in faqs)
-page("faq.html","FAQ | Part Time & Work From Home Jobs in Singapore | Sider Jobs","Answers about part time job Singapore, work from home jobs, remote jobs, online work, freelance jobs and how to make money at home.",
+page("faq.html","FAQ | Part Time & Work From Home Jobs in Singapore | Talentinova","Answers about part time job Singapore, work from home jobs, remote jobs, online work, freelance jobs and how to make money at home.",
 head("FAQ","Quick answers.")+f'<section><div class="wrap" style="max-width:820px">{fl}<p style="margin-top:2rem">Still stuck? <a href="contact.html">Contact us</a>.</p></div></section>')
 
 # ---------------- ABOUT
-page("about.html","About Us | Sider Jobs","Sider Jobs shares practical, sourced information on part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs.",
+page("about.html","About Us | Talentinova","Talentinova shares practical, sourced information on part time job Singapore, work from home jobs, remote job Singapore, online jobs and freelance jobs.",
 head("About Us","Information on flexible work in Singapore.")+f'''
 <section><div class="wrap split">
-<div class="reveal"><h2>Who this is for</h2><p>Sider Jobs is an independent publication on Singapore career paths, industry trends and skills. It is for anyone planning their next move, or looking at a part time job, work from home in Singapore, online work or freelance jobs as a side income. We are not affiliated with any government agency.</p>
+<div class="reveal"><h2>Who this is for</h2><p>Talentinova is an independent publication on Singapore career paths, industry trends and skills. It is for anyone planning their next move, or looking at a part time job, work from home in Singapore, online work or freelance jobs as a side income. We are not affiliated with any government agency.</p>
 <p>You have limited hours, real bills and no time to sift through jargon. So each guide tells you what the work involves, what it usually looks like week to week, and what to check before you agree to anything.</p></div>
 <div class="reveal"><h2>How we write our guides</h2><div class="types">
 <div class="type" style="grid-template-columns:1fr"><div><h3>From your point of view</h3><p>Every guide answers the questions a job seeker asks: hours, pay basis, CPF, contract and how to start.</p></div></div>
@@ -519,10 +519,10 @@ head("About Us","Information on flexible work in Singapore.")+f'''
 </div></section>
 <section class="alt"><div class="wrap"><div class="head"><span class="eyebrow">What you will find</span><h2>Articles, job type guides and tools.</h2></div>
 <div class="btn-row"><a class="btn btn-primary" href="jobs.html">Browse job types</a><a class="btn btn-ghost" href="knowledge-hub.html">Knowledge Hub</a></div></div></section>
-<section><div class="wrap"><p class="notice" style="max-width:70ch">Sider Jobs shares general information about jobs in Singapore. It is not legal, financial or employment advice. Find us at 1 Raffles Place, Singapore 048616.</p></div></section>''')
+<section><div class="wrap"><p class="notice" style="max-width:70ch">Talentinova shares general information about jobs in Singapore. It is not legal, financial or employment advice. Find us at 21 Bukit Batok Crescent, Singapore 658065.</p></div></section>''')
 
 # ---------------- CONTACT
-page("contact.html","Contact Us | Sider Jobs","Contact Sider Jobs with a question, correction or topic suggestion about part time job Singapore, work from home jobs and remote work.",
+page("contact.html","Contact Us | Talentinova","Contact Talentinova with a question, correction or topic suggestion about part time job Singapore, work from home jobs and remote work.",
 head("Contact Us","Questions, corrections or topic ideas?","Send us a question, a correction or an idea for a guide. We read every message. Please do not include NRIC, bank or Singpass details.")+f'''
 <section><div class="wrap split">
 <div>
@@ -532,24 +532,24 @@ head("Contact Us","Questions, corrections or topic ideas?","Send us a question, 
 <div class="field"><label for="topic">Topic</label><select id="topic"><option>A question about part time jobs</option><option>A question about work from home or remote jobs</option><option>Online jobs or freelance work</option><option>Report a problem or concern</option><option>Suggest an article</option><option>Correction or feedback</option></select></div>
 <div class="field"><label for="msg">Message</label><textarea id="msg" required></textarea><div class="err" aria-live="polite"></div></div>
 <button class="btn btn-primary" type="submit">Send</button>
-<p class="notice">Sending opens your email app with your message ready to send to support@siderjobs.com.</p>
+<p class="notice">Sending opens your email app with your message ready to send to support@talentinova.com.</p>
 </form>
-<div id="form-ok" class="ok" hidden tabindex="-1" role="status"><h3>Thank you for your message.</h3><p>Your email app should now be open with your message ready to send. Just press send when you are ready.</p><p class="ok-sub">If nothing opened, no worries. You can write to us at support@siderjobs.com and we will be glad to hear from you.</p></div>
+<div id="form-ok" class="ok" hidden tabindex="-1" role="status"><h3>Thank you for your message.</h3><p>Your email app should now be open with your message ready to send. Just press send when you are ready.</p><p class="ok-sub">If nothing opened, no worries. You can write to us at support@talentinova.com and we will be glad to hear from you.</p></div>
 </div>
 <div><h2>Other ways</h2><ul class="contact-list">
-<li><b>Email</b>support@siderjobs.com</li>
+<li><b>Email</b>support@talentinova.com</li>
 <li><b>Phone</b>+65 8396 3756</li>
-<li><b>Address</b>1 Raffles Place, Singapore 048616</li>
+<li><b>Address</b>21 Bukit Batok Crescent, Singapore 658065</li>
 </ul></div>
 </div></section>''')
 
 
 
 # ---------------- DISCLAIMER
-page("disclaimer.html","Disclaimer | Sider Jobs","Disclaimer for Sider Jobs, an information website about part time, work from home, remote and freelance work in Singapore.",
+page("disclaimer.html","Disclaimer | Talentinova","Disclaimer for Talentinova, an information website about part time, work from home, remote and freelance work in Singapore.",
 head("Disclaimer","Disclaimer")+'''
 <section><div class="wrap article">
-<h2>Information only</h2><p>Sider Jobs publishes general information about part-time, work from home, remote, online, freelance and contract work in Singapore. We are not an employment agency, we do not publish job vacancies, and we do not recruit, screen, place or introduce candidates.</p>
+<h2>Information only</h2><p>Talentinova publishes general information about part-time, work from home, remote, online, freelance and contract work in Singapore. We are not an employment agency, we do not publish job vacancies, and we do not recruit, screen, place or introduce candidates.</p>
 <h2>No earnings or job guarantees</h2><p>Nothing on this site promises employment or a level of income. Pay, hours and conditions differ between employers and roles, and change over time.</p>
 <h2>Not professional advice</h2><p>Content is not legal, financial, tax or employment advice. Rules on CPF, employment terms and flexible work can change. Please confirm details with the Ministry of Manpower, CPF Board, IRAS or a qualified professional.</p>
 <h2>Third-party links</h2><p>We link to official and third-party websites for reference. We do not control their content and are not responsible for it.</p>
@@ -557,14 +557,14 @@ head("Disclaimer","Disclaimer")+'''
 </div></section>''')
 
 # ---------------- PRIVACY
-page("privacy.html","Privacy Policy | Sider Jobs","How Sider Jobs collects, uses, discloses and protects personal data in accordance with Singapore's Personal Data Protection Act 2012 (PDPA).",
+page("privacy.html","Privacy Policy | Talentinova","How Talentinova collects, uses, discloses and protects personal data in accordance with Singapore's Personal Data Protection Act 2012 (PDPA).",
 head("Privacy Policy","Privacy Policy","Last updated: 1 October 2026")+'''
 <section><div class="wrap article">
-<p>Sider Jobs ("we", "us", "our") respects your privacy and is committed to protecting your personal data in accordance with Singapore's Personal Data Protection Act 2012 ("PDPA"). This policy explains how we collect, use, disclose and protect personal data when you use this website.</p>
+<p>Talentinova ("we", "us", "our") respects your privacy and is committed to protecting your personal data in accordance with Singapore's Personal Data Protection Act 2012 ("PDPA"). This policy explains how we collect, use, disclose and protect personal data when you use this website.</p>
 <p>By using this website or submitting your personal data to us, you acknowledge that you have read and understood this policy.</p>
 
 <h2>1. Who we are</h2>
-<p>Sider Jobs is an independent information website on Singapore careers, industries and skills. We publish articles and tools only. We are not an employment agency, we do not publish job vacancies, and we do not recruit, screen or place candidates.</p>
+<p>Talentinova is an independent information website on Singapore careers, industries and skills. We publish articles and tools only. We are not an employment agency, we do not publish job vacancies, and we do not recruit, screen or place candidates.</p>
 
 <h2>2. Personal data we collect</h2>
 <p>We collect personal data only when you choose to give it to us, for example when you send a message through our contact form or email us. This may include:</p>
@@ -607,17 +607,17 @@ head("Privacy Policy","Privacy Policy","Last updated: 1 October 2026")+'''
 
 <h2>12. Contact our Data Protection Officer</h2>
 <p>If you have questions, a request or a complaint about how we handle personal data, please contact:</p>
-<ul><li><strong>Data Protection Officer, Sider Jobs</strong></li><li>Email: support@siderjobs.com</li><li>Phone: +65 8396 3756</li><li>Address: 1 Raffles Place, Singapore 048616</li></ul>
+<ul><li><strong>Data Protection Officer, Talentinova</strong></li><li>Email: support@talentinova.com</li><li>Phone: +65 8396 3756</li><li>Address: 21 Bukit Batok Crescent, Singapore 658065</li></ul>
 <p>If you are not satisfied with our response, you may contact the Personal Data Protection Commission at <a href="https://www.pdpc.gov.sg" rel="noopener">www.pdpc.gov.sg</a>.</p>
 </div></section>''')
 
 # ---------------- THANK YOU
-page("thank-you.html","Thank You | Sider Jobs","Thank you for contacting Sider Jobs.",
+page("thank-you.html","Thank You | Talentinova","Thank you for contacting Talentinova.",
 head("Thank you","Thanks for getting in touch.","We have received your message and will reply by email as soon as we can.")+'''
 <section><div class="wrap" style="max-width:720px">
 <p>In the meantime, you are welcome to keep reading our latest articles on Singapore careers, industries and skills.</p>
 <div class="btn-row"><a class="btn btn-primary" href="knowledge-hub.html">Read more articles</a><a class="btn btn-ghost" href="index.html">Back to home</a></div>
-<p class="notice" style="margin-top:2rem">Need to add something? Email support@siderjobs.com or call +65 8396 3756.</p>
+<p class="notice" style="margin-top:2rem">Need to add something? Email support@talentinova.com or call +65 8396 3756.</p>
 </div></section>''',extra_head='<meta name="robots" content="noindex">')
 exec(open(pathlib.Path(__file__).with_name("articles2.py"),encoding="utf-8").read())
 exec(open(pathlib.Path(__file__).with_name("jobpages.py"),encoding="utf-8").read())

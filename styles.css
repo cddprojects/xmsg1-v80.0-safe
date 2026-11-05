@@ -37,7 +37,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .site-header{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.6rem;font:750 1.35rem var(--f-head);color:var(--ink);text-decoration:none;letter-spacing:-.03em}
-.brand svg{width:32px;height:32px}
+.brand img{width:32px;height:32px;display:block}
 .brand em{font-style:normal;color:var(--coral-ink)}
 .nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0;align-items:center}
 .nav ul a{display:block;padding:.5rem .8rem;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:500;font-size:.98rem}
@@ -179,7 +179,7 @@ details p{margin:.8rem 0 0;color:var(--ink-2);max-width:70ch}
 .site-footer{background:var(--ink);color:color-mix(in oklch,#fff 78%,transparent);padding:4rem 0 2rem}
 .site-footer a{color:#fff}
 .foot-grid{display:grid;grid-template-columns:1.5fr repeat(2,1fr);gap:2rem}
-@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid > :first-child{grid-column:1 / -1}}
 .site-footer h4{color:#fff;font-size:1rem;font-family:var(--f-body);letter-spacing:.05em;text-transform:uppercase}
 .site-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
 .site-footer .brand{color:#fff}
